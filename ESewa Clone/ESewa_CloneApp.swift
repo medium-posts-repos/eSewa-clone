@@ -27,15 +27,15 @@ struct ESewaApp: App {
                         Rectangle().hidden().onAppear {
                             router.route(menu: routeDashboard)
                         }
-                      
+                        
                     } else {
                         DashboardScreen()
-//                        {
-//                            var dashboardDest = RouteDestination()
-//                            dashboardDest.routeCode = RouteCodeNavigator.ROUTE_DASHBOARD
-//                            router.route(menu: dashboardDest)
-//                        }
-                       // .navigationTitle("Login")
+                        //                        {
+                        //                            var dashboardDest = RouteDestination()
+                        //                            dashboardDest.routeCode = RouteCodeNavigator.ROUTE_DASHBOARD
+                        //                            router.route(menu: dashboardDest)
+                        //                        }
+                        // .navigationTitle("Login")
                     }
                 }
                 .navigationTitle("")
@@ -43,7 +43,9 @@ struct ESewaApp: App {
                 .navigationDestination(for: RouteDestination.self) { destination in
                     router.buildNavigationStack(destination: destination)
                 }
-            }.environmentObject(router)
+            }
+            .environmentObject(router)
+            .environment(\.colorScheme, .dark)
         }
     }
 }

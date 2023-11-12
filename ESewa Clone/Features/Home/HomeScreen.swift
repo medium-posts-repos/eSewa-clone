@@ -11,7 +11,8 @@ public struct HomeScreen: View {
     public var body: some View {
         NavigationView {
             ScrollView {
-                
+                HomePrimaryMenuView()
+                    .padding(.top, 18)
             }.toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     HStack(spacing: 8) {

@@ -23,6 +23,8 @@
 		A33AD6A82B00C26E005A09AC /* StatementScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AD6A72B00C26E005A09AC /* StatementScreen.swift */; };
 		A33AD6AB2B00C298005A09AC /* SupportScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AD6AA2B00C298005A09AC /* SupportScreen.swift */; };
 		A3ECAED12B00FB3E00CA8E32 /* ImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ECAED02B00FB3E00CA8E32 /* ImageExt.swift */; };
+		A3ECAED32B01149F00CA8E32 /* HomePrimaryMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ECAED22B01149F00CA8E32 /* HomePrimaryMenuView.swift */; };
+		A3ECAED52B012BE900CA8E32 /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ECAED42B012BE900CA8E32 /* ColorExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		A33AD6A72B00C26E005A09AC /* StatementScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementScreen.swift; sourceTree = "<group>"; };
 		A33AD6AA2B00C298005A09AC /* SupportScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportScreen.swift; sourceTree = "<group>"; };
 		A3ECAED02B00FB3E00CA8E32 /* ImageExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExt.swift; sourceTree = "<group>"; };
+		A3ECAED22B01149F00CA8E32 /* HomePrimaryMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePrimaryMenuView.swift; sourceTree = "<group>"; };
+		A3ECAED42B012BE900CA8E32 /* ColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				A33AD6A42B00BFCF005A09AC /* HomeScreen.swift */,
+				A3ECAED22B01149F00CA8E32 /* HomePrimaryMenuView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -238,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				A3ECAED02B00FB3E00CA8E32 /* ImageExt.swift */,
+				A3ECAED42B012BE900CA8E32 /* ColorExt.swift */,
 			);
 			path = Ext;
 			sourceTree = "<group>";
@@ -381,8 +387,10 @@
 				A33AD6A52B00BFCF005A09AC /* HomeScreen.swift in Sources */,
 				A33AD69B2B009887005A09AC /* Router.swift in Sources */,
 				A33AD6982B009887005A09AC /* RouteCode.swift in Sources */,
+				A3ECAED32B01149F00CA8E32 /* HomePrimaryMenuView.swift in Sources */,
 				A33AD6A22B0099AF005A09AC /* DashboardScreen.swift in Sources */,
 				A3ECAED12B00FB3E00CA8E32 /* ImageExt.swift in Sources */,
+				A3ECAED52B012BE900CA8E32 /* ColorExt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
