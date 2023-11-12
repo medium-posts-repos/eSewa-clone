@@ -1,0 +1,712 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A33AD66A2B009818005A09AC /* ESewa_CloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AD6692B009818005A09AC /* ESewa_CloneApp.swift */; };
+		A33AD66C2B009818005A09AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AD66B2B009818005A09AC /* ContentView.swift */; };
+		A33AD66E2B009819005A09AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A33AD66D2B009819005A09AC /* Assets.xcassets */; };
+		A33AD6712B009819005A09AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A33AD6702B009819005A09AC /* Preview Assets.xcassets */; };
+		A33AD67B2B009819005A09AC /* ESewa_CloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AD67A2B009819005A09AC /* ESewa_CloneTests.swift */; };
+		A33AD6852B009819005A09AC /* ESewa_CloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AD6842B009819005A09AC /* ESewa_CloneUITests.swift */; };
+		A33AD6872B009819005A09AC /* ESewa_CloneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AD6862B009819005A09AC /* ESewa_CloneUITestsLaunchTests.swift */; };
+		A33AD6982B009887005A09AC /* RouteCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AD6942B009887005A09AC /* RouteCode.swift */; };
+		A33AD6992B009887005A09AC /* NavigationRoutePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AD6952B009887005A09AC /* NavigationRoutePath.swift */; };
+		A33AD69A2B009887005A09AC /* RouteDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AD6962B009887005A09AC /* RouteDestination.swift */; };
+		A33AD69B2B009887005A09AC /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AD6972B009887005A09AC /* Router.swift */; };
+		A33AD6A22B0099AF005A09AC /* DashboardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AD6A12B0099AF005A09AC /* DashboardScreen.swift */; };
+		A33AD6A52B00BFCF005A09AC /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AD6A42B00BFCF005A09AC /* HomeScreen.swift */; };
+		A33AD6A82B00C26E005A09AC /* StatementScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AD6A72B00C26E005A09AC /* StatementScreen.swift */; };
+		A33AD6AB2B00C298005A09AC /* SupportScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AD6AA2B00C298005A09AC /* SupportScreen.swift */; };
+		A3ECAED12B00FB3E00CA8E32 /* ImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ECAED02B00FB3E00CA8E32 /* ImageExt.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A33AD6772B009819005A09AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A33AD65E2B009817005A09AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A33AD6652B009818005A09AC;
+			remoteInfo = "ESewa Clone";
+		};
+		A33AD6812B009819005A09AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A33AD65E2B009817005A09AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A33AD6652B009818005A09AC;
+			remoteInfo = "ESewa Clone";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A33AD6662B009818005A09AC /* ESewa Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ESewa Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A33AD6692B009818005A09AC /* ESewa_CloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESewa_CloneApp.swift; sourceTree = "<group>"; };
+		A33AD66B2B009818005A09AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A33AD66D2B009819005A09AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A33AD6702B009819005A09AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A33AD6762B009819005A09AC /* ESewa CloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ESewa CloneTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A33AD67A2B009819005A09AC /* ESewa_CloneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESewa_CloneTests.swift; sourceTree = "<group>"; };
+		A33AD6802B009819005A09AC /* ESewa CloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ESewa CloneUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A33AD6842B009819005A09AC /* ESewa_CloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESewa_CloneUITests.swift; sourceTree = "<group>"; };
+		A33AD6862B009819005A09AC /* ESewa_CloneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESewa_CloneUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A33AD6942B009887005A09AC /* RouteCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteCode.swift; sourceTree = "<group>"; };
+		A33AD6952B009887005A09AC /* NavigationRoutePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationRoutePath.swift; sourceTree = "<group>"; };
+		A33AD6962B009887005A09AC /* RouteDestination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteDestination.swift; sourceTree = "<group>"; };
+		A33AD6972B009887005A09AC /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		A33AD6A12B0099AF005A09AC /* DashboardScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardScreen.swift; sourceTree = "<group>"; };
+		A33AD6A42B00BFCF005A09AC /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		A33AD6A72B00C26E005A09AC /* StatementScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementScreen.swift; sourceTree = "<group>"; };
+		A33AD6AA2B00C298005A09AC /* SupportScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportScreen.swift; sourceTree = "<group>"; };
+		A3ECAED02B00FB3E00CA8E32 /* ImageExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExt.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A33AD6632B009818005A09AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A33AD6732B009819005A09AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A33AD67D2B009819005A09AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A33AD65D2B009817005A09AC = {
+			isa = PBXGroup;
+			children = (
+				A33AD6682B009818005A09AC /* ESewa Clone */,
+				A33AD6792B009819005A09AC /* ESewa CloneTests */,
+				A33AD6832B009819005A09AC /* ESewa CloneUITests */,
+				A33AD6672B009818005A09AC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A33AD6672B009818005A09AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A33AD6662B009818005A09AC /* ESewa Clone.app */,
+				A33AD6762B009819005A09AC /* ESewa CloneTests.xctest */,
+				A33AD6802B009819005A09AC /* ESewa CloneUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A33AD6682B009818005A09AC /* ESewa Clone */ = {
+			isa = PBXGroup;
+			children = (
+				A3ECAECE2B00FB1E00CA8E32 /* Utils */,
+				A33AD69F2B009994005A09AC /* Infrastructure */,
+				A33AD69E2B009989005A09AC /* Features */,
+				A33AD69D2B009984005A09AC /* Data */,
+				A33AD69C2B009976005A09AC /* Domain */,
+				A33AD6692B009818005A09AC /* ESewa_CloneApp.swift */,
+				A33AD66B2B009818005A09AC /* ContentView.swift */,
+				A33AD66D2B009819005A09AC /* Assets.xcassets */,
+				A33AD66F2B009819005A09AC /* Preview Content */,
+			);
+			path = "ESewa Clone";
+			sourceTree = "<group>";
+		};
+		A33AD66F2B009819005A09AC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A33AD6702B009819005A09AC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A33AD6792B009819005A09AC /* ESewa CloneTests */ = {
+			isa = PBXGroup;
+			children = (
+				A33AD67A2B009819005A09AC /* ESewa_CloneTests.swift */,
+			);
+			path = "ESewa CloneTests";
+			sourceTree = "<group>";
+		};
+		A33AD6832B009819005A09AC /* ESewa CloneUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A33AD6842B009819005A09AC /* ESewa_CloneUITests.swift */,
+				A33AD6862B009819005A09AC /* ESewa_CloneUITestsLaunchTests.swift */,
+			);
+			path = "ESewa CloneUITests";
+			sourceTree = "<group>";
+		};
+		A33AD6932B009887005A09AC /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A33AD6942B009887005A09AC /* RouteCode.swift */,
+				A33AD6952B009887005A09AC /* NavigationRoutePath.swift */,
+				A33AD6962B009887005A09AC /* RouteDestination.swift */,
+				A33AD6972B009887005A09AC /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		A33AD69C2B009976005A09AC /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A33AD69D2B009984005A09AC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A33AD69E2B009989005A09AC /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				A33AD6A92B00C28B005A09AC /* Support */,
+				A33AD6A62B00C25E005A09AC /* Statement */,
+				A33AD6A32B00BFC3005A09AC /* Home */,
+				A33AD6A02B00999F005A09AC /* Dashboard */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		A33AD69F2B009994005A09AC /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				A33AD6932B009887005A09AC /* Router */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		A33AD6A02B00999F005A09AC /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				A33AD6A12B0099AF005A09AC /* DashboardScreen.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		A33AD6A32B00BFC3005A09AC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A33AD6A42B00BFCF005A09AC /* HomeScreen.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A33AD6A62B00C25E005A09AC /* Statement */ = {
+			isa = PBXGroup;
+			children = (
+				A33AD6A72B00C26E005A09AC /* StatementScreen.swift */,
+			);
+			path = Statement;
+			sourceTree = "<group>";
+		};
+		A33AD6A92B00C28B005A09AC /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				A33AD6AA2B00C298005A09AC /* SupportScreen.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		A3ECAECE2B00FB1E00CA8E32 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A3ECAECF2B00FB2800CA8E32 /* Ext */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A3ECAECF2B00FB2800CA8E32 /* Ext */ = {
+			isa = PBXGroup;
+			children = (
+				A3ECAED02B00FB3E00CA8E32 /* ImageExt.swift */,
+			);
+			path = Ext;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A33AD6652B009818005A09AC /* ESewa Clone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A33AD68A2B009819005A09AC /* Build configuration list for PBXNativeTarget "ESewa Clone" */;
+			buildPhases = (
+				A33AD6622B009818005A09AC /* Sources */,
+				A33AD6632B009818005A09AC /* Frameworks */,
+				A33AD6642B009818005A09AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ESewa Clone";
+			productName = "ESewa Clone";
+			productReference = A33AD6662B009818005A09AC /* ESewa Clone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A33AD6752B009819005A09AC /* ESewa CloneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A33AD68D2B009819005A09AC /* Build configuration list for PBXNativeTarget "ESewa CloneTests" */;
+			buildPhases = (
+				A33AD6722B009819005A09AC /* Sources */,
+				A33AD6732B009819005A09AC /* Frameworks */,
+				A33AD6742B009819005A09AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A33AD6782B009819005A09AC /* PBXTargetDependency */,
+			);
+			name = "ESewa CloneTests";
+			productName = "ESewa CloneTests";
+			productReference = A33AD6762B009819005A09AC /* ESewa CloneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A33AD67F2B009819005A09AC /* ESewa CloneUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A33AD6902B009819005A09AC /* Build configuration list for PBXNativeTarget "ESewa CloneUITests" */;
+			buildPhases = (
+				A33AD67C2B009819005A09AC /* Sources */,
+				A33AD67D2B009819005A09AC /* Frameworks */,
+				A33AD67E2B009819005A09AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A33AD6822B009819005A09AC /* PBXTargetDependency */,
+			);
+			name = "ESewa CloneUITests";
+			productName = "ESewa CloneUITests";
+			productReference = A33AD6802B009819005A09AC /* ESewa CloneUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A33AD65E2B009817005A09AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					A33AD6652B009818005A09AC = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					A33AD6752B009819005A09AC = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = A33AD6652B009818005A09AC;
+					};
+					A33AD67F2B009819005A09AC = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = A33AD6652B009818005A09AC;
+					};
+				};
+			};
+			buildConfigurationList = A33AD6612B009817005A09AC /* Build configuration list for PBXProject "ESewa Clone" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A33AD65D2B009817005A09AC;
+			productRefGroup = A33AD6672B009818005A09AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A33AD6652B009818005A09AC /* ESewa Clone */,
+				A33AD6752B009819005A09AC /* ESewa CloneTests */,
+				A33AD67F2B009819005A09AC /* ESewa CloneUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A33AD6642B009818005A09AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A33AD6712B009819005A09AC /* Preview Assets.xcassets in Resources */,
+				A33AD66E2B009819005A09AC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A33AD6742B009819005A09AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A33AD67E2B009819005A09AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A33AD6622B009818005A09AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A33AD6A82B00C26E005A09AC /* StatementScreen.swift in Sources */,
+				A33AD6AB2B00C298005A09AC /* SupportScreen.swift in Sources */,
+				A33AD6992B009887005A09AC /* NavigationRoutePath.swift in Sources */,
+				A33AD66C2B009818005A09AC /* ContentView.swift in Sources */,
+				A33AD69A2B009887005A09AC /* RouteDestination.swift in Sources */,
+				A33AD66A2B009818005A09AC /* ESewa_CloneApp.swift in Sources */,
+				A33AD6A52B00BFCF005A09AC /* HomeScreen.swift in Sources */,
+				A33AD69B2B009887005A09AC /* Router.swift in Sources */,
+				A33AD6982B009887005A09AC /* RouteCode.swift in Sources */,
+				A33AD6A22B0099AF005A09AC /* DashboardScreen.swift in Sources */,
+				A3ECAED12B00FB3E00CA8E32 /* ImageExt.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A33AD6722B009819005A09AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A33AD67B2B009819005A09AC /* ESewa_CloneTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A33AD67C2B009819005A09AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A33AD6872B009819005A09AC /* ESewa_CloneUITestsLaunchTests.swift in Sources */,
+				A33AD6852B009819005A09AC /* ESewa_CloneUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A33AD6782B009819005A09AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A33AD6652B009818005A09AC /* ESewa Clone */;
+			targetProxy = A33AD6772B009819005A09AC /* PBXContainerItemProxy */;
+		};
+		A33AD6822B009819005A09AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A33AD6652B009818005A09AC /* ESewa Clone */;
+			targetProxy = A33AD6812B009819005A09AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A33AD6882B009819005A09AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A33AD6892B009819005A09AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A33AD68B2B009819005A09AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ESewa Clone/Preview Content\"";
+				DEVELOPMENT_TEAM = 65JHC6K66H;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "junkeritechnepal.ESewa-Clone";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A33AD68C2B009819005A09AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ESewa Clone/Preview Content\"";
+				DEVELOPMENT_TEAM = 65JHC6K66H;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "junkeritechnepal.ESewa-Clone";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A33AD68E2B009819005A09AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 65JHC6K66H;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "junkeritechnepal.ESewa-CloneTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ESewa Clone.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ESewa Clone";
+			};
+			name = Debug;
+		};
+		A33AD68F2B009819005A09AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 65JHC6K66H;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "junkeritechnepal.ESewa-CloneTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ESewa Clone.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ESewa Clone";
+			};
+			name = Release;
+		};
+		A33AD6912B009819005A09AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 65JHC6K66H;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "junkeritechnepal.ESewa-CloneUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "ESewa Clone";
+			};
+			name = Debug;
+		};
+		A33AD6922B009819005A09AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 65JHC6K66H;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "junkeritechnepal.ESewa-CloneUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "ESewa Clone";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A33AD6612B009817005A09AC /* Build configuration list for PBXProject "ESewa Clone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A33AD6882B009819005A09AC /* Debug */,
+				A33AD6892B009819005A09AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A33AD68A2B009819005A09AC /* Build configuration list for PBXNativeTarget "ESewa Clone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A33AD68B2B009819005A09AC /* Debug */,
+				A33AD68C2B009819005A09AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A33AD68D2B009819005A09AC /* Build configuration list for PBXNativeTarget "ESewa CloneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A33AD68E2B009819005A09AC /* Debug */,
+				A33AD68F2B009819005A09AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A33AD6902B009819005A09AC /* Build configuration list for PBXNativeTarget "ESewa CloneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A33AD6912B009819005A09AC /* Debug */,
+				A33AD6922B009819005A09AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A33AD65E2B009817005A09AC /* Project object */;
+}
