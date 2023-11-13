@@ -8,6 +8,7 @@
 import SwiftUI
 
 public struct HomePrimaryMenuView: View {
+        
     public var body: some View {
         HStack(spacing: 16) {
             verticalMenuView(title: "Load Money", icon: "house.fill")

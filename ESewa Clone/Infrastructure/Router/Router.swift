@@ -23,12 +23,12 @@ public class Router: ObservableObject {
     func buildNavigationStack(destination: RouteDestination) -> some View {
         switch destination.routeCode {
         case RouteCodeNavigator.ROUTE_PRIVATE_PROFILE:
-            EmptyView()
+            ProfileScreen()
         case RouteCodeNavigator.ROUTE_NOTIFICATION:
             EmptyView()
         case RouteCodeNavigator.ROUTE_DASHBOARD:
-            EmptyView()
-                .navigationTitle("Snap Paisa")
+            DashboardScreen()
+                .navigationTitle("Snap Sewa")
                 .navigationBarBackButtonHidden()
         default:
             EmptyView()

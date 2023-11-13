@@ -26,6 +26,8 @@
 		A394A7762B020DB50030AAF1 /* GridListMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A394A7752B020DB50030AAF1 /* GridListMenuView.swift */; };
 		A394A7792B020DE70030AAF1 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A394A7782B020DE70030AAF1 /* Menu.swift */; };
 		A394A77E2B02171C0030AAF1 /* MenuShapeViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A394A77D2B02171C0030AAF1 /* MenuShapeViewModifier.swift */; };
+		A394A7812B021DA50030AAF1 /* TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = A394A7802B021DA50030AAF1 /* TypeAlias.swift */; };
+		A394A7842B021F930030AAF1 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A394A7832B021F930030AAF1 /* ProfileScreen.swift */; };
 		A3ECAED12B00FB3E00CA8E32 /* ImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ECAED02B00FB3E00CA8E32 /* ImageExt.swift */; };
 		A3ECAED32B01149F00CA8E32 /* HomePrimaryMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ECAED22B01149F00CA8E32 /* HomePrimaryMenuView.swift */; };
 		A3ECAED52B012BE900CA8E32 /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ECAED42B012BE900CA8E32 /* ColorExt.swift */; };
@@ -71,6 +73,8 @@
 		A394A7752B020DB50030AAF1 /* GridListMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridListMenuView.swift; sourceTree = "<group>"; };
 		A394A7782B020DE70030AAF1 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		A394A77D2B02171C0030AAF1 /* MenuShapeViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuShapeViewModifier.swift; sourceTree = "<group>"; };
+		A394A7802B021DA50030AAF1 /* TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAlias.swift; sourceTree = "<group>"; };
+		A394A7832B021F930030AAF1 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
 		A3ECAED02B00FB3E00CA8E32 /* ImageExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExt.swift; sourceTree = "<group>"; };
 		A3ECAED22B01149F00CA8E32 /* HomePrimaryMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePrimaryMenuView.swift; sourceTree = "<group>"; };
 		A3ECAED42B012BE900CA8E32 /* ColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExt.swift; sourceTree = "<group>"; };
@@ -176,6 +180,7 @@
 		A33AD69C2B009976005A09AC /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				A394A77F2B021D9A0030AAF1 /* TypeAlias */,
 				A394A7772B020DDE0030AAF1 /* Model */,
 			);
 			path = Domain;
@@ -191,6 +196,7 @@
 		A33AD69E2B009989005A09AC /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				A394A7822B021F860030AAF1 /* Profile */,
 				A394A7732B020D8E0030AAF1 /* Common */,
 				A33AD6A92B00C28B005A09AC /* Support */,
 				A33AD6A62B00C25E005A09AC /* Statement */,
@@ -296,6 +302,22 @@
 				A394A77D2B02171C0030AAF1 /* MenuShapeViewModifier.swift */,
 			);
 			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		A394A77F2B021D9A0030AAF1 /* TypeAlias */ = {
+			isa = PBXGroup;
+			children = (
+				A394A7802B021DA50030AAF1 /* TypeAlias.swift */,
+			);
+			path = TypeAlias;
+			sourceTree = "<group>";
+		};
+		A394A7822B021F860030AAF1 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A394A7832B021F930030AAF1 /* ProfileScreen.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		A3ECAECE2B00FB1E00CA8E32 /* Utils */ = {
@@ -449,6 +471,7 @@
 				A33AD6A82B00C26E005A09AC /* StatementScreen.swift in Sources */,
 				A394A7722B0208D90030AAF1 /* HomeScreenViewTypes.swift in Sources */,
 				A33AD6AB2B00C298005A09AC /* SupportScreen.swift in Sources */,
+				A394A7842B021F930030AAF1 /* ProfileScreen.swift in Sources */,
 				A33AD6992B009887005A09AC /* NavigationRoutePath.swift in Sources */,
 				A33AD66C2B009818005A09AC /* ContentView.swift in Sources */,
 				A394A7762B020DB50030AAF1 /* GridListMenuView.swift in Sources */,
@@ -458,6 +481,7 @@
 				A394A77E2B02171C0030AAF1 /* MenuShapeViewModifier.swift in Sources */,
 				A33AD69B2B009887005A09AC /* Router.swift in Sources */,
 				A394A7792B020DE70030AAF1 /* Menu.swift in Sources */,
+				A394A7812B021DA50030AAF1 /* TypeAlias.swift in Sources */,
 				A33AD6982B009887005A09AC /* RouteCode.swift in Sources */,
 				A3ECAED32B01149F00CA8E32 /* HomePrimaryMenuView.swift in Sources */,
 				A33AD6A22B0099AF005A09AC /* DashboardScreen.swift in Sources */,
