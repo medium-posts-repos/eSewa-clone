@@ -9,6 +9,8 @@ import SwiftUI
 
 public struct HomeScreen: View {
     
+    @EnvironmentObject var router: Router
+
     private let viewTypes: [HomeScreenViewType] = [
         .primaryMenuView,
         .secondaryMenuView
@@ -34,44 +36,45 @@ public struct HomeScreen: View {
                     }
                 }
                 
-            }.listStyle(.plain)
-                .onAppear {
-                    UITableView.appearance().separatorStyle = .none
+            }
+            .listStyle(.plain)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    HStack(spacing: 8) {
+                        Image("ic_profile")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .clipShape(Circle())
+                            .frame(width: 36, height: 36)
+                            .onTapGesture {
+                                self.onProfileTapped()
+                            }
+                        Text("Hi, Swornim")
+                        
+                    }
                 }
-                .renderToolBar()
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    HStack(spacing: 12) {
+                        Image(systemName: "tray.and.arrow.down")
+                            .toNavigationIcon()
+                        
+                        Image(systemName: "bell.fill")
+                            .toNavigationIcon()
+                        
+                        Image(systemName: "scribble")
+                            .toNavigationIcon()
+                    }
+                }
+            }
         }
     }
 }
 
-//MARK: Toolbar View
-extension View {
-    @ViewBuilder func renderToolBar() -> some View {
-        toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                HStack(spacing: 8) {
-                    Image("ic_profile")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .clipShape(Circle())
-                        .frame(width: 36, height: 36)
-                    Text("Hi, Swornim")
-                    
-                }
-            }
-            
-            ToolbarItem(placement: .navigationBarTrailing) {
-                HStack(spacing: 12) {
-                    Image(systemName: "tray.and.arrow.down")
-                        .toNavigationIcon()
-                    
-                    Image(systemName: "bell.fill")
-                        .toNavigationIcon()
-                    
-                    Image(systemName: "scribble")
-                        .toNavigationIcon()
-                }
-            }
-        }
+//MARK: View Events
+extension HomeScreen {
+    func onProfileTapped() {
+        router.route(menu: .init(routeCode: RouteCodeNavigator.ROUTE_PRIVATE_PROFILE))
     }
 }
 

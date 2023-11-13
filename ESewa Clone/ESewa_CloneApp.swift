@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct ESewaApp: App {
-    @AppStorage("isAuthenticated") private var isAuthenticated = false
+    @AppStorage("isAuthenticated") private var isAuthenticated = true
     
     @ObservedObject var router = Router()
     
@@ -28,14 +28,6 @@ struct ESewaApp: App {
                             router.route(menu: routeDashboard)
                         }
                         
-                    } else {
-                        DashboardScreen()
-                        //                        {
-                        //                            var dashboardDest = RouteDestination()
-                        //                            dashboardDest.routeCode = RouteCodeNavigator.ROUTE_DASHBOARD
-                        //                            router.route(menu: dashboardDest)
-                        //                        }
-                        // .navigationTitle("Login")
                     }
                 }
                 .navigationTitle("")

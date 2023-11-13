@@ -16,9 +16,6 @@ public struct GridListMenuView: View {
         LazyVGrid(columns: columns, spacing: 24) {
             ForEach(menus, id: \.self) { each in
                 GridListItemMenuView(menu: each)
-                    .onAppear {
-                        print("Item \(each.name ?? "")")
-                    }
             }
         }.modifier(MenuShapeViewModifier())
     }
