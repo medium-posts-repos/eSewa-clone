@@ -8,9 +8,7 @@
 import SwiftUI
 
 public struct HomeScreen: View {
-    
-    @EnvironmentObject var router: Router
-    
+        
     private let viewTypes: [HomeScreenViewType] = [
         .primaryMenuView,
         .secondaryMenuView
@@ -44,9 +42,7 @@ public struct HomeScreen: View {
 
 //MARK: View Events
 extension HomeScreen {
-    func onProfileTapped() {
-        router.route(menu: .init(routeCode: RouteCodeNavigator.ROUTE_PRIVATE_PROFILE))
-    }
+
 }
 
 struct HomeScreen_Previews: PreviewProvider {

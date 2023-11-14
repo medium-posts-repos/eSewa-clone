@@ -8,6 +8,13 @@
 import SwiftUI
 
 public struct HomeToolbarView: ToolbarContent {
+    
+    public var onProfileTapped: VoidCallback?
+    
+    public init(onProfileTapped: VoidCallback? = nil) {
+        self.onProfileTapped = onProfileTapped
+    }
+    
     public var body: some ToolbarContent {
         
         ToolbarItem(placement: .navigationBarLeading) {
@@ -18,7 +25,7 @@ public struct HomeToolbarView: ToolbarContent {
                     .clipShape(Circle())
                     .frame(width: 36, height: 36)
                     .onTapGesture {
-//                        self.onProfileTapped()
+                        self.onProfileTapped?()
                     }
                 Text("Hi, Swornim")
                 
