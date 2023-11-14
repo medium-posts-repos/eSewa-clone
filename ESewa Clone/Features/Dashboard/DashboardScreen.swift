@@ -8,6 +8,9 @@
 import SwiftUI
 
 public struct DashboardScreen: View {
+    
+    @EnvironmentObject var router: Router
+
     @State private var selectedTab = 0
     @State private var onSelectedTab = 0
 
@@ -21,7 +24,7 @@ public struct DashboardScreen: View {
             }.toolbar {
                 switch onSelectedTab {
                 case 0:
-                    HomeToolbarView()
+                    HomeToolbarView(onProfileTapped: onProfileTapped)
                 case 1:
                     ToolbarItem(placement: .navigationBarLeading) {
                         Text("Notification")
@@ -68,6 +71,13 @@ public struct DashboardScreen: View {
             })
             .tabItem { Text("More") }
             .tag(3)
+    }
+}
+
+// MARK: view events
+extension DashboardScreen {
+    func onProfileTapped() {
+        router.route(menu: .init(routeCode: RouteCodeNavigator.ROUTE_PRIVATE_PROFILE))
     }
 }
 
