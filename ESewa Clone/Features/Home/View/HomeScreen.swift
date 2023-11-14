@@ -12,7 +12,8 @@ public struct HomeScreen: View {
     private let viewTypes: [HomeScreenViewType] = [
         .primaryMenuView,
         .secondaryMenuView,
-        .offerView
+        .offerView,
+        .productView
     ]
     
     public var body: some View {
@@ -30,11 +31,14 @@ public struct HomeScreen: View {
                             GridListMenuView(menus: Menu.dashboardMenus)
                         }.listRowBackground(Color.clear)
                             .listRowSeparator(.hidden)
+
                     case .offerView:
                         Section {
                             MenuListMoreView(dataSource: Menu.offerMenus)
                         }.listRowBackground(Color.clear)
                             .listRowSeparator(.hidden)
+                    case .productView:
+                        HorizontalProductPagerView(products: Product.products)
                     default:
                         EmptyView()
                     }

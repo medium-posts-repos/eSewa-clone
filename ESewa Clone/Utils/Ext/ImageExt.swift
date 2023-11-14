@@ -16,4 +16,13 @@ public extension Image {
             .clipShape(Circle())
             .frame(width: 20, height: 20)
     }
+    
+    func data(url: String) -> Self {
+        if let url = URL(string: url), let data = try? Data(contentsOf: url) {
+            return Image(uiImage: UIImage(data: data) ?? .init())
+                .resizable()
+        }
+        
+        return self
+    }
 }
