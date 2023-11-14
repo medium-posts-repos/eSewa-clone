@@ -23,6 +23,7 @@
 		A33AD6A82B00C26E005A09AC /* StatementScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AD6A72B00C26E005A09AC /* StatementScreen.swift */; };
 		A33AD6AB2B00C298005A09AC /* SupportScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AD6AA2B00C298005A09AC /* SupportScreen.swift */; };
 		A37415B52B036E89007D1ECA /* HomeToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37415B42B036E89007D1ECA /* HomeToolbarView.swift */; };
+		A37415B72B03A954007D1ECA /* MenuListMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37415B62B03A954007D1ECA /* MenuListMoreView.swift */; };
 		A394A7722B0208D90030AAF1 /* HomeScreenViewTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A394A7712B0208D90030AAF1 /* HomeScreenViewTypes.swift */; };
 		A394A7762B020DB50030AAF1 /* GridListMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A394A7752B020DB50030AAF1 /* GridListMenuView.swift */; };
 		A394A7792B020DE70030AAF1 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A394A7782B020DE70030AAF1 /* Menu.swift */; };
@@ -71,6 +72,7 @@
 		A33AD6A72B00C26E005A09AC /* StatementScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementScreen.swift; sourceTree = "<group>"; };
 		A33AD6AA2B00C298005A09AC /* SupportScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportScreen.swift; sourceTree = "<group>"; };
 		A37415B42B036E89007D1ECA /* HomeToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeToolbarView.swift; sourceTree = "<group>"; };
+		A37415B62B03A954007D1ECA /* MenuListMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListMoreView.swift; sourceTree = "<group>"; };
 		A394A7712B0208D90030AAF1 /* HomeScreenViewTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewTypes.swift; sourceTree = "<group>"; };
 		A394A7752B020DB50030AAF1 /* GridListMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridListMenuView.swift; sourceTree = "<group>"; };
 		A394A7782B020DE70030AAF1 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				A394A7752B020DB50030AAF1 /* GridListMenuView.swift */,
+				A37415B62B03A954007D1ECA /* MenuListMoreView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A33AD6A82B00C26E005A09AC /* StatementScreen.swift in Sources */,
+				A37415B72B03A954007D1ECA /* MenuListMoreView.swift in Sources */,
 				A394A7722B0208D90030AAF1 /* HomeScreenViewTypes.swift in Sources */,
 				A33AD6AB2B00C298005A09AC /* SupportScreen.swift in Sources */,
 				A394A7842B021F930030AAF1 /* ProfileScreen.swift in Sources */,
