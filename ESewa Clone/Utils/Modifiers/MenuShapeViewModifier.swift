@@ -12,7 +12,7 @@ struct MenuShapeViewModifier: ViewModifier {
 
     func body(content: Content) -> some View {
         content
-            .padding(.init(top: 12, leading: 8, bottom: 12, trailing: 8))
+            .padding(.init(top: 14, leading: 8, bottom: 14, trailing: 8))
             .background(colorScheme == .dark ? Color(hex: 0x1c252e) : Color(hex: 0xf5f5f5))
             .cornerRadius(16)
     }

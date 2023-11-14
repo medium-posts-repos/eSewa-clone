@@ -11,11 +11,12 @@ public struct HomeScreen: View {
         
     private let viewTypes: [HomeScreenViewType] = [
         .primaryMenuView,
-        .secondaryMenuView
+        .secondaryMenuView,
+        .offerView
     ]
     
     public var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             List {
                 ForEach(viewTypes, id: \.self) { each in
                     switch each {
@@ -29,14 +30,19 @@ public struct HomeScreen: View {
                             GridListMenuView(menus: Menu.dashboardMenus)
                         }.listRowBackground(Color.clear)
                             .listRowSeparator(.hidden)
+                    case .offerView:
+                        Section {
+                            MenuListMoreView(dataSource: Menu.offerMenus)
+                        }.listRowBackground(Color.clear)
+                            .listRowSeparator(.hidden)
                     default:
                         EmptyView()
                     }
                 }
-                
-            }
-            .listStyle(.plain)
-        }.toolbar { HomeToolbarView() }
+            }.listStyle(.plain)
+                .padding(.init(top: 0, leading: -14, bottom: 0, trailing: -14)) // TODO: left right , padding issue
+            Spacer()
+        }.frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 
