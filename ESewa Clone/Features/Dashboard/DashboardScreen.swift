@@ -9,11 +9,32 @@ import SwiftUI
 
 public struct DashboardScreen: View {
     @State private var selectedTab = 0
-    
+    @State private var onSelectedTab = 0
+
     public var body: some View {
         VStack {
             TabView(selection:$selectedTab) {
                 renderTabScreen()
+            }.onChange(of: selectedTab) { index in
+                print("Tab selected \(index)")
+                onSelectedTab = index
+            }.toolbar {
+                switch onSelectedTab {
+                case 0:
+                    HomeToolbarView()
+                case 1:
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Text("Notification")
+                    }
+                case 2:
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Text("Statement")
+                    }
+                default:
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Text("More")
+                    }
+                }
             }
         }.edgesIgnoringSafeArea(.bottom)
     }
@@ -27,12 +48,12 @@ public struct DashboardScreen: View {
             .tabItem { Text("Home") }
             .tag(0)
         
-        StatementScreen()
-            .tabItem({
-                Image(systemName: "bell")
-            })
-            .tabItem { Text("Statement") }
-            .tag(1)
+            StatementScreen()
+                .tabItem({
+                    Image(systemName: "bell")
+                })
+                .tabItem { Text("Statement") }
+                .tag(1)
         
         StatementScreen()
             .tabItem({

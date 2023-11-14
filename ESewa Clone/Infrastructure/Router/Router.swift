@@ -28,8 +28,8 @@ public class Router: ObservableObject {
             EmptyView()
         case RouteCodeNavigator.ROUTE_DASHBOARD:
             DashboardScreen()
-                .navigationTitle("Snap Sewa")
                 .navigationBarBackButtonHidden()
+                
         default:
             EmptyView()
         }

@@ -10,14 +10,14 @@ import SwiftUI
 public struct HomeScreen: View {
     
     @EnvironmentObject var router: Router
-
+    
     private let viewTypes: [HomeScreenViewType] = [
         .primaryMenuView,
         .secondaryMenuView
     ]
     
     public var body: some View {
-        NavigationView {
+        VStack {
             List {
                 ForEach(viewTypes, id: \.self) { each in
                     switch each {
@@ -25,12 +25,12 @@ public struct HomeScreen: View {
                         Section {
                             HomePrimaryMenuView()
                         }.listRowBackground(Color.clear)
-                        .listRowSeparator(.hidden)
+                            .listRowSeparator(.hidden)
                     case .secondaryMenuView:
                         Section {
                             GridListMenuView(menus: Menu.dashboardMenus)
                         }.listRowBackground(Color.clear)
-                        .listRowSeparator(.hidden)
+                            .listRowSeparator(.hidden)
                     default:
                         EmptyView()
                     }
@@ -38,36 +38,7 @@ public struct HomeScreen: View {
                 
             }
             .listStyle(.plain)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    HStack(spacing: 8) {
-                        Image("ic_profile")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .clipShape(Circle())
-                            .frame(width: 36, height: 36)
-                            .onTapGesture {
-                                self.onProfileTapped()
-                            }
-                        Text("Hi, Swornim")
-                        
-                    }
-                }
-                
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    HStack(spacing: 12) {
-                        Image(systemName: "tray.and.arrow.down")
-                            .toNavigationIcon()
-                        
-                        Image(systemName: "bell.fill")
-                            .toNavigationIcon()
-                        
-                        Image(systemName: "scribble")
-                            .toNavigationIcon()
-                    }
-                }
-            }
-        }
+        }.toolbar { HomeToolbarView() }
     }
 }
 
