@@ -46,6 +46,9 @@ public struct Menu: Codable, Hashable, Identifiable {
         menus.append(.init(id: 7, name: "Voting & Events", desc: "Voting & Events", iconName: "mobile.fill"))
         menus.append(.init(id: 7, name: "Online Payment", desc: "Online Payment", iconName: "mobile.fill"))
         menus.append(.init(id: 7, name: "Antivirus", desc: "Antivirus", iconName: "mobile.fill"))
+        menus.append(.init(id: 7, name: "Antivirus", desc: "Antivirus", iconName: "mobile.fill"))
+        menus.append(.init(id: 8, name: "Antivirus", desc: "Antivirus", iconName: "mobile.fill"))
+        menus.append(.init(id: 9, name: "Antivirus", desc: "Antivirus", iconName: "mobile.fill"))
         return menus
     }
 }

@@ -10,5 +10,6 @@ import SwiftUI
 public struct StatementScreen: View {
     public var body: some View {
         Text("Statement")
+            .toolbar { HomeToolbarView() }
     }
 }

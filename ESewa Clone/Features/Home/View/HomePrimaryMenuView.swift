@@ -30,6 +30,7 @@ public struct HomePrimaryMenuView: View {
         VStack {
             Image(systemName: icon)
                 .toNavigationIcon()
+                .tint(.green)
             
             Text(title)
                 .font(.system(size: 15))

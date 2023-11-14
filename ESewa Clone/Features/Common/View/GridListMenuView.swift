@@ -28,6 +28,7 @@ public struct GridListItemMenuView: View {
         VStack {
             Image(systemName: "house.fill")
                 .toNavigationIcon()
+                .foregroundColor(.green)
             
             Text(menu.name ?? "")
                 .font(.system(size: 15))

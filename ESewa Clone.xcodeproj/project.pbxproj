@@ -22,6 +22,7 @@
 		A33AD6A52B00BFCF005A09AC /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AD6A42B00BFCF005A09AC /* HomeScreen.swift */; };
 		A33AD6A82B00C26E005A09AC /* StatementScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AD6A72B00C26E005A09AC /* StatementScreen.swift */; };
 		A33AD6AB2B00C298005A09AC /* SupportScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AD6AA2B00C298005A09AC /* SupportScreen.swift */; };
+		A37415B52B036E89007D1ECA /* HomeToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37415B42B036E89007D1ECA /* HomeToolbarView.swift */; };
 		A394A7722B0208D90030AAF1 /* HomeScreenViewTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A394A7712B0208D90030AAF1 /* HomeScreenViewTypes.swift */; };
 		A394A7762B020DB50030AAF1 /* GridListMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A394A7752B020DB50030AAF1 /* GridListMenuView.swift */; };
 		A394A7792B020DE70030AAF1 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A394A7782B020DE70030AAF1 /* Menu.swift */; };
@@ -69,6 +70,7 @@
 		A33AD6A42B00BFCF005A09AC /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		A33AD6A72B00C26E005A09AC /* StatementScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementScreen.swift; sourceTree = "<group>"; };
 		A33AD6AA2B00C298005A09AC /* SupportScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportScreen.swift; sourceTree = "<group>"; };
+		A37415B42B036E89007D1ECA /* HomeToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeToolbarView.swift; sourceTree = "<group>"; };
 		A394A7712B0208D90030AAF1 /* HomeScreenViewTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewTypes.swift; sourceTree = "<group>"; };
 		A394A7752B020DB50030AAF1 /* GridListMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridListMenuView.swift; sourceTree = "<group>"; };
 		A394A7782B020DE70030AAF1 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 			children = (
 				A3ECAED22B01149F00CA8E32 /* HomePrimaryMenuView.swift */,
 				A33AD6A42B00BFCF005A09AC /* HomeScreen.swift */,
+				A37415B42B036E89007D1ECA /* HomeToolbarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				A33AD66A2B009818005A09AC /* ESewa_CloneApp.swift in Sources */,
 				A33AD6A52B00BFCF005A09AC /* HomeScreen.swift in Sources */,
 				A394A77E2B02171C0030AAF1 /* MenuShapeViewModifier.swift in Sources */,
+				A37415B52B036E89007D1ECA /* HomeToolbarView.swift in Sources */,
 				A33AD69B2B009887005A09AC /* Router.swift in Sources */,
 				A394A7792B020DE70030AAF1 /* Menu.swift in Sources */,
 				A394A7812B021DA50030AAF1 /* TypeAlias.swift in Sources */,
