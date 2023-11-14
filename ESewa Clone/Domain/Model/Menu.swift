@@ -9,13 +9,19 @@ public struct Menu: Codable, Hashable, Identifiable {
     public var id: Int?
     public var name: String?
     public var desc: String?
-    public var iconUrl: String? // remote
     public var iconName: String? // local
+    public var iconUrl: String? // remote
     
     public init(id: Int, name: String, desc: String, iconName: String) {
         self.name = name
         self.desc = desc
         self.iconName = iconName
+    }
+    
+    public init(id: Int, name: String, desc: String, iconUrl: String) {
+        self.name = name
+        self.desc = desc
+        self.iconUrl = iconUrl
     }
     
     public init() {}
@@ -51,12 +57,12 @@ public struct Menu: Codable, Hashable, Identifiable {
     
     public static var offerMenus: [Menu] {
         var menus: [Menu] = []
-        menus.append(.init(id: 0, name: "Form Builder", desc: "Topup", iconName: "mobile.fill"))
-        menus.append(.init(id: 1, name: "Electricity NEA", desc: "Electricity", iconName: "mobile.fill"))
-        menus.append(.init(id: 2, name: "Khanepani Water", desc: "Khanepani", iconName: "mobile.fill"))
-        menus.append(.init(id: 3, name: "eSewa Care", desc: "eSewa Care", iconName: "mobile.fill"))
-        menus.append(.init(id: 4, name: "Tihar Daskhina", desc: "Tihar Daskhina", iconName: "mobile.fill"))      
-        menus.append(.init(id: 9, name: "Antivirus Software", desc: "Antivirus", iconName: "mobile.fill"))
+        menus.append(.init(id: 0, name: "School Fees Money", desc: "Topup", iconUrl: "mobile.fill"))
+        menus.append(.init(id: 1, name: "College Fees Transfer", desc: "Electricity", iconUrl: "mobile.fill"))
+        menus.append(.init(id: 2, name: "Khanepani Water", desc: "Khanepani", iconUrl: "mobile.fill"))
+        menus.append(.init(id: 3, name: "eSewa Care Community", desc: "eSewa Care", iconUrl: "mobile.fill"))
+        menus.append(.init(id: 4, name: "Tihar Daskhina", desc: "Tihar Daskhina", iconUrl: "mobile.fill"))
+        menus.append(.init(id: 9, name: "Antivirus Software", desc: "Antivirus", iconUrl: "mobile.fill"))
         return menus
     }
 }

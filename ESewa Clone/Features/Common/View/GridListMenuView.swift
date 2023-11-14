@@ -11,15 +11,13 @@ public struct GridListMenuView: View {
     public var menus: [Menu]
     
     public var body: some View {
-        let columns = Array(repeating: GridItem(.adaptive(minimum: 80), spacing: 10), count: 4)
+        let columns = Array(repeating: GridItem(.adaptive(minimum: 80), spacing: 12), count: 4)
         
-        VStack(alignment: .leading) {
-            LazyVGrid(columns: columns, spacing: 20) {
-                ForEach(menus, id: \.self) { each in
-                    GridListItemMenuView(menu: each)
-                }
-            }.modifier(MenuShapeViewModifier())
-        }
+        LazyVGrid(columns: columns, spacing: 20) {
+            ForEach(menus, id: \.self) { each in
+                GridListItemMenuView(menu: each)
+            }
+        }.modifier(GridMenuShapeViewModifier())
     }
 }
 

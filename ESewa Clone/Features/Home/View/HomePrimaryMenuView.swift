@@ -10,7 +10,7 @@ import SwiftUI
 public struct HomePrimaryMenuView: View {
         
     public var body: some View {
-        HStack(spacing: 16) {
+        HStack(spacing: 14) {
             verticalMenuView(title: "Load Money", icon: "house.fill")
                 .frame(maxWidth: .infinity)
             
@@ -20,7 +20,7 @@ public struct HomePrimaryMenuView: View {
             verticalMenuView(title: "Bank Transfer", icon: "bell.fill")
                 .frame(maxWidth: .infinity)
 
-            verticalMenuView(title: "Remittance", icon: "bell.fill")
+            verticalMenuView(title: "Use Remittance", icon: "bell.fill")
                 .frame(maxWidth: .infinity)
         }.modifier(MenuShapeViewModifier())
     }

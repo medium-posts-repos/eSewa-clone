@@ -16,8 +16,8 @@ public struct MenuListMoreView: View {
     }
     
     public var body: some View {
-        VStack(spacing: 18) {
-            HStack(alignment: .top) {
+        VStack(alignment: .leading, spacing: 14) {
+            HStack {
                 Text("Offers")
                 Spacer()
                 Button(action: {}) {
@@ -49,5 +49,6 @@ public struct MenuListMoreView: View {
             }.scrollIndicators(.never)
         }
         .modifier(MenuShapeViewModifier())
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
