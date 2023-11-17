@@ -11,7 +11,7 @@ public struct HomePrimaryMenuView: View {
         
     public var body: some View {
         HStack(spacing: 14) {
-            verticalMenuView(title: "Load Money", icon: "house.fill")
+            verticalMenuView(title: "Loads Money", icon: "house.fill")
                 .frame(maxWidth: .infinity)
             
             verticalMenuView(title: "Send Money", icon: "bell.fill")
