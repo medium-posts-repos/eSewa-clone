@@ -30,7 +30,7 @@ public struct DashboardScreen: View {
                         Text("Notification")
                     }
                 case 2:
-                    ToolbarItem(placement: .navigationBarLeading) {
+                    ToolbarItem(placement: .principal) {
                         Text("Statement")
                     }
                 default:
@@ -39,7 +39,7 @@ public struct DashboardScreen: View {
                     }
                 }
             }
-        }.edgesIgnoringSafeArea(.bottom)
+        }
     }
     
     @ViewBuilder
@@ -58,7 +58,7 @@ public struct DashboardScreen: View {
                 .tabItem { Text("Statement") }
                 .tag(1)
         
-        StatementScreen()
+        HelpAndSupportScreen()
             .tabItem({
                 Image(systemName: "text.bubble")
             })

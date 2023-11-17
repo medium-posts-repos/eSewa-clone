@@ -65,4 +65,13 @@ public struct Menu: Codable, Hashable, Identifiable {
         menus.append(.init(id: 9, name: "Antivirus Software", desc: "Antivirus", iconUrl: "mobile.fill"))
         return menus
     }
+    
+    public static var helpAndSupportMenus: [Menu] {
+        return [
+            .init(id: 0, name: "Meroshare / Demat", desc: "Payment not updated, Double Payment", iconUrl: "mobile.fill"),
+            .init(id: 1, name: "Mobile Top-up", desc: "Mistake Top-up, Amount not updated", iconUrl: "mobile.fill"),
+            .init(id: 2, name: "Account Link", desc: "Unable to link", iconUrl: "mobile.fill"),
+            .init(id: 3, name: "Government Payment", desc: "Amount not updated, Mistake payment", iconUrl: "mobile.fill")
+        ]
+    }
 }
