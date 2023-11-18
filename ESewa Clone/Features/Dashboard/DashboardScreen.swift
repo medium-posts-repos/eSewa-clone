@@ -31,7 +31,7 @@ public struct DashboardScreen: View {
                     }
                 case 2:
                     ToolbarItem(placement: .principal) {
-                        Text("Statement")
+                        Text("Help and Support")
                     }
                 default:
                     ToolbarItem(placement: .navigationBarTrailing) {
@@ -62,7 +62,7 @@ public struct DashboardScreen: View {
             .tabItem({
                 Image(systemName: "text.bubble")
             })
-            .tabItem { Text("Support") }
+            .tabItem { Text("Help and Support") }
             .tag(2)
         
         SupportScreen()

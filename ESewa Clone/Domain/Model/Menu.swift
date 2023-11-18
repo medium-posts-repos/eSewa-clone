@@ -13,12 +13,14 @@ public struct Menu: Codable, Hashable, Identifiable {
     public var iconUrl: String? // remote
     
     public init(id: Int, name: String, desc: String, iconName: String) {
+        self.id = id
         self.name = name
         self.desc = desc
         self.iconName = iconName
     }
     
     public init(id: Int, name: String, desc: String, iconUrl: String) {
+        self.id = id
         self.name = name
         self.desc = desc
         self.iconUrl = iconUrl
@@ -72,6 +74,15 @@ public struct Menu: Codable, Hashable, Identifiable {
             .init(id: 1, name: "Mobile Top-up", desc: "Mistake Top-up, Amount not updated", iconUrl: "mobile.fill"),
             .init(id: 2, name: "Account Link", desc: "Unable to link", iconUrl: "mobile.fill"),
             .init(id: 3, name: "Government Payment", desc: "Amount not updated, Mistake payment", iconUrl: "mobile.fill")
+        ]
+    }
+    
+    public static var helpAndFaqsMenus: [Menu] {
+        return [
+            .init(id: 0, name: "My eSewa Account is Temporary Blocked", desc: "If there is a log in attempt in your account with wrong MPIN, your ID will be temporarly blocked for security reasons.", iconUrl: "mobile.fill"),
+            .init(id: 1, name: "I am unable to send/receive SMS to reset my MPIN.", desc: "Don't worry. Foremost, you have to make sure that you have access to the registered SIM number to reset your MPIN.", iconUrl: "mobile.fill"),
+            .init(id: 2, name: "How can I reset my MPIN/Password If I lost my sim card?", desc: "If you don't have the registered SIM card accessible to you then you have to contact our customer service as soon as possible.", iconUrl: "mobile.fill"),
+            .init(id: 3, name: "I forgot my MPIN for esewa. How can I login to my account?", desc: "Don't worry! We will help you to recover your account.", iconUrl: "mobile.fill")
         ]
     }
 }
