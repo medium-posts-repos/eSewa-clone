@@ -9,6 +9,10 @@ import SwiftUI
 
 public struct ProfileScreen: View {
     public var body: some View {
-        Text("Profile Screen")
+        List {
+            Section {
+                
+            }.listRowSeparator(.hidden)
+        }.listStyle(.plain)
     }
 }

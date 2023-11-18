@@ -34,6 +34,8 @@
 		A394A77E2B02171C0030AAF1 /* MenuShapeViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A394A77D2B02171C0030AAF1 /* MenuShapeViewModifier.swift */; };
 		A394A7812B021DA50030AAF1 /* TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = A394A7802B021DA50030AAF1 /* TypeAlias.swift */; };
 		A394A7842B021F930030AAF1 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A394A7832B021F930030AAF1 /* ProfileScreen.swift */; };
+		A3B3EF602B088F5C00392609 /* MoreHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B3EF5F2B088F5C00392609 /* MoreHeaderView.swift */; };
+		A3B3EF642B0895EE00392609 /* MoreScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B3EF632B0895EE00392609 /* MoreScreen.swift */; };
 		A3BCD6162B087827000CD081 /* HelpAndFaqListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BCD6152B087827000CD081 /* HelpAndFaqListView.swift */; };
 		A3BCD6182B08791D000CD081 /* UIEdgeInsetsExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BCD6172B08791D000CD081 /* UIEdgeInsetsExt.swift */; };
 		A3ECAED12B00FB3E00CA8E32 /* ImageExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ECAED02B00FB3E00CA8E32 /* ImageExt.swift */; };
@@ -89,6 +91,8 @@
 		A394A77D2B02171C0030AAF1 /* MenuShapeViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuShapeViewModifier.swift; sourceTree = "<group>"; };
 		A394A7802B021DA50030AAF1 /* TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAlias.swift; sourceTree = "<group>"; };
 		A394A7832B021F930030AAF1 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
+		A3B3EF5F2B088F5C00392609 /* MoreHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreHeaderView.swift; sourceTree = "<group>"; };
+		A3B3EF632B0895EE00392609 /* MoreScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreScreen.swift; sourceTree = "<group>"; };
 		A3BCD6152B087827000CD081 /* HelpAndFaqListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpAndFaqListView.swift; sourceTree = "<group>"; };
 		A3BCD6172B08791D000CD081 /* UIEdgeInsetsExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsetsExt.swift; sourceTree = "<group>"; };
 		A3ECAED02B00FB3E00CA8E32 /* ImageExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExt.swift; sourceTree = "<group>"; };
@@ -212,6 +216,7 @@
 		A33AD69E2B009989005A09AC /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				A3B3EF612B0895C100392609 /* More */,
 				A37415B82B03D3AC007D1ECA /* Products */,
 				A394A7822B021F860030AAF1 /* Profile */,
 				A394A7732B020D8E0030AAF1 /* Common */,
@@ -362,9 +367,34 @@
 		A394A7822B021F860030AAF1 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				A3B3EF5E2B088F5100392609 /* View */,
 				A394A7832B021F930030AAF1 /* ProfileScreen.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		A3B3EF5E2B088F5100392609 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A3B3EF612B0895C100392609 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				A3B3EF622B0895C600392609 /* View */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		A3B3EF622B0895C600392609 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A3B3EF5F2B088F5C00392609 /* MoreHeaderView.swift */,
+				A3B3EF632B0895EE00392609 /* MoreScreen.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		A3ECAECE2B00FB1E00CA8E32 /* Utils */ = {
@@ -527,6 +557,7 @@
 				A394A7842B021F930030AAF1 /* ProfileScreen.swift in Sources */,
 				A33AD6992B009887005A09AC /* NavigationRoutePath.swift in Sources */,
 				A33AD66C2B009818005A09AC /* ContentView.swift in Sources */,
+				A3B3EF602B088F5C00392609 /* MoreHeaderView.swift in Sources */,
 				A394A7762B020DB50030AAF1 /* GridListMenuView.swift in Sources */,
 				A33AD69A2B009887005A09AC /* RouteDestination.swift in Sources */,
 				A33AD66A2B009818005A09AC /* ESewa_CloneApp.swift in Sources */,
@@ -534,6 +565,7 @@
 				A37415BD2B03D553007D1ECA /* Product.swift in Sources */,
 				A394A77E2B02171C0030AAF1 /* MenuShapeViewModifier.swift in Sources */,
 				A37415B52B036E89007D1ECA /* HomeToolbarView.swift in Sources */,
+				A3B3EF642B0895EE00392609 /* MoreScreen.swift in Sources */,
 				A33AD69B2B009887005A09AC /* Router.swift in Sources */,
 				A394A7792B020DE70030AAF1 /* Menu.swift in Sources */,
 				A394A7812B021DA50030AAF1 /* TypeAlias.swift in Sources */,
