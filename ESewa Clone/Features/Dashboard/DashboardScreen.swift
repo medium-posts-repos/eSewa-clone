@@ -65,7 +65,7 @@ public struct DashboardScreen: View {
             .tabItem { Text("Help and Support") }
             .tag(2)
         
-        SupportScreen()
+        MoreScreen()
             .tabItem({
                 Image(systemName: "qrcode")
             })
