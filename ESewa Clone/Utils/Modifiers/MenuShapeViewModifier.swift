@@ -9,10 +9,16 @@ import SwiftUI
 
 struct MenuShapeViewModifier: ViewModifier {
     @Environment(\.colorScheme) var colorScheme
+    
+    public var padding: CGFloat = 14
+    
+    public init(padding: CGFloat = 14) {
+        self.padding = padding
+    }
 
     func body(content: Content) -> some View {
         content
-            .padding(.all, 14)
+            .padding(.all, padding)
             .background(
                 RoundedRectangle(cornerRadius: 16)
                     .foregroundColor(colorScheme == .dark ? Color(hex: 0x1c252e) : Color(hex: 0xf5f5f5))
