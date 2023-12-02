@@ -22,16 +22,22 @@ public struct GenericFormScreen: View  {
     }
     
     public var body: some View {
-        ScrollView {
-            ForEach(formFields, id: \.self) { each in
-                switch each.type {
-                case .TEXT:
-                    provideTextField(field: each)
-                default:
-                    EmptyView()
-                }
+        List {
+            Section {
+                VStack(spacing: 22) {
+                    ForEach(formFields, id: \.self) { each in
+                        switch each.type {
+                        case .TEXT:
+                            provideTextField(field: each)
+                        default:
+                            EmptyView()
+                        }
+                    }
+                }.modifier(MenuShapeViewModifier(padding: 14))
             }
-        }
+            .listRowSeparator(.hidden)
+
+        }.listStyle(.plain)
     }
 }
 
@@ -39,10 +45,12 @@ public struct GenericFormScreen: View  {
 extension GenericFormScreen {
     
     private func provideTextField(field: FormFieldModel) -> some View {
-        VStack {
+        VStack(alignment: .leading, spacing: 6) {
+            Text(field.label ?? "")
+                .font(.subheadline)
             FormTextFieldView(formField: field)
-                .padding()
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .modifier(FormFieldViewModifier())
+                .clipShape(RoundedRectangle(cornerRadius: 8))
         }
     }
 }

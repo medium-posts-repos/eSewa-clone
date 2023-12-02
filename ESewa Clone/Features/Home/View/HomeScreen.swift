@@ -62,7 +62,7 @@ extension HomeScreen {
         formViewModel.fetchForm(code: RouteConstants.ROUTE_ELECTRICITY, completion: { data in
             var destination = RouteDestination(routeMenu: menu)
             destination.formFields = data
-            self.router.route(menu: RouteDestination(routeMenu: menu))
+            self.router.route(menu: destination)
         })
     }
 }

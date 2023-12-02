@@ -30,19 +30,16 @@ public extension Router {
     }
     
     func formBuilder(formMenu: RouteDestination) {
-        Task { @MainActor [weak self] in
-//            do {
-                let formFields = await FormData().build(menu: formMenu.routeMenu)
+        guard let formFields = formMenu.formFields, !formFields.isEmpty else {
+            Task { @MainActor [weak self] in
                 var updatedFormMenu = formMenu
+                let formFields = await FormData().build(menu: formMenu.routeMenu)
                 updatedFormMenu.formFields = formFields
                 self?.route(formMenu: updatedFormMenu)
-//            } catch let error {
-//                print("Error \(error)")
-//            }
-        }.store(in: &cancellables)
+            }
+            return
+        }
         
-        // approaches for async calls and task cancellations
-        // 1. &cancellables(recommended)
-        // 2. use global var task: Task<Void, Never>? for simple usecases
+        route(formMenu: formMenu)
     }
 }
