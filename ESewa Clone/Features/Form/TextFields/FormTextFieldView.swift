@@ -33,9 +33,10 @@ struct FormTextFieldView: View {
             self.delegate?.onTextChanged(field: formField, text: $0)
         })
         
-        TextField("Enter text", text: binding)
+        TextField(formField.hint ?? "", text: binding)
+            .keyboardType(formField.type == .AMOUNT ? .decimalPad : .default)
             .padding(.all, 12)
             .overlay(RoundedRectangle(cornerRadius: 6)
-                .strokeBorder(Color.black, style: StrokeStyle(lineWidth: 0.0)))
+            .strokeBorder(Color.black, style: StrokeStyle(lineWidth: 0.0)))
     }
 }

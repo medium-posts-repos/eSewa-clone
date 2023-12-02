@@ -27,7 +27,7 @@ public struct GenericFormScreen: View  {
                 VStack(spacing: 22) {
                     ForEach(formFields, id: \.self) { each in
                         switch each.type {
-                        case .TEXT:
+                        case .TEXT, .AMOUNT:
                             provideTextField(field: each)
                         default:
                             EmptyView()
