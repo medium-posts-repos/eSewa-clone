@@ -58,7 +58,7 @@ public class NetworkService: NetworkServiceProtocol {
                 AppLogger.d("\(_params)\n\(customHeaders)\n")
             }
         } catch {
-            
+            AppLogger.e("Error in request ....")
         }
     
         let encoding: ParameterEncoding = method == .get ? URLEncoding(destination: .queryString) : JSONEncoding.default

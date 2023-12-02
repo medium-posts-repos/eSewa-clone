@@ -16,7 +16,7 @@ public protocol RoutableIntentProtocol: Hashable {
 public struct RouteDestination: RoutableIntentProtocol {
     public var routeMenu: MenuModel?
     public var routeCode: String?
-    public var formFields: [FormField]?
+    public var formFields: [FormFieldModel]?
     
     public var routingCode: String? {
         get {

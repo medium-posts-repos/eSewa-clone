@@ -10,15 +10,15 @@ import DomainPackage
 import FormPackage
 
 public protocol FormFieldTextDelegate: Protocol {
-    func onTextChanged(field: FormField, text: String)
+    func onTextChanged(field: FormFieldModel, text: String)
 }
 
 struct FormTextFieldView: View {
     @State private var textInput: String = ""
     
-    public let formField: FormField
+    public let formField: FormFieldModel
     
-    public init(formField: FormField) {
+    public init(formField: FormFieldModel) {
         self.formField = formField
     }
     

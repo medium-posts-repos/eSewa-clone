@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  
+//
 //
 //  Created by swornim-shah on 02/12/2023.
 //
@@ -20,7 +20,7 @@ public enum FormFieldType {
     case TEXT_AREA
 }
 
-public final class FormField: Hashable, Identifiable {
+public final class FormFieldModel: Hashable, Identifiable {
     public var hashId: UUID
     public var tag: String?
     public var regex: String?
@@ -37,7 +37,7 @@ public final class FormField: Hashable, Identifiable {
     }
     
     // Equatable conformance (required by Hashable)
-    public static func == (lhs: FormField, rhs: FormField) -> Bool {
+    public static func == (lhs: FormFieldModel, rhs: FormFieldModel) -> Bool {
         return lhs.hashId == rhs.hashId
     }
 }

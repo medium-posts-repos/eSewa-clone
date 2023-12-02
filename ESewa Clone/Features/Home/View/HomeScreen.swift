@@ -7,10 +7,13 @@
 
 import SwiftUI
 import DomainPackage
+import NetworkPackage
 
 public struct HomeScreen: View {
     
     public let router: Router
+    
+    private let formViewModel = AppFactory.shared.vmFactory.providesFormViewModel()
         
     private let viewTypes: [HomeScreenViewType] = [
         .primaryMenuView,
@@ -56,7 +59,11 @@ public struct HomeScreen: View {
 //MARK: View Events
 extension HomeScreen {
     func onGridListMenuClicked(menu: MenuModel) {
-        router.route(menu: RouteDestination(routeMenu: menu))
+        formViewModel.fetchForm(code: RouteConstants.ROUTE_ELECTRICITY, completion: { data in
+            var destination = RouteDestination(routeMenu: menu)
+            destination.formFields = data
+            self.router.route(menu: RouteDestination(routeMenu: menu))
+        })
     }
 }
 
