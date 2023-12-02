@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import DomainPackage
 
 public struct HelpAndSupportScreen: View {
     public var body: some View {
@@ -36,7 +37,7 @@ public struct HelpAndSupportScreen: View {
     @ViewBuilder
     func serviceOptionViews() -> some View {
         let columns = Array(repeating: GridItem(.flexible(), spacing: 4), count: 2)
-        let menus = Menu.helpAndSupportMenus
+        let menus = MenuModel.helpAndSupportMenus
         let itemSize = (UIScreen.main.bounds.width - 52)/2 - 12
         
         LazyVGrid(columns: columns, spacing: 8) {

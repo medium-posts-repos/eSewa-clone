@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import DomainPackage
 
 public struct DashboardScreen: View {
     
@@ -44,7 +45,7 @@ public struct DashboardScreen: View {
     
     @ViewBuilder
     private func renderTabScreen() -> some View {
-        HomeScreen()
+        HomeScreen(router: router)
             .tabItem({
                 Image(systemName: "house")
             })

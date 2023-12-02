@@ -9,3 +9,5 @@ import Foundation
 
 public typealias VoidCallback = () -> Void
 public typealias TypeCallback<T> = (T) -> Void
+
+public typealias RequestParams = [String: Any]

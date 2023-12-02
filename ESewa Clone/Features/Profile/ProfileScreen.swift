@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import DomainPackage
 
 public struct ProfileScreen: View {
     public var body: some View {
@@ -22,7 +23,7 @@ public struct ProfileScreen: View {
             }.listRowSeparator(.hidden)
             
             Section {
-                MenuIconDescListView(menus: Menu.dashboardMenus, spacing: 20)
+                MenuIconDescListView(menus: MenuModel.dashboardMenus, spacing: 20)
                     .frame(maxWidth: .infinity)
                     .modifier(MenuShapeViewModifier())
             }.listRowSeparator(.hidden)

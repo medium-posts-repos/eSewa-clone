@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import DomainPackage
 
 public struct HorizontalProductPagerView: View {
     

@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import DomainPackage
 
 public struct GridListMenuView: View {
-    public var menus: [Menu]
+    public var menus: [MenuModel]
+    
+    public var onItemClick: TypeCallback<MenuModel>?
     
     public var body: some View {
         let columns = Array(repeating: GridItem(.adaptive(minimum: 80), spacing: 12), count: 4)
@@ -16,13 +19,16 @@ public struct GridListMenuView: View {
         LazyVGrid(columns: columns, spacing: 20) {
             ForEach(menus, id: \.self) { each in
                 GridListItemMenuView(menu: each)
+                    .onTapGesture {
+                        self.onItemClick?(each)
+                    }
             }
         }.modifier(GridMenuShapeViewModifier())
     }
 }
 
 public struct GridListItemMenuView: View {
-    public var menu: Menu
+    public var menu: MenuModel
     
     public var body: some View {
         VStack {

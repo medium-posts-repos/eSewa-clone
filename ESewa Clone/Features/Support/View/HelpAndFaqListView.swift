@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import DomainPackage
 
 public struct HelpAndFaqListView: View {
     public var body: some View {
@@ -18,7 +19,7 @@ public struct HelpAndFaqListView: View {
             }
             
             ScrollView {
-                ForEach(Menu.helpAndFaqsMenus, id: \.id) { each in
+                ForEach(MenuModel.helpAndFaqsMenus, id: \.id) { each in
                     HelpAndFaqItemView(menu: each)
                 }
             }
@@ -34,9 +35,9 @@ public struct HelpAndFaqListView: View {
 }
 
 public struct HelpAndFaqItemView: View {
-    public var menu: Menu
+    public var menu: MenuModel
     
-    public init(menu: Menu) {
+    public init(menu: MenuModel) {
         self.menu = menu
     }
     

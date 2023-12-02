@@ -6,22 +6,27 @@
 //
 
 import SwiftUI
+import DomainPackage
+import FormPackage
 
-public extension View {
-    func setupRouteDestination() -> some View {
-            navigationDestination(for: RouteDestination.self) { destination in
-                switch destination.routeCode {
-                case RouteCodeNavigator.ROUTE_PRIVATE_PROFILE:
-                    EmptyView()
-                case RouteCodeNavigator.ROUTE_NOTIFICATION:
-                    EmptyView()
-                case RouteCodeNavigator.ROUTE_DASHBOARD:
-                    EmptyView()
-                        .navigationTitle("Snap Paisa")
-                        .navigationBarBackButtonHidden()                    
-                default:
-                    EmptyView()
-                }
-            }
+public protocol RoutableIntentProtocol: Hashable {
+    var routeCode: String? { get set }
+}
+
+public struct RouteDestination: RoutableIntentProtocol {
+    public var routeMenu: MenuModel?
+    public var routeCode: String?
+    public var formFields: [FormField]?
+    
+    public var routingCode: String? {
+        get {
+            routeCode ?? routeMenu?.code
+        }
+    }
+    
+    public var routingTitle: String? {
+        get {
+            routeMenu?.name
+        }
     }
 }

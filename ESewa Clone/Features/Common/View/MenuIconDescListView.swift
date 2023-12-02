@@ -6,14 +6,15 @@
 //
 
 import SwiftUI
+import DomainPackage
 
 public struct MenuIconDescListView: View {
     
     public var spacing: CGFloat = 0
     
-    public var menus: [Menu]
+    public var menus: [MenuModel]
     
-    public init(menus: [Menu], spacing: CGFloat = 0) {
+    public init(menus: [MenuModel], spacing: CGFloat = 0) {
         self.menus = menus
         self.spacing = spacing
     }
@@ -29,9 +30,9 @@ public struct MenuIconDescListView: View {
 }
 
 public struct MenuIconDescItemView: View {
-    public var menu: Menu
+    public var menu: MenuModel
     
-    public init(menu: Menu) {
+    public init(menu: MenuModel) {
         self.menu = menu
     }
     

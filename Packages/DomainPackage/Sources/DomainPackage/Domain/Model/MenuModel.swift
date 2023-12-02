@@ -5,15 +5,30 @@
 //  Created by swornim-shah on 13/11/2023.
 //
 
-public struct Menu: Codable, Hashable, Identifiable {
+import Foundation
+
+public struct MenuModel: Codable, Hashable, Identifiable {
     public var id: Int?
+    public var code: String?
     public var name: String?
     public var desc: String?
     public var iconName: String? // local
     public var iconUrl: String? // remote
     
+    public init(code: String?) {
+        self.code = code
+    }
+    
     public init(id: Int, name: String, desc: String, iconName: String) {
         self.id = id
+        self.name = name
+        self.desc = desc
+        self.iconName = iconName
+    }
+    
+    public init(id: Int, code: String, name: String, desc: String, iconName: String) {
+        self.id = id
+        self.code = code
         self.name = name
         self.desc = desc
         self.iconName = iconName
@@ -28,10 +43,10 @@ public struct Menu: Codable, Hashable, Identifiable {
     
     public init() {}
     
-    public static var dashboardMenus: [Menu] {
-        var menus: [Menu] = []
+    public static var dashboardMenus: [MenuModel] {
+        var menus: [MenuModel] = []
         menus.append(.init(id: 0, name: "Form Builder", desc: "Topup", iconName: "mobile.fill"))
-        menus.append(.init(id: 1, name: "Electricity NEA", desc: "Electricity", iconName: "mobile.fill"))
+        menus.append(.init(id: 1, code: MenuConstants.ELECTRICITY, name: "Electricity NEA", desc: "Electricity", iconName: "mobile.fill"))
         menus.append(.init(id: 2, name: "Khanepani Water", desc: "Khanepani", iconName: "mobile.fill"))
         menus.append(.init(id: 3, name: "eSewa Care", desc: "eSewa Care", iconName: "mobile.fill"))
         menus.append(.init(id: 4, name: "Tihar Daskhina", desc: "Tihar Daskhina", iconName: "mobile.fill"))
@@ -57,8 +72,8 @@ public struct Menu: Codable, Hashable, Identifiable {
         return menus
     }
     
-    public static var offerMenus: [Menu] {
-        var menus: [Menu] = []
+    public static var offerMenus: [MenuModel] {
+        var menus: [MenuModel] = []
         menus.append(.init(id: 0, name: "School Fees Money", desc: "Topup", iconUrl: "mobile.fill"))
         menus.append(.init(id: 1, name: "College Fees Transfer", desc: "Electricity", iconUrl: "mobile.fill"))
         menus.append(.init(id: 2, name: "Khanepani Water", desc: "Khanepani", iconUrl: "mobile.fill"))
@@ -68,7 +83,7 @@ public struct Menu: Codable, Hashable, Identifiable {
         return menus
     }
     
-    public static var helpAndSupportMenus: [Menu] {
+    public static var helpAndSupportMenus: [MenuModel] {
         return [
             .init(id: 0, name: "Meroshare / Demat", desc: "Payment not updated, Double Payment", iconUrl: "mobile.fill"),
             .init(id: 1, name: "Mobile Top-up", desc: "Mistake Top-up, Amount not updated", iconUrl: "mobile.fill"),
@@ -77,7 +92,7 @@ public struct Menu: Codable, Hashable, Identifiable {
         ]
     }
     
-    public static var helpAndFaqsMenus: [Menu] {
+    public static var helpAndFaqsMenus: [MenuModel] {
         return [
             .init(id: 0, name: "My eSewa Account is Temporary Blocked", desc: "If there is a log in attempt in your account with wrong MPIN, your ID will be temporarly blocked for security reasons.", iconUrl: "mobile.fill"),
             .init(id: 1, name: "I am unable to send/receive SMS to reset my MPIN.", desc: "Don't worry. Foremost, you have to make sure that you have access to the registered SIM number to reset your MPIN.", iconUrl: "mobile.fill"),
