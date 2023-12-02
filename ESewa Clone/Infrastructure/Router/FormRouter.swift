@@ -25,7 +25,8 @@ public extension Router {
             GenericFormScreen(formFields: destination.formFields ?? [])
                 .navigationTitle(destination.routingTitle ?? "")
         default:
-           EmptyView()
+            GenericFormScreen(formFields: destination.formFields ?? [])
+                .navigationTitle(destination.routingTitle ?? "")
         }
     }
     
