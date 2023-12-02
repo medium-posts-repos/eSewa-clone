@@ -21,10 +21,19 @@ struct MenuShapeViewModifier: ViewModifier {
             .padding(.all, padding)
             .background(
                 RoundedRectangle(cornerRadius: 16)
-                    .foregroundColor(colorScheme == .dark ? Color(hex: 0x1c252e) : Color(hex: 0xf5f5f5))
+                    .foregroundColor(colorScheme == .dark ? Color(hex: 0x0e1116) : Color(hex: 0xf5f5f5))
 
             )
 
+    }
+}
+
+struct FormFieldViewModifier: ViewModifier {
+    @Environment(\.colorScheme) var colorScheme
+
+    func body(content: Content) -> some View {
+        content
+            .background(colorScheme == .dark ? Color(hex: 0x2b3846) : Color(hex: 0xf5f5f5))
     }
 }
 

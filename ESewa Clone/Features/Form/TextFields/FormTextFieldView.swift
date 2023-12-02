@@ -34,5 +34,8 @@ struct FormTextFieldView: View {
         })
         
         TextField("Enter text", text: binding)
+            .padding(.all, 12)
+            .overlay(RoundedRectangle(cornerRadius: 6)
+                .strokeBorder(Color.black, style: StrokeStyle(lineWidth: 0.0)))
     }
 }
