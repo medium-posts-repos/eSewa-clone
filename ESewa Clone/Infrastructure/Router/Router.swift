@@ -6,18 +6,15 @@
 //
 
 import SwiftUI
-
-public protocol RoutableIntentProtocol: Hashable {
-    var routeCode: String? { get set }
-}
-
-public struct RouteDestination: RoutableIntentProtocol, Codable {
-    public var routeCode: String?
-}
+import DomainPackage
+import FormPackage
+import Combine
 
 public class Router: ObservableObject {
     
     @Published var navPath = NavigationRoutePath()
+    
+    public lazy var cancellables: Set<AnyCancellable> = []
 
     @ViewBuilder
     func buildNavigationStack(destination: RouteDestination) -> some View {
@@ -29,17 +26,20 @@ public class Router: ObservableObject {
         case RouteCodeNavigator.ROUTE_DASHBOARD:
             DashboardScreen()
                 .navigationBarBackButtonHidden()
-                
         default:
-            EmptyView()
+            buildFormRouteDestination(destination: destination)
         }
     }
 }
 
-/* route to specific controllers */
+//MARK: route variations
 extension Router {
-    
+
     public func route(menu: RouteDestination) {
+        if routeToFormMiddleware(menu: menu, onNext: { newMenu in
+            routeFormHandler(formMenu: newMenu)
+        }) { return }
+            
         navPath.append(menu)
     }
     

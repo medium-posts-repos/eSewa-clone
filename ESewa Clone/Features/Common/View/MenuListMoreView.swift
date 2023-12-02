@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import DomainPackage
 
 public struct MenuListMoreView: View {
     
-    public var dataSource: [Menu]
+    public var dataSource: [MenuModel]
     
-    public init(dataSource: [Menu]) {
+    public init(dataSource: [MenuModel]) {
         self.dataSource = dataSource
     }
     

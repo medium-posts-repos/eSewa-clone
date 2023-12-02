@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import DomainPackage
 
 public struct HomeScreen: View {
+    
+    public let router: Router
         
     private let viewTypes: [HomeScreenViewType] = [
         .primaryMenuView,
@@ -28,13 +31,13 @@ public struct HomeScreen: View {
                             .listRowSeparator(.hidden)
                     case .secondaryMenuView:
                         Section {
-                            GridListMenuView(menus: Menu.dashboardMenus)
+                            GridListMenuView(menus: MenuModel.dashboardMenus, onItemClick: onGridListMenuClicked(menu:))
                         }.listRowBackground(Color.clear)
                             .listRowSeparator(.hidden)
 
                     case .offerView:
                         Section {
-                            MenuListMoreView(dataSource: Menu.offerMenus)
+                            MenuListMoreView(dataSource: MenuModel.offerMenus)
                         }.listRowBackground(Color.clear)
                             .listRowSeparator(.hidden)
                     case .productView:
@@ -52,9 +55,11 @@ public struct HomeScreen: View {
 
 //MARK: View Events
 extension HomeScreen {
-
+    func onGridListMenuClicked(menu: MenuModel) {
+        router.route(menu: RouteDestination(routeMenu: menu))
+    }
 }
 
 struct HomeScreen_Previews: PreviewProvider {
-    static var previews: some View { HomeScreen() }
+    static var previews: some View { HomeScreen(router: .init()) }
 }
