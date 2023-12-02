@@ -15,9 +15,9 @@ public struct GenericFormScreen: View  {
     // MARK: States
     @State private var textInputs: [String] = []
     
-    public let formFields: [FormField]
+    public let formFields: [FormFieldModel]
     
-    public init(formFields: [FormField]) {
+    public init(formFields: [FormFieldModel]) {
         self.formFields = formFields
     }
     
@@ -38,7 +38,7 @@ public struct GenericFormScreen: View  {
 // MARK: form fields view
 extension GenericFormScreen {
     
-    private func provideTextField(field: FormField) -> some View {
+    private func provideTextField(field: FormFieldModel) -> some View {
         VStack {
             FormTextFieldView(formField: field)
                 .padding()
