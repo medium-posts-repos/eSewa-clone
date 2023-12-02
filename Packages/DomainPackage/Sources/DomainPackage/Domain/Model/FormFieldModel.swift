@@ -7,10 +7,10 @@
 
 import Foundation
 
-public enum FormFieldType {
+public enum FormFieldType: String {
     case TEXT
     case NUMBER
-    case AMOUNT
+    case AMOUNT = "AMOUNT"
     case DROPDOWN
     case SUBMIT
     case CHECKBOX
@@ -25,6 +25,7 @@ public final class FormFieldModel: Hashable, Identifiable {
     public var tag: String?
     public var regex: String?
     public var label: String?
+    public var hint: String?
     public var type: FormFieldType?
     
     public init() {
