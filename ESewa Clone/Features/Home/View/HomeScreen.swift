@@ -52,9 +52,9 @@ public struct HomeScreen: View {
                 }
             }.listStyle(.plain)
                 .padding(.init(top: 0, leading: -14, bottom: 0, trailing: -14)) // TODO: left right , padding issue
-                .modifier(ProgressViewModifier(isLoading: formViewModel.isLoading))
             Spacer()
         }
+        .modifier(ProgressViewModifier(isLoading: formViewModel.isLoading))
         .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
