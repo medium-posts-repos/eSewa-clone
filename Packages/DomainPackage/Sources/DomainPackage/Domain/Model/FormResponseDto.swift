@@ -6,6 +6,8 @@
 
 
 public struct FormItemResponseDto: Codable {
+    public var captionTitle: String?
+    public var captionDesc: String?
     public var label: String?
     public var hint: String?
     public var type: String?
@@ -17,6 +19,8 @@ public struct FormItemResponseDto: Codable {
         get {
             let field = FormFieldModel()
             field.label = label
+            field.captionTitle = captionTitle
+            field.captionDesc = captionDesc
             field.hint = hint
             field.type = FormFieldType.toType(rawValue: type) ?? .TEXT
             field.regex = regex

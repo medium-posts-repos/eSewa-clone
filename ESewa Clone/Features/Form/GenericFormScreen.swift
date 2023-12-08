@@ -11,7 +11,8 @@ import DomainPackage
 import FormPackage
 
 public struct GenericFormScreen: View  {
-    
+    @Environment(\.colorScheme) var colorScheme
+
     // MARK: States
     @State private var textInputs: [String] = []
     
@@ -24,16 +25,21 @@ public struct GenericFormScreen: View  {
     public var body: some View {
         List {
             Section {
-                VStack(spacing: 22) {
+                VStack(alignment: .leading, spacing: 22) {
                     ForEach(formFields, id: \.self) { each in
                         switch each.type {
                         case .TEXT, .AMOUNT:
                             provideTextField(field: each)
+                        case .HEADER_CAPTION:
+                            provideHeaderCaption(field: each)
+                        case .NOTE:
+                            provideNoteField(field: each)
                         default:
                             EmptyView()
                         }
                     }
-                }.modifier(MenuShapeViewModifier(padding: 14))
+                }.frame(maxWidth: .infinity, alignment: .leading)
+                .modifier(MenuShapeViewModifier(padding: 14))
             }
             
             Section {
@@ -64,6 +70,30 @@ extension GenericFormScreen {
                Text("\(field.label ?? "Submit")")
            })
            .buttonStyle(FillButtonStyle())
+        }
+    }
+    
+    fileprivate func provideNoteField(field: FormFieldModel) -> some View {
+        VStack(alignment: .leading) {
+            Text(field.label ?? "")
+                .foregroundColor(.green.opacity(0.9))
+                .multilineTextAlignment(.leading)
+        }.padding(.all, 6)
+            .background(
+                RoundedRectangle(cornerRadius: 6)
+                    .foregroundColor(.green.opacity(0.4))
+            )
+    }
+    
+    fileprivate func provideHeaderCaption(field: FormFieldModel) -> some View {
+        VStack(alignment: .leading) {
+            Text(field.captionTitle ?? "")
+                .fontWeight(.bold)
+                .themeable()
+            Text(field.captionDesc ?? "")
+                .font(.body)
+                .fontWeight(.light)
+                .themeable()
         }
     }
 }

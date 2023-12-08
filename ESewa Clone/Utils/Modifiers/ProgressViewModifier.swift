@@ -16,7 +16,7 @@ struct ProgressViewModifier: ViewModifier {
                 .disabled(isLoading)
             if isLoading {
                 ProgressView()
-                    .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                    .progressViewStyle(CircularProgressViewStyle(tint: .primary))
             }
         }
     }

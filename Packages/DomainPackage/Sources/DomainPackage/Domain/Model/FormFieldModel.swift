@@ -18,6 +18,7 @@ public enum FormFieldType: String, CaseIterable {
     case WEBVIEW
     case NOTE
     case TEXT_AREA
+    case HEADER_CAPTION
     
     static func toType(rawValue: String?) -> FormFieldType? {
         return self.allCases.first{ "\($0)" == rawValue }
@@ -31,6 +32,9 @@ public final class FormFieldModel: Hashable, Identifiable {
     public var label: String?
     public var hint: String?
     public var type: FormFieldType?
+    
+    public var captionTitle: String?
+    public var captionDesc: String?
     
     public init() {
         self.hashId = UUID()
