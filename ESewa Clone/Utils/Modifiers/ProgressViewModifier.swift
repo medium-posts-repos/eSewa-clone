@@ -13,9 +13,10 @@ struct ProgressViewModifier: ViewModifier {
     func body(content: Content) -> some View {
         ZStack(alignment: .center) {
             content
+                .disabled(isLoading)
             if isLoading {
                 ProgressView()
-                    .progressViewStyle(CircularProgressViewStyle(tint: .green))
+                    .progressViewStyle(CircularProgressViewStyle(tint: .white))
             }
         }
     }
