@@ -12,6 +12,7 @@ import FormPackage
 
 public struct GenericFormScreen: View  {
     @Environment(\.colorScheme) var colorScheme
+    @State private var selectedFruitIndex = 0
 
     // MARK: States
     @State private var textInputs: [String] = []
@@ -34,6 +35,8 @@ public struct GenericFormScreen: View  {
                             provideHeaderCaption(field: each)
                         case .NOTE:
                             provideNoteField(field: each)
+                        case .DROPDOWN:
+                            provideDropDownField(field: each)
                         default:
                             EmptyView()
                         }
@@ -86,7 +89,7 @@ extension GenericFormScreen {
     }
     
     fileprivate func provideHeaderCaption(field: FormFieldModel) -> some View {
-        VStack(alignment: .leading) {
+        return VStack(alignment: .leading) {
             Text(field.captionTitle ?? "")
                 .fontWeight(.bold)
                 .themeable()
@@ -94,6 +97,21 @@ extension GenericFormScreen {
                 .font(.body)
                 .fontWeight(.light)
                 .themeable()
+        }
+    }
+    
+    fileprivate func provideDropDownField(field: FormFieldModel) -> some View {
+        let options = field.options ?? []
+//        let options = ["Apple", "Banana", "Orange", "Grapes"]
+        return VStack {
+            Picker(field.label ?? "", selection: $selectedFruitIndex) {
+                ForEach(0..<options.count, id: \.self) { index in
+                    Text(options[index].label ?? "").tag(index)
+//                    Text(options[index]).tag(index)
+                }
+            }
+            .pickerStyle(.menu)
+            .padding()
         }
     }
 }

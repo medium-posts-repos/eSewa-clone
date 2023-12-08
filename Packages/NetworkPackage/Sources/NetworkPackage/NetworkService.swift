@@ -64,6 +64,7 @@ public class NetworkService: NetworkServiceProtocol {
         let encoding: ParameterEncoding = method == .get ? URLEncoding(destination: .queryString) : JSONEncoding.default
         return sessionManager
             .request(request, method: method, parameters: params, encoding: encoding, headers: .init(customHeaders))
+            
             .publishData()
             .tryMap ({ response in
                 

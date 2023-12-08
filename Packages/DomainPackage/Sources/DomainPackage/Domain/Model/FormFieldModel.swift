@@ -36,6 +36,8 @@ public final class FormFieldModel: Hashable, Identifiable {
     public var captionTitle: String?
     public var captionDesc: String?
     
+    public var options: [FormOptionDto]?
+    
     public init() {
         self.hashId = UUID()
     }
