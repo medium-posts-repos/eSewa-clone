@@ -11,11 +11,13 @@ import FormPackage
 
 public protocol RoutableIntentProtocol: Hashable {
     var routeCode: String? { get set }
+    var formFields: [FormFieldModel]? { get set }
 }
 
-public struct RouteDestination: RoutableIntentProtocol {
+public struct RouteIntentDto: RoutableIntentProtocol {
     public var routeMenu: MenuModel?
     public var routeCode: String?
+    
     public var formFields: [FormFieldModel]?
     
     public var routingCode: String? {

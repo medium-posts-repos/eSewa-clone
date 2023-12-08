@@ -18,7 +18,7 @@ public struct FormItemResponseDto: Codable {
             let field = FormFieldModel()
             field.label = label
             field.hint = hint
-            field.type = type == FormFieldType.AMOUNT.rawValue ? .AMOUNT : .TEXT
+            field.type = FormFieldType.toType(rawValue: type) ?? .TEXT
             field.regex = regex
             return field
         }

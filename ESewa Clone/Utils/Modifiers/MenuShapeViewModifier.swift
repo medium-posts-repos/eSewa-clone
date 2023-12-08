@@ -44,10 +44,11 @@ struct GridMenuShapeViewModifier: ViewModifier {
         content
             .padding(.top, 14)
             .padding(.bottom, 14)
+            .padding(.leading, 8)
+            .padding(.trailing, 8)
             .background(
                 RoundedRectangle(cornerRadius: 16)
                     .foregroundColor(colorScheme == .dark ? Color(hex: 0x1c252e) : Color(hex: 0xf5f5f5))
             )
-            .cornerRadius(16)
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum FormFieldType: String {
+public enum FormFieldType: String, CaseIterable {
     case TEXT
     case NUMBER
     case AMOUNT = "AMOUNT"
@@ -18,6 +18,10 @@ public enum FormFieldType: String {
     case WEBVIEW
     case NOTE
     case TEXT_AREA
+    
+    static func toType(rawValue: String?) -> FormFieldType? {
+        return self.allCases.first{ "\($0)" == rawValue }
+    }
 }
 
 public final class FormFieldModel: Hashable, Identifiable {

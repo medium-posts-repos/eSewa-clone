@@ -13,7 +13,8 @@ public struct HomeScreen: View {
     
     public let router: Router
     
-    private let formViewModel = AppFactory.shared.vmFactory.providesFormViewModel()
+    @ObservedObject
+    private var formViewModel = AppFactory.shared.vmFactory.providesFormViewModel()
         
     private let viewTypes: [HomeScreenViewType] = [
         .primaryMenuView,
@@ -51,8 +52,10 @@ public struct HomeScreen: View {
                 }
             }.listStyle(.plain)
                 .padding(.init(top: 0, leading: -14, bottom: 0, trailing: -14)) // TODO: left right , padding issue
+                .modifier(ProgressViewModifier(isLoading: formViewModel.isLoading))
             Spacer()
-        }.frame(maxWidth: .infinity, alignment: .leading)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 
@@ -60,9 +63,9 @@ public struct HomeScreen: View {
 extension HomeScreen {
     func onGridListMenuClicked(menu: MenuModel) {
         formViewModel.fetchForm(code: RouteConstants.ROUTE_ELECTRICITY, completion: { data in
-            var destination = RouteDestination(routeMenu: menu)
+            var destination = RouteIntentDto(routeMenu: menu)
             destination.formFields = data
-            self.router.route(menu: destination)
+          //  self.router.route(menu: destination)
         })
     }
 }

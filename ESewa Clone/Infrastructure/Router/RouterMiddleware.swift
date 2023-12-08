@@ -9,7 +9,7 @@ import DomainPackage
 import FormPackage
 
 public extension Router {
-    func routeToFormMiddleware(menu: RouteDestination, onNext: TypeCallback<RouteDestination>) -> Bool {
+    func routeToFormMiddleware(menu: RouteIntentDto, onNext: TypeCallback<RouteIntentDto>) -> Bool {
         guard let _ = FormMenuConfig.menus.first(where: { $0.code == menu.routingCode }) else {
             return false
         }

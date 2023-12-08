@@ -16,7 +16,7 @@ public struct GenericFormScreen: View  {
     @State private var textInputs: [String] = []
     
     public let formFields: [FormFieldModel]
-    
+        
     public init(formFields: [FormFieldModel]) {
         self.formFields = formFields
     }
@@ -35,6 +35,10 @@ public struct GenericFormScreen: View  {
                     }
                 }.modifier(MenuShapeViewModifier(padding: 14))
             }
+            
+            Section {
+                provideSubmitField(field: .init())
+            }
             .listRowSeparator(.hidden)
 
         }.listStyle(.plain)
@@ -51,6 +55,15 @@ extension GenericFormScreen {
             FormTextFieldView(formField: field)
                 .modifier(FormFieldViewModifier())
                 .clipShape(RoundedRectangle(cornerRadius: 8))
+        }
+    }
+    
+    private func provideSubmitField(field: FormFieldModel) -> some View {
+        VStack(alignment: .leading, spacing: 6) {
+           Button(action: {}, label: {
+               Text("\(field.label ?? "Submit")")
+           })
+           .buttonStyle(FillButtonStyle())
         }
     }
 }

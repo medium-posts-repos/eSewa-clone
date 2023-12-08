@@ -10,16 +10,16 @@ import DomainPackage
 import SwiftUI
 
 public extension Router {
-    func routeFormHandler(formMenu: RouteDestination) {
+    func routeFormHandler(formMenu: RouteIntentDto) {
         formBuilder(formMenu: formMenu)
     }
     
-    private func route(formMenu: RouteDestination) {
+    private func route(formMenu: RouteIntentDto) {
         navPath.append(formMenu)
     }
     
     @ViewBuilder
-    func buildFormRouteDestination(destination: RouteDestination) -> some View {
+    func buildFormRouteDestination(destination: RouteIntentDto) -> some View {
         switch destination.routingCode {
         case MenuConstants.ELECTRICITY:
             GenericFormScreen(formFields: destination.formFields ?? [])
@@ -30,7 +30,7 @@ public extension Router {
         }
     }
     
-    func formBuilder(formMenu: RouteDestination) {
+    func formBuilder(formMenu: RouteIntentDto) {
         guard let formFields = formMenu.formFields, !formFields.isEmpty else {
             Task { @MainActor [weak self] in
                 var updatedFormMenu = formMenu

@@ -13,8 +13,8 @@ struct ESewaApp: App {
     
     @ObservedObject var router = Router()
     
-    private var routeDashboard: RouteDestination {
-        var menu = RouteDestination()
+    private var routeDashboard: RouteIntentDto {
+        var menu = RouteIntentDto()
         menu.routeCode = RouteCodeNavigator.ROUTE_DASHBOARD
         return menu
     }
@@ -32,7 +32,7 @@ struct ESewaApp: App {
                 }
                 .navigationTitle("")
                 .navigationBarTitleDisplayMode(.inline)
-                .navigationDestination(for: RouteDestination.self) { destination in
+                .navigationDestination(for: RouteIntentDto.self) { destination in
                     router.buildNavigationStack(destination: destination)
                 }
             }

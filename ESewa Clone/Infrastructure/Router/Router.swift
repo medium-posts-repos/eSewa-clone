@@ -17,7 +17,7 @@ public class Router: ObservableObject {
     public lazy var cancellables: Set<AnyCancellable> = []
 
     @ViewBuilder
-    func buildNavigationStack(destination: RouteDestination) -> some View {
+    func buildNavigationStack(destination: RouteIntentDto) -> some View {
         switch destination.routeCode {
         case RouteCodeNavigator.ROUTE_PRIVATE_PROFILE:
             ProfileScreen()
@@ -35,7 +35,7 @@ public class Router: ObservableObject {
 //MARK: route variations
 extension Router {
 
-    public func route(menu: RouteDestination) {
+    public func route(menu: RouteIntentDto) {
         if routeToFormMiddleware(menu: menu, onNext: { newMenu in
             routeFormHandler(formMenu: newMenu)
         }) { return }
