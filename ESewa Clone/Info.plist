@@ -2,7 +2,121 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CFBundleShortVersionString</key>
-	<string>1.0.1</string>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>$(DEVELOPMENT_LANGUAGE)</string>
+    <key>CFBundleExecutable</key>
+    <string>$(EXECUTABLE_NAME)</string>
+    <key>CFBundleIdentifier</key>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>$(APP_DISPLAY_NAME)</string>
+    <key>CFBundlePackageType</key>
+    <string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
+    <key>CFBundleShortVersionString</key>
+    <string>6.6.81</string>
+    <key>CFBundleVersion</key>
+    <string>103</string>
+    <key>ITSAppUsesNonExemptEncryption</key>
+    <false/>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>nip.io</key>
+            <dict>
+                <key>NSExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+            </dict>
+        </dict>
+    </dict>
+    <key>NSCalendarsUsageDescription</key>
+    <string>App needs this permission to set reminder that will remind you about your fixed deposits, emis status.</string>
+    <key>NSCameraUsageDescription</key>
+    <string>Camera will be used to scan QR codes across merchant location and you can use it to set profile image for this app.</string>
+    <key>NSContactsUsageDescription</key>
+    <string>Access is required to use phone number service</string>
+    <key>NSFaceIDUsageDescription</key>
+    <string>Your face ID will be used to login to this app.</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>Your location is needed show the locations of bank branches in map.</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Your location is needed show the locations of bank branches in map.</string>
+    <key>NSLocationUsageDescription</key>
+    <string>Your location is needed show the locations of bank branches in map.</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Your location is needed show the locations of bank branches in map.</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Photos will be used to set profile picture in the app.</string>
+    <key>NSRemindersUsageDescription</key>
+    <string>App needs this permission to set reminder that will remind you about your fixed deposits, emis status.</string>
+    <key>SchemeName</key>
+    <string>$(SCHEME_NAME)</string>
+    <key>UIAppFonts</key>
+    <array>
+        <string>light.ttf</string>
+        <string>bold.ttf</string>
+        <string>semibold.ttf</string>
+        <string>medium.ttf</string>
+        <string>regular.ttf</string>
+        <string>ocrastd.otf</string>
+    </array>
+    <key>UIApplicationSceneManifest</key>
+    <dict>
+        <key>UIApplicationSupportsMultipleScenes</key>
+        <false/>
+        <key>UISceneConfigurations</key>
+        <dict>
+            <key>UIWindowSceneSessionRoleApplication</key>
+            <array>
+                <dict>
+                    <key>UISceneConfigurationName</key>
+                    <string>Default Configuration</string>
+                    <key>UISceneDelegateClassName</key>
+                    <string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
+                </dict>
+            </array>
+        </dict>
+    </dict>
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
+    <key>UIRequiredDeviceCapabilities</key>
+    <array>
+        <string>armv7</string>
+    </array>
+    <key>UIStatusBarStyle</key>
+    <string>UIStatusBarStyleLightContent</string>
+    <key>UIStatusBarTintParameters</key>
+    <dict>
+        <key>UINavigationBar</key>
+        <dict>
+            <key>Style</key>
+            <string>UIBarStyleDefault</string>
+            <key>Translucent</key>
+            <false/>
+        </dict>
+    </dict>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+    </array>
+    <key>UISupportedInterfaceOrientations~ipad</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationPortraitUpsideDown</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    <key>UIUserInterfaceStyle</key>
+    <string>Light</string>
+    <key>UIViewControllerBasedStatusBarAppearance</key>
+    <true/>
+    <key>appCore</key>
+    <string>XP-3582-ASBA-feature</string>
 </dict>
 </plist>
