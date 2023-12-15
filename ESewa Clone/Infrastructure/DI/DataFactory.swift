@@ -21,4 +21,8 @@ public final class DataFactory {
     public func provideFormUseCase() -> FormUseCase {
         FormUseCaseImpl(networkService: networkService)
     }
+    
+    public func provideStatementUseCase() -> StatementUseCase {
+        StatementUseCaseImpl(networkService: networkService)
+    }
 }

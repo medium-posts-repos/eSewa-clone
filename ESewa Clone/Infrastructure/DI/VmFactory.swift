@@ -18,4 +18,8 @@ public final class VmFactory {
     public func providesFormViewModel() -> FormViewModel {
         FormViewModel(formUseCase: dataFactory.provideFormUseCase())
     }
+    
+    public func providesStatementViewModel() -> StatementViewModel {
+        StatementViewModel(statementUc: dataFactory.provideStatementUseCase())
+    }
 }

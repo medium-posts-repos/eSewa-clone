@@ -52,16 +52,16 @@ public struct DashboardScreen: View {
             .tabItem { Text("Home") }
             .tag(0)
         
-            StatementScreen()
-                .tabItem({
-                    Image(systemName: "bell")
-                })
-                .tabItem { Text("Statement") }
-                .tag(1)
+        StatementScreen()
+            .tabItem({
+                Image(systemName: "text.bubble")
+            })
+            .tabItem { Text("Statement") }
+            .tag(1)
         
         HelpAndSupportScreen()
             .tabItem({
-                Image(systemName: "text.bubble")
+                Image(systemName: "bell")
             })
             .tabItem { Text("Help and Support") }
             .tag(2)

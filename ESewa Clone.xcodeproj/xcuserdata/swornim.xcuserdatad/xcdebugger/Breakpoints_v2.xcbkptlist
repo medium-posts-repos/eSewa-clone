@@ -3,4 +3,101 @@
    uuid = "5C0C2B06-13FA-431B-8D4D-63AAFA590C84"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "73D6D712-EE6D-4076-9119-BE8F200A8052"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ESewa Clone/Data/UseCase/FormUseCaseImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "executeGet(code:params:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "41471042-90F5-4A36-98E6-CA4AF223AB9B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ESewa Clone/Data/UseCase/StatementUseCaseImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "executePost(code:params:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A72A0463-7CFB-462D-A204-AA4DC2E67531"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Packages/NetworkPackage/Sources/NetworkPackage/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "aSyncCall(request:model:method:params:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A72A0463-7CFB-462D-A204-AA4DC2E67531 - 9db3093d5e85fe8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "one-time initialization function for instance"
+                  moduleName = "ESewa Clone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swornim/Desktop/personal/ios-projects/SwiftUI/ESewaClone/ESewa%20Clone/Packages/NetworkPackage/Sources/NetworkPackage/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "A72A0463-7CFB-462D-A204-AA4DC2E67531 - 8c404d100e239220"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; NetworkPackage.NetworkServiceProtocol in variable initialization expression of static NetworkPackage.NetworkService.instance : NetworkPackage.NetworkServiceProtocol"
+                  moduleName = "ESewa Clone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swornim/Desktop/personal/ios-projects/SwiftUI/ESewaClone/ESewa%20Clone/Packages/NetworkPackage/Sources/NetworkPackage/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "A72A0463-7CFB-462D-A204-AA4DC2E67531 - a082bed494d13a8f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NetworkPackage.NetworkService.instance.unsafeMutableAddressor : NetworkPackage.NetworkServiceProtocol"
+                  moduleName = "ESewa Clone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swornim/Desktop/personal/ios-projects/SwiftUI/ESewaClone/ESewa%20Clone/Packages/NetworkPackage/Sources/NetworkPackage/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

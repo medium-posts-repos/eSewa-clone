@@ -14,7 +14,8 @@ public class RouteProvider {
     public static let BASE_URL = "http://localhost:8000/api/v1/"
 
     private let authRoutes: [String: String] = [
-        RouteConstants.ROUTE_ELECTRICITY: "form/electricity"
+        RouteConstants.ROUTE_ELECTRICITY: "form/electricity",
+        RouteConstants.ACCOUNT_STATEMENTS: "account/statements"
     ]
     
     public func routeFrom(routeCode: String) -> ApiRoutes {

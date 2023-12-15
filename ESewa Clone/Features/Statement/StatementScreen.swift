@@ -6,10 +6,28 @@
 //
 
 import SwiftUI
+import DomainPackage
 
 public struct StatementScreen: View {
+    @ObservedObject
+    private var statementViewModel = AppFactory.shared.vmFactory.providesStatementViewModel()
+    
     public var body: some View {
-        Text("Statement")
-            .toolbar { HomeToolbarView() }
+        VStack {
+            List {
+                Section {
+                    AccountBalanceView()
+                        .task {
+                            statementViewModel.fetchStatements(code: RouteConstants.ACCOUNT_STATEMENTS) {
+                                print("Incoming statements \($0)")
+                            }
+                        }
+                       
+                }.listRowBackground(Color.clear)
+                    .listRowSeparator(.hidden)
+            }
+            .listStyle(.plain)
+            .padding(.init(top: 0, leading: -14, bottom: 0, trailing: -14))
+        }.modifier(ProgressViewModifier(isLoading: statementViewModel.isLoading))
     }
 }
