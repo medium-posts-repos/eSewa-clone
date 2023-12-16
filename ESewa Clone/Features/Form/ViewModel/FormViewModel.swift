@@ -19,10 +19,10 @@ public final class FormViewModel: BaseViewModel {
         isLoading = true
         
         formUseCase.executeGet(code: code, params: [:])
-            .sink(receiveCompletion: {_ in}, receiveValue: { [weak self] response in
+            .sink(receiveCompletion: { [weak self] response in
                 guard let _self = self else { return }
                 _self.isLoading = false
-                
+            }, receiveValue: { [weak self] response in                
                 if response.status == true, let data = response.data?.formFields {
                     completion(data)
                 } else {

@@ -7,8 +7,12 @@
 
 import SwiftUI
 import DomainPackage
+import Combine
 
 public final class StatementViewModel: BaseViewModel {
+    
+    @Published
+    public var statementResult: PassthroughSubject<[StatementGroupDto], Never> = .init()
     
     public let statementUc: StatementUseCase
     
@@ -16,18 +20,18 @@ public final class StatementViewModel: BaseViewModel {
         self.statementUc = statementUc
     }
     
-    func fetchStatements(code: String, completion: @escaping TypeCallback<[StatementGroupDto]>) {
+    @MainActor
+    func fetchStatements(code: String, completion: @escaping TypeCallback<[StatementGroupDto]>) async {
         isLoading = true
         statementUc.executePost(code: code, params: [:])
             .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: {_ in}, receiveValue: { [weak self] response in
-                guard let _self = self else { return }
-                _self.isLoading = false
-                
+            .sink(receiveCompletion: { _ in
+                self.isLoading = false
+            }, receiveValue: { response in
                 if response.status == true, let data = response.data?.statementGroups {
-                    completion(data)
+                    self.statementResult.send(data)
                 } else {
-                    completion([])
+                    self.failureResult.send(.init(message: response.message))
                 }
             })
             .store(in: &cancellables)

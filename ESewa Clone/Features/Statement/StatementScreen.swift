@@ -9,25 +9,37 @@ import SwiftUI
 import DomainPackage
 
 public struct StatementScreen: View {
-    @ObservedObject
-    private var statementViewModel = AppFactory.shared.vmFactory.providesStatementViewModel()
     
+    @StateObject private var statementViewModel = AppFactory.shared.vmFactory.providesStatementViewModel()
+    
+    @State private var dataSource: [StatementGroupDto] = []
+
     public var body: some View {
         VStack {
             List {
                 Section {
                     AccountBalanceView()
-                        .task {
-                            statementViewModel.fetchStatements(code: RouteConstants.ACCOUNT_STATEMENTS) {
-                                print("Incoming statements \($0)")
-                            }
-                        }
-                       
                 }.listRowBackground(Color.clear)
                     .listRowSeparator(.hidden)
+                
+                ForEach(dataSource, id: \.self) { item in
+                    Section(header: Text("\(item.filterDate ?? "" )")) {
+                        ForEach(item.statements ?? [], id: \.self) { statement in
+                            Text("\(statement.reason ?? "")")
+                        }
+                    }
+                }
             }
             .listStyle(.plain)
             .padding(.init(top: 0, leading: -14, bottom: 0, trailing: -14))
         }.modifier(ProgressViewModifier(isLoading: statementViewModel.isLoading))
+            .onReceive(statementViewModel.statementResult) {
+                self.dataSource = $0
+            }
+            .task {
+                await statementViewModel.fetchStatements(code: RouteConstants.ACCOUNT_STATEMENTS) {
+                    print("Incoming statements \($0)")
+                }
+            }
     }
 }

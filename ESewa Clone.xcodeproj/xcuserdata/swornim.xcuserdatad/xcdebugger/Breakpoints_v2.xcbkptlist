@@ -7,38 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "73D6D712-EE6D-4076-9119-BE8F200A8052"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ESewa Clone/Data/UseCase/FormUseCaseImpl.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "executeGet(code:params:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "41471042-90F5-4A36-98E6-CA4AF223AB9B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ESewa Clone/Data/UseCase/StatementUseCaseImpl.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "executePost(code:params:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "A72A0463-7CFB-462D-A204-AA4DC2E67531"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -46,57 +14,89 @@
             filePath = "Packages/NetworkPackage/Sources/NetworkPackage/NetworkService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "aSyncCall(request:model:method:params:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "A72A0463-7CFB-462D-A204-AA4DC2E67531 - 9db3093d5e85fe8"
+                  uuid = "A72A0463-7CFB-462D-A204-AA4DC2E67531 - c721e91d0e5eb4e2"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "one-time initialization function for instance"
+                  symbolName = "NetworkPackage.NetworkService.aSyncCall&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(request: Alamofire.URLConvertible, model: &#x3c4;_0_0.Type, method: Alamofire.HTTPMethod, params: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;) -&gt; Combine.AnyPublisher&lt;&#x3c4;_0_0, Swift.Error&gt;"
                   moduleName = "ESewa Clone"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/swornim/Desktop/personal/ios-projects/SwiftUI/ESewaClone/ESewa%20Clone/Packages/NetworkPackage/Sources/NetworkPackage/NetworkService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "32">
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "2832">
                </Location>
                <Location
-                  uuid = "A72A0463-7CFB-462D-A204-AA4DC2E67531 - 8c404d100e239220"
+                  uuid = "A72A0463-7CFB-462D-A204-AA4DC2E67531 - 6cec3b3a5f9928db"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; NetworkPackage.NetworkServiceProtocol in variable initialization expression of static NetworkPackage.NetworkService.instance : NetworkPackage.NetworkServiceProtocol"
+                  symbolName = "closure #2 (Swift.Error) -&gt; Swift.Error in NetworkPackage.NetworkService.aSyncCall&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(request: Alamofire.URLConvertible, model: &#x3c4;_0_0.Type, method: Alamofire.HTTPMethod, params: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;) -&gt; Combine.AnyPublisher&lt;&#x3c4;_0_0, Swift.Error&gt;"
                   moduleName = "ESewa Clone"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/swornim/Desktop/personal/ios-projects/SwiftUI/ESewaClone/ESewa%20Clone/Packages/NetworkPackage/Sources/NetworkPackage/NetworkService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "96"
-                  endingLineNumber = "96"
-                  offsetFromSymbolStart = "24">
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "220">
                </Location>
                <Location
-                  uuid = "A72A0463-7CFB-462D-A204-AA4DC2E67531 - a082bed494d13a8f"
+                  uuid = "A72A0463-7CFB-462D-A204-AA4DC2E67531 - 6cec3b3a5f9928f4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "NetworkPackage.NetworkService.instance.unsafeMutableAddressor : NetworkPackage.NetworkServiceProtocol"
+                  symbolName = "closure #2 (Swift.Error) -&gt; Swift.Error in NetworkPackage.NetworkService.aSyncCall&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(request: Alamofire.URLConvertible, model: &#x3c4;_0_0.Type, method: Alamofire.HTTPMethod, params: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;) -&gt; Combine.AnyPublisher&lt;&#x3c4;_0_0, Swift.Error&gt;"
                   moduleName = "ESewa Clone"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/swornim/Desktop/personal/ios-projects/SwiftUI/ESewaClone/ESewa%20Clone/Packages/NetworkPackage/Sources/NetworkPackage/NetworkService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "16">
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "876">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E14672D2-9431-4D92-A73C-D4408A9B4071"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Packages/DomainPackage/Sources/DomainPackage/Domain/TypeAlias/TypeAlias.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "3"
+            endingLineNumber = "3"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "128E688C-7378-4AC0-90DD-F47DDBB6811C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Packages/DomainPackage/Sources/DomainPackage/Domain/TypeAlias/TypeAlias.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1"
+            endingLineNumber = "1"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

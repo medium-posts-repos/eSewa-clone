@@ -19,10 +19,6 @@ public extension Result {
     }
 }
 
-public struct ApiModel: Codable {
-    public init() {}
-}
-
 public class NetworkService: NetworkServiceProtocol {
     
     private var extraHeaders: RequestParams {

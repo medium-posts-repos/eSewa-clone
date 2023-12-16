@@ -5,6 +5,7 @@
 
 import SwiftUI
 import Combine
+import DomainPackage
 
 @available(iOS 13.0, *)
 open class BaseViewModel: ObservableObject {
@@ -13,6 +14,8 @@ open class BaseViewModel: ObservableObject {
     // Use @Published instead for observing from non view components
 //    @State public var isLoading: Bool = false
     @Published public var isLoading: Bool = false
+    
+    public lazy var failureResult: PassthroughSubject<ApiResDto, Error> = .init()
 
     public var cancellables = Set<AnyCancellable>()
 

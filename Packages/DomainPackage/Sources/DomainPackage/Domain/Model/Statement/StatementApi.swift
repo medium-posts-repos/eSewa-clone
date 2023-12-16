@@ -13,7 +13,7 @@ public struct StatementResponseDto: Codable {
 }
 
 // Api response
-public struct StatementResItemDto: Codable {
+public struct StatementResItemDto: Codable, Hashable {
     public var amount: String?
     public var balance: String?
     public var txnType: String?
@@ -24,7 +24,7 @@ public struct StatementResItemDto: Codable {
 }
 
 // Internal model to group dates
-public struct StatementGroupDto: Codable {
+public struct StatementGroupDto: Codable, Hashable {
     public var statements: [StatementResItemDto]? /* grouped items */
     public var filterDate: String? /* group by date */
     

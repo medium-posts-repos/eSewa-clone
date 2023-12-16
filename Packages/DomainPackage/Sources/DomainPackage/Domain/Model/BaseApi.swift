@@ -24,3 +24,16 @@ public protocol BaseResponseProtocol: Codable {
 public struct NothingDto: Codable {
     public init() {}
 }
+
+public struct ApiResDto: Codable {
+    
+    public var message: String?
+    public var status: Bool?
+    
+    public init(message: String?, status: Bool? = false) {
+        self.message = message
+        self.status = status
+    }
+    
+    public init() {}
+}
