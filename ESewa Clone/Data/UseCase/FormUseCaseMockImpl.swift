@@ -104,6 +104,7 @@ public final class FormUseCaseMockImpl: FormUseCase {
             } catch {
                 promise(.failure(error))
             }
-        }.eraseToAnyPublisher()
+        }.delay(for: 1.5, scheduler: DispatchQueue.main)
+            .eraseToAnyPublisher()
     }
 }
