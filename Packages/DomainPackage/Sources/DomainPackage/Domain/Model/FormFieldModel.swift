@@ -10,7 +10,7 @@ import Foundation
 public enum FormFieldType: String, CaseIterable {
     case TEXT
     case NUMBER
-    case AMOUNT = "AMOUNT"
+    case AMOUNT
     case DROPDOWN
     case SUBMIT
     case CHECKBOX
