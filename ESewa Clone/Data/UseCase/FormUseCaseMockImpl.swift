@@ -31,7 +31,7 @@ public final class FormUseCaseMockImpl: FormUseCase {
                           "captionDesc": "Update your personal details below"
                         },
                         {
-                          "label": "Customer Id. ",
+                          "label": "Card Id. ",
                           "hint": "Eg CA23423",
                           "type": "TEXT",
                           "regex": ""
@@ -96,7 +96,7 @@ public final class FormUseCaseMockImpl: FormUseCase {
                     }
                     """
         
-        // MARK: future process immediately, you can also go for Defered publisher for on demand processing
+        // MARK: `Future` alternate solution is to use `Defered`
         return Future<BaseResponseDto<[FormItemResponseDto]>, Error> { promise in
             do {
                 let baseResponse = try JSONDecoder().decode(BaseResponseDto<[FormItemResponseDto]>.self, from: mockFormJsonString.data(using: .utf8)!)

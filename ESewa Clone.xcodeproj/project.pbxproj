@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A334A6182B878F4C008CC8D4 /* GenericFormScreenExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A334A6172B878F4C008CC8D4 /* GenericFormScreenExt.swift */; };
 		A33AD66A2B009818005A09AC /* ESewa_CloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AD6692B009818005A09AC /* ESewa_CloneApp.swift */; };
 		A33AD66C2B009818005A09AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AD66B2B009818005A09AC /* ContentView.swift */; };
 		A33AD66E2B009819005A09AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A33AD66D2B009819005A09AC /* Assets.xcassets */; };
@@ -86,6 +87,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A334A6172B878F4C008CC8D4 /* GenericFormScreenExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericFormScreenExt.swift; sourceTree = "<group>"; };
 		A33AD6662B009818005A09AC /* ESewa Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ESewa Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33AD6692B009818005A09AC /* ESewa_CloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESewa_CloneApp.swift; sourceTree = "<group>"; };
 		A33AD66B2B009818005A09AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -179,6 +181,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A334A6162B878F3B008CC8D4 /* FormExt */ = {
+			isa = PBXGroup;
+			children = (
+				A334A6172B878F4C008CC8D4 /* GenericFormScreenExt.swift */,
+			);
+			path = FormExt;
+			sourceTree = "<group>";
+		};
 		A33AD65D2B009817005A09AC = {
 			isa = PBXGroup;
 			children = (
@@ -313,6 +323,7 @@
 		A371F10D2B1B224500B50E77 /* Form */ = {
 			isa = PBXGroup;
 			children = (
+				A334A6162B878F3B008CC8D4 /* FormExt */,
 				A394A7702B0208B60030AAF1 /* ViewModel */,
 				A371F1102B1B251900B50E77 /* TextFields */,
 				A371F10E2B1B225600B50E77 /* GenericFormScreen.swift */,
@@ -750,6 +761,7 @@
 				A3ACA4762B2C3D500051E9D4 /* ExpandedView.swift in Sources */,
 				A3ACA4852B2C49020051E9D4 /* StatementViewModel.swift in Sources */,
 				A3ACA46F2B2C3D500051E9D4 /* StatementScreen.swift in Sources */,
+				A334A6182B878F4C008CC8D4 /* GenericFormScreenExt.swift in Sources */,
 				A33AD66C2B009818005A09AC /* ContentView.swift in Sources */,
 				A3B3EF602B088F5C00392609 /* MoreHeaderView.swift in Sources */,
 				A3ACA46D2B2C3D500051E9D4 /* HelpAndSupportScreen.swift in Sources */,

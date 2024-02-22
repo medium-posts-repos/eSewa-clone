@@ -12,7 +12,7 @@ import FormPackage
 
 public struct GenericFormScreen: View  {
     @Environment(\.colorScheme) var colorScheme
-    @State private var selectedFruitIndex = 0
+    @State public var selectedFruitIndex = 0
 
     // MARK: States
     @State private var textInputs: [String] = []
@@ -51,67 +51,5 @@ public struct GenericFormScreen: View  {
             .listRowSeparator(.hidden)
 
         }.listStyle(.plain)
-    }
-}
-
-// MARK: form fields view
-extension GenericFormScreen {
-    
-    private func provideTextField(field: FormFieldModel) -> some View {
-        VStack(alignment: .leading, spacing: 6) {
-            Text(field.label ?? "")
-                .font(.subheadline)
-            FormTextFieldView(formField: field)
-                .modifier(FormFieldViewModifier())
-                .clipShape(RoundedRectangle(cornerRadius: 8))
-        }
-    }
-    
-    private func provideSubmitField(field: FormFieldModel) -> some View {
-        VStack(alignment: .leading, spacing: 6) {
-           Button(action: {}, label: {
-               Text("\(field.label ?? "Submit")")
-           })
-           .buttonStyle(FillButtonStyle())
-        }
-    }
-    
-    fileprivate func provideNoteField(field: FormFieldModel) -> some View {
-        VStack(alignment: .leading) {
-            Text(field.label ?? "")
-                .foregroundColor(.green.opacity(0.9))
-                .multilineTextAlignment(.leading)
-        }.padding(.all, 6)
-            .background(
-                RoundedRectangle(cornerRadius: 6)
-                    .foregroundColor(.green.opacity(0.4))
-            )
-    }
-    
-    fileprivate func provideHeaderCaption(field: FormFieldModel) -> some View {
-        return VStack(alignment: .leading) {
-            Text(field.captionTitle ?? "")
-                .fontWeight(.bold)
-                .themeable()
-            Text(field.captionDesc ?? "")
-                .font(.body)
-                .fontWeight(.light)
-                .themeable()
-        }
-    }
-    
-    fileprivate func provideDropDownField(field: FormFieldModel) -> some View {
-        let options = field.options ?? []
-//        let options = ["Apple", "Banana", "Orange", "Grapes"]
-        return VStack {
-            Picker(field.label ?? "", selection: $selectedFruitIndex) {
-                ForEach(0..<options.count, id: \.self) { index in
-                    Text(options[index].label ?? "").tag(index)
-//                    Text(options[index]).tag(index)
-                }
-            }
-            .pickerStyle(.menu)
-            .padding()
-        }
     }
 }
