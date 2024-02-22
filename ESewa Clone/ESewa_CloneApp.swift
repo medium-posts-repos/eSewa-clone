@@ -6,9 +6,13 @@
 //
 
 import SwiftUI
+import FormPackage
 
 @main
 struct ESewaApp: App {
+    
+   // @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
+
     @AppStorage("isAuthenticated") private var isAuthenticated = true
     
     @ObservedObject var router = Router()

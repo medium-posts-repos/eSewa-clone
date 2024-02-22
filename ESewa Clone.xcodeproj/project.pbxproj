@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		A334A6182B878F4C008CC8D4 /* GenericFormScreenExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A334A6172B878F4C008CC8D4 /* GenericFormScreenExt.swift */; };
+		A334A61A2B8797DF008CC8D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A334A6192B8797DF008CC8D4 /* SceneDelegate.swift */; };
+		A334A61C2B8798A1008CC8D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A334A61B2B8798A1008CC8D4 /* AppDelegate.swift */; };
+		A334A61F2B879917008CC8D4 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A334A61E2B879917008CC8D4 /* RootCoordinator.swift */; };
+		A334A6212B879927008CC8D4 /* Coordinating.swift in Sources */ = {isa = PBXBuildFile; fileRef = A334A6202B879927008CC8D4 /* Coordinating.swift */; };
+		A334A6242B8799AF008CC8D4 /* FormCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A334A6232B8799AF008CC8D4 /* FormCoordinator.swift */; };
+		A334A6292B87AAAD008CC8D4 /* ElectrictyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A334A6282B87AAAD008CC8D4 /* ElectrictyRouter.swift */; };
 		A33AD66A2B009818005A09AC /* ESewa_CloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AD6692B009818005A09AC /* ESewa_CloneApp.swift */; };
 		A33AD66C2B009818005A09AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AD66B2B009818005A09AC /* ContentView.swift */; };
 		A33AD66E2B009819005A09AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A33AD66D2B009819005A09AC /* Assets.xcassets */; };
@@ -88,6 +94,12 @@
 
 /* Begin PBXFileReference section */
 		A334A6172B878F4C008CC8D4 /* GenericFormScreenExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericFormScreenExt.swift; sourceTree = "<group>"; };
+		A334A6192B8797DF008CC8D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A334A61B2B8798A1008CC8D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A334A61E2B879917008CC8D4 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
+		A334A6202B879927008CC8D4 /* Coordinating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinating.swift; sourceTree = "<group>"; };
+		A334A6232B8799AF008CC8D4 /* FormCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCoordinator.swift; sourceTree = "<group>"; };
+		A334A6282B87AAAD008CC8D4 /* ElectrictyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectrictyRouter.swift; sourceTree = "<group>"; };
 		A33AD6662B009818005A09AC /* ESewa Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ESewa Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33AD6692B009818005A09AC /* ESewa_CloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESewa_CloneApp.swift; sourceTree = "<group>"; };
 		A33AD66B2B009818005A09AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -189,6 +201,43 @@
 			path = FormExt;
 			sourceTree = "<group>";
 		};
+		A334A61D2B879904008CC8D4 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				A334A61E2B879917008CC8D4 /* RootCoordinator.swift */,
+				A334A6202B879927008CC8D4 /* Coordinating.swift */,
+				A334A6232B8799AF008CC8D4 /* FormCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		A334A6252B87A9F6008CC8D4 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				A334A6272B87AA9F008CC8D4 /* Electricity */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		A334A6262B87AA64008CC8D4 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				A33AD6962B009887005A09AC /* RouteIntentDto.swift */,
+				A33AD6942B009887005A09AC /* RouteCode.swift */,
+				A33AD6952B009887005A09AC /* NavigationRoutePath.swift */,
+				A371F1152B1B3AB600B50E77 /* RouterMiddleware.swift */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		A334A6272B87AA9F008CC8D4 /* Electricity */ = {
+			isa = PBXGroup;
+			children = (
+				A334A6282B87AAAD008CC8D4 /* ElectrictyRouter.swift */,
+			);
+			path = Electricity;
+			sourceTree = "<group>";
+		};
 		A33AD65D2B009817005A09AC = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +272,8 @@
 				A33AD66B2B009818005A09AC /* ContentView.swift */,
 				A33AD66D2B009819005A09AC /* Assets.xcassets */,
 				A33AD66F2B009819005A09AC /* Preview Content */,
+				A334A6192B8797DF008CC8D4 /* SceneDelegate.swift */,
+				A334A61B2B8798A1008CC8D4 /* AppDelegate.swift */,
 			);
 			path = "ESewa Clone";
 			sourceTree = "<group>";
@@ -255,12 +306,9 @@
 		A33AD6932B009887005A09AC /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				A3E74CA52B22C839006DFB17 /* Dto */,
-				A33AD6942B009887005A09AC /* RouteCode.swift */,
-				A33AD6952B009887005A09AC /* NavigationRoutePath.swift */,
+				A334A6262B87AA64008CC8D4 /* Configurations */,
 				A33AD6972B009887005A09AC /* Router.swift */,
 				A371F1132B1B2A0900B50E77 /* FormRouter.swift */,
-				A371F1152B1B3AB600B50E77 /* RouterMiddleware.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -285,7 +333,7 @@
 				A3ACA4592B2C3D4F0051E9D4 /* Products */,
 				A3ACA4502B2C3D4F0051E9D4 /* Statement */,
 				A3ACA44B2B2C3D4E0051E9D4 /* Support */,
-				A371F10D2B1B224500B50E77 /* Form */,
+				A371F10D2B1B224500B50E77 /* Forms */,
 				A3B3EF612B0895C100392609 /* More */,
 				A37415B82B03D3AC007D1ECA /* Products */,
 				A394A7822B021F860030AAF1 /* Profile */,
@@ -296,6 +344,7 @@
 		A33AD69F2B009994005A09AC /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				A334A61D2B879904008CC8D4 /* Coordinator */,
 				A371F12B2B1B6CC500B50E77 /* DI */,
 				A371F1172B1B43A000B50E77 /* Extensions */,
 				A33AD6932B009887005A09AC /* Router */,
@@ -320,15 +369,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A371F10D2B1B224500B50E77 /* Form */ = {
+		A371F10D2B1B224500B50E77 /* Forms */ = {
 			isa = PBXGroup;
 			children = (
+				A334A6252B87A9F6008CC8D4 /* Features */,
 				A334A6162B878F3B008CC8D4 /* FormExt */,
 				A394A7702B0208B60030AAF1 /* ViewModel */,
 				A371F1102B1B251900B50E77 /* TextFields */,
 				A371F10E2B1B225600B50E77 /* GenericFormScreen.swift */,
 			);
-			path = Form;
+			path = Forms;
 			sourceTree = "<group>";
 		};
 		A371F1102B1B251900B50E77 /* TextFields */ = {
@@ -576,14 +626,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		A3E74CA52B22C839006DFB17 /* Dto */ = {
-			isa = PBXGroup;
-			children = (
-				A33AD6962B009887005A09AC /* RouteIntentDto.swift */,
-			);
-			path = Dto;
-			sourceTree = "<group>";
-		};
 		A3ECAECE2B00FB1E00CA8E32 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -760,12 +802,15 @@
 				A33AD6992B009887005A09AC /* NavigationRoutePath.swift in Sources */,
 				A3ACA4762B2C3D500051E9D4 /* ExpandedView.swift in Sources */,
 				A3ACA4852B2C49020051E9D4 /* StatementViewModel.swift in Sources */,
+				A334A6212B879927008CC8D4 /* Coordinating.swift in Sources */,
 				A3ACA46F2B2C3D500051E9D4 /* StatementScreen.swift in Sources */,
 				A334A6182B878F4C008CC8D4 /* GenericFormScreenExt.swift in Sources */,
 				A33AD66C2B009818005A09AC /* ContentView.swift in Sources */,
 				A3B3EF602B088F5C00392609 /* MoreHeaderView.swift in Sources */,
 				A3ACA46D2B2C3D500051E9D4 /* HelpAndSupportScreen.swift in Sources */,
 				A371F1302B1B6CC500B50E77 /* DataFactory.swift in Sources */,
+				A334A61A2B8797DF008CC8D4 /* SceneDelegate.swift in Sources */,
+				A334A6292B87AAAD008CC8D4 /* ElectrictyRouter.swift in Sources */,
 				A33AD69A2B009887005A09AC /* RouteIntentDto.swift in Sources */,
 				A33AD66A2B009818005A09AC /* ESewa_CloneApp.swift in Sources */,
 				A3ACA4872B2C4A3F0051E9D4 /* StatementUseCaseImpl.swift in Sources */,
@@ -779,15 +824,18 @@
 				A3B3EF642B0895EE00392609 /* MoreScreen.swift in Sources */,
 				A33AD69B2B009887005A09AC /* Router.swift in Sources */,
 				A33AD6982B009887005A09AC /* RouteCode.swift in Sources */,
+				A334A61F2B879917008CC8D4 /* RootCoordinator.swift in Sources */,
 				A3ACA46E2B2C3D500051E9D4 /* SupportScreen.swift in Sources */,
 				A3ACA4812B2C3ECC0051E9D4 /* AccountBalanceView.swift in Sources */,
 				A3E74CAB2B22DEC0006DFB17 /* ProgressViewModifier.swift in Sources */,
 				A371F1142B1B2A0900B50E77 /* FormRouter.swift in Sources */,
 				A371F1292B1B5D3700B50E77 /* FormUseCaseImpl.swift in Sources */,
 				A371F12F2B1B6CC500B50E77 /* AppFactory.swift in Sources */,
+				A334A61C2B8798A1008CC8D4 /* AppDelegate.swift in Sources */,
 				A3ECAED12B00FB3E00CA8E32 /* ImageExt.swift in Sources */,
 				A3ACA47C2B2C3D500051E9D4 /* HomeScreen.swift in Sources */,
 				A371F1232B1B4F0900B50E77 /* BaseUseCase.swift in Sources */,
+				A334A6242B8799AF008CC8D4 /* FormCoordinator.swift in Sources */,
 				A3ACA47B2B2C3D500051E9D4 /* HomePrimaryMenuView.swift in Sources */,
 				A3ECAED52B012BE900CA8E32 /* ColorExt.swift in Sources */,
 			);

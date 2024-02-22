@@ -9,6 +9,7 @@ import DomainPackage
 
 public struct FormMenuConfig {
     public static var menus: [MenuModel] = [
-        MenuModel(code: MenuConstants.ELECTRICITY)
+        MenuModel(code: MenuConstants.ELECTRICITY),
+        MenuModel(code: MenuConstants.ELECTRICITY_CONFIRM)
     ]
 }

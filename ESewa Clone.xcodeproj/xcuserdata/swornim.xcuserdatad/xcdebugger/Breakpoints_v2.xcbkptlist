@@ -99,5 +99,212 @@
             landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FE88CDCE-A929-4CF6-ACEB-2FDB01D4D564"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ESewa Clone/Data/UseCase/FormUseCaseMockImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "executeGet(code:params:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AE8FC4C9-16F2-447E-BC44-A829482DC7B3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ESewa Clone/Features/Forms/Features/Electricity/ElectrictyRouter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "buildElectricityFlowDestination(destination:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AE8FC4C9-16F2-447E-BC44-A829482DC7B3 - d0a9b2228bb3171d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ESewa_Clone.Router.buildElectricityFlowDestination(destination: ESewa_Clone.RouteIntentDto) -&gt; some"
+                  moduleName = "ESewa Clone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swornim/Desktop/personal/ios-projects/SwiftUI/ESewaClone/ESewa%20Clone/ESewa%20Clone/Features/Forms/Features/Electricity/ElectrictyRouter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "2144">
+               </Location>
+               <Location
+                  uuid = "AE8FC4C9-16F2-447E-BC44-A829482DC7B3 - d0a9b2228bb3171d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ESewa_Clone.Router.buildElectricityFlowDestination(destination: ESewa_Clone.RouteIntentDto) -&gt; some"
+                  moduleName = "ESewa Clone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swornim/Desktop/personal/ios-projects/SwiftUI/ESewaClone/ESewa%20Clone/ESewa%20Clone/Features/Forms/Features/Electricity/ElectrictyRouter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "2136">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ADAF92C2-A032-4FE3-84C7-1A2346824B6C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ESewa Clone/Features/Forms/Features/Electricity/ElectrictyRouter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "routeConfirmation(destination:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A8B31D32-371C-4BB1-9961-6574F4028712"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ESewa Clone/Features/Forms/Features/Electricity/ElectrictyRouter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "buildElectricityFlowDestination(destination:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A8B31D32-371C-4BB1-9961-6574F4028712 - d0a9b2228bb31791"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ESewa_Clone.Router.buildElectricityFlowDestination(destination: ESewa_Clone.RouteIntentDto) -&gt; some"
+                  moduleName = "ESewa Clone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swornim/Desktop/personal/ios-projects/SwiftUI/ESewaClone/ESewa%20Clone/ESewa%20Clone/Features/Forms/Features/Electricity/ElectrictyRouter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "988">
+               </Location>
+               <Location
+                  uuid = "A8B31D32-371C-4BB1-9961-6574F4028712 - 1c13da96e491acc1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in ESewa_Clone.Router.buildElectricityFlowDestination(destination: ESewa_Clone.RouteIntentDto) -&gt; some"
+                  moduleName = "ESewa Clone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swornim/Desktop/personal/ios-projects/SwiftUI/ESewaClone/ESewa%20Clone/ESewa%20Clone/Features/Forms/Features/Electricity/ElectrictyRouter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "A8B31D32-371C-4BB1-9961-6574F4028712 - d0a9b2228bb31791"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ESewa_Clone.Router.buildElectricityFlowDestination(destination: ESewa_Clone.RouteIntentDto) -&gt; some"
+                  moduleName = "ESewa Clone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swornim/Desktop/personal/ios-projects/SwiftUI/ESewaClone/ESewa%20Clone/ESewa%20Clone/Features/Forms/Features/Electricity/ElectrictyRouter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "976">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CD0435A6-EDA5-4BD1-AC88-84C419BE485B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ESewa Clone/Infrastructure/Router/FormRouter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "buildFormRouteDestination(destination:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C3EDBE36-1112-48D1-9203-3AF72A4BE52F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ESewa Clone/Infrastructure/Router/FormRouter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "buildFormRouteDestination(destination:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C3EDBE36-1112-48D1-9203-3AF72A4BE52F - 18dbb55ce98c09fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ESewa_Clone.Router.buildFormRouteDestination(destination: ESewa_Clone.RouteIntentDto) -&gt; some"
+                  moduleName = "ESewa Clone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swornim/Desktop/personal/ios-projects/SwiftUI/ESewaClone/ESewa%20Clone/ESewa%20Clone/Infrastructure/Router/FormRouter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "1588">
+               </Location>
+               <Location
+                  uuid = "C3EDBE36-1112-48D1-9203-3AF72A4BE52F - fcb598032574a0e5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in ESewa_Clone.Router.buildFormRouteDestination(destination: ESewa_Clone.RouteIntentDto) -&gt; some"
+                  moduleName = "ESewa Clone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swornim/Desktop/personal/ios-projects/SwiftUI/ESewaClone/ESewa%20Clone/ESewa%20Clone/Infrastructure/Router/FormRouter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

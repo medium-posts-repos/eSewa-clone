@@ -25,9 +25,9 @@ extension GenericFormScreen {
         VStack(alignment: .leading, spacing: 6) {
            Button(action: {}, label: {
                Text("\(field.label ?? "Submit")")
-           })
+           }).disabled(true)
            .buttonStyle(FillButtonStyle())
-        }
+        }.disabled(false)
     }
     
     public func provideNoteField(field: FormFieldModel) -> some View {

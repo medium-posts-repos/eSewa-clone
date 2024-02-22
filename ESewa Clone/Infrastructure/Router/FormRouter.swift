@@ -21,11 +21,10 @@ public extension Router {
     @ViewBuilder
     func buildFormRouteDestination(destination: RouteIntentDto) -> some View {
         switch destination.routingCode {
-        case MenuConstants.ELECTRICITY:
-            GenericFormScreen(formFields: destination.formFields ?? [])
-                .navigationTitle(destination.routingTitle ?? "")
+        case MenuConstants.ELECTRICITY, MenuConstants.ELECTRICITY_CONFIRM:
+            buildElectricityFlowDestination(destination: destination)
         default:
-            GenericFormScreen(formFields: destination.formFields ?? [])
+            GenericFormScreen(formFields: destination.formFields ?? [], onSubmitClicked: {})
                 .navigationTitle(destination.routingTitle ?? "")
         }
     }

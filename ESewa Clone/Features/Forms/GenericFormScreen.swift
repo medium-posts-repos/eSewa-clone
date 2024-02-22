@@ -18,9 +18,12 @@ public struct GenericFormScreen: View  {
     @State private var textInputs: [String] = []
     
     public let formFields: [FormFieldModel]
+    
+    public var onSubmitClicked: VoidCallback
         
-    public init(formFields: [FormFieldModel]) {
+    public init(formFields: [FormFieldModel], onSubmitClicked: @escaping VoidCallback) {
         self.formFields = formFields
+        self.onSubmitClicked = onSubmitClicked
     }
     
     public var body: some View {
@@ -47,6 +50,9 @@ public struct GenericFormScreen: View  {
             
             Section {
                 provideSubmitField(field: .init())
+                    .onTapGesture {
+                        self.onSubmitClicked()
+                    }
             }
             .listRowSeparator(.hidden)
 
