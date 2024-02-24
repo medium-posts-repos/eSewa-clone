@@ -40,8 +40,8 @@ public struct GenericConfirmationVc: View {
             }.listRowSeparator(.hidden)
         }.listStyle(.plain)
             .buildSheet(binding: $stateShowConfirmation) {
-                Text("This app was brought to you by Hacking with Swift.com")
-                    .presentationDetents([.medium, .large])
+                TxnPinSheetView()
+                    .presentationDetents([.medium])
             }
     }
 }
