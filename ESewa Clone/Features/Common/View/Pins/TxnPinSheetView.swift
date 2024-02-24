@@ -34,7 +34,7 @@ public struct TxnPinSheetView: View {
                 
                 HStack {
                     Button(action: {}, label: {
-                        Text("\("Cancel")")
+                        Text("\("Submit")")
                     }).disabled(true)
                     .buttonStyle(FillButtonStyle())
                     
