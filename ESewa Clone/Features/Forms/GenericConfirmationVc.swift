@@ -9,6 +9,9 @@ import SwiftUI
 import DomainPackage
 
 public struct GenericConfirmationVc: View {
+    
+    @State private var stateShowConfirmation = false
+    
     public var body: some View {
         List {
             Section {
@@ -32,10 +35,14 @@ public struct GenericConfirmationVc: View {
             Section {
                 FormFieldModel().provideSubmitField()
                     .onTapGesture {
-                        
+                        self.stateShowConfirmation = true
                     }
             }.listRowSeparator(.hidden)
         }.listStyle(.plain)
+            .buildSheet(binding: $stateShowConfirmation) {
+                Text("This app was brought to you by Hacking with Swift.com")
+                    .presentationDetents([.medium, .large])
+            }
     }
 }
 

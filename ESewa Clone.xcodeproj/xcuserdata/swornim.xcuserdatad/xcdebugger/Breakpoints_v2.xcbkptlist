@@ -64,6 +64,21 @@
                   endingLineNumber = "90"
                   offsetFromSymbolStart = "876">
                </Location>
+               <Location
+                  uuid = "A72A0463-7CFB-462D-A204-AA4DC2E67531 - 6cec3b3a5f9928f4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Error) -&gt; Swift.Error in NetworkPackage.NetworkService.aSyncCall&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(request: Alamofire.URLConvertible, model: &#x3c4;_0_0.Type, method: Alamofire.HTTPMethod, params: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;) -&gt; Combine.AnyPublisher&lt;&#x3c4;_0_0, Swift.Error&gt;"
+                  moduleName = "ESewa Clone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swornim/Desktop/personal/ios-projects/SwiftUI/ESewaClone/ESewa%20Clone/Packages/NetworkPackage/Sources/NetworkPackage/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "960">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -97,22 +112,6 @@
             endingLineNumber = "1"
             landmarkName = "unknown"
             landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FE88CDCE-A929-4CF6-ACEB-2FDB01D4D564"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ESewa Clone/Data/UseCase/FormUseCaseMockImpl.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "executeGet(code:params:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
