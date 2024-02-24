@@ -10,9 +10,10 @@ import SwiftUI
 
 // MARK: form fields view
 
-extension FormFieldModel {
+public extension FormFieldModel {
     
-    public func provideSubmitField() -> some View {
+    @ViewBuilder
+    func provideSubmitField() -> some View {
         VStack(alignment: .leading, spacing: 6) {
            Button(action: {}, label: {
                Text("\(label ?? "Submit")")
@@ -20,23 +21,21 @@ extension FormFieldModel {
            .buttonStyle(FillButtonStyle())
         }.disabled(false)
     }
-}
-
-extension GenericFormScreen {
     
-    public func provideTextField(field: FormFieldModel) -> some View {
+    func provideTextField() -> some View {
         VStack(alignment: .leading, spacing: 6) {
-            Text(field.label ?? "")
+            Text(label ?? "")
                 .font(.subheadline)
-            FormTextFieldView(formField: field)
+            FormTextFieldView(formField: self)
                 .modifier(FormFieldViewModifier())
                 .clipShape(RoundedRectangle(cornerRadius: 8))
         }
     }
     
-    public func provideNoteField(field: FormFieldModel) -> some View {
+    @ViewBuilder
+    func provideNoteField() -> some View {
         VStack(alignment: .leading) {
-            Text(field.label ?? "")
+            Text(label ?? "")
                 .foregroundColor(.green.opacity(0.9))
                 .multilineTextAlignment(.leading)
         }.padding(.all, 6)
@@ -46,22 +45,24 @@ extension GenericFormScreen {
             )
     }
     
-    public func provideHeaderCaption(field: FormFieldModel) -> some View {
-        return VStack(alignment: .leading) {
-            Text(field.captionTitle ?? "")
+    @ViewBuilder
+    func provideHeaderCaption() -> some View {
+        VStack(alignment: .leading) {
+            Text(captionTitle ?? "")
                 .fontWeight(.bold)
                 .themeable()
-            Text(field.captionDesc ?? "")
+            Text(captionDesc ?? "")
                 .font(.body)
                 .fontWeight(.light)
                 .themeable()
         }
     }
-    
-    public func provideDropDownField(field: FormFieldModel) -> some View {
-        let options = field.options ?? []
-        return VStack {
-            Picker(field.label ?? "", selection: $selectedFruitIndex) {
+
+    @ViewBuilder
+    func provideDropDownField(selection: Binding<Int>) -> some View {
+        let options = options ?? []
+        VStack {
+            Picker(label ?? "", selection: selection) {
                 ForEach(0..<options.count, id: \.self) { index in
                     Text(options[index].label ?? "").tag(index)
                 }

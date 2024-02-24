@@ -12,7 +12,7 @@ import FormPackage
 
 public struct GenericFormScreen: View  {
     @Environment(\.colorScheme) var colorScheme
-    @State public var selectedFruitIndex = 0
+    @State private var selectedDropDowns = 0
 
     // MARK: States
     @State private var textInputs: [String] = []
@@ -30,16 +30,16 @@ public struct GenericFormScreen: View  {
         List {
             Section {
                 VStack(alignment: .leading, spacing: 22) {
-                    ForEach(formFields, id: \.self) { each in
-                        switch each.type {
+                     ForEach(formFields, id: \.self) { formField in
+                        switch formField.type {
                         case .TEXT, .AMOUNT:
-                            provideTextField(field: each)
+                            formField.provideTextField()
                         case .HEADER_CAPTION:
-                            provideHeaderCaption(field: each)
+                            formField.provideHeaderCaption()
                         case .NOTE:
-                            provideNoteField(field: each)
+                            formField.provideNoteField()
                         case .DROPDOWN:
-                            provideDropDownField(field: each)
+                            formField.provideDropDownField(selection: $selectedDropDowns)
                         default:
                             EmptyView()
                         }
