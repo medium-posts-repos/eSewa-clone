@@ -49,7 +49,7 @@ public struct GenericFormScreen: View  {
             }
             
             Section {
-                provideSubmitField(field: .init())
+                FormFieldModel().provideSubmitField()
                     .onTapGesture {
                         self.onSubmitClicked()
                     }

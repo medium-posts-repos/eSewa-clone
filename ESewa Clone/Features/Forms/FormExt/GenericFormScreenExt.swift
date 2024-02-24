@@ -9,6 +9,19 @@ import DomainPackage
 import SwiftUI
 
 // MARK: form fields view
+
+extension FormFieldModel {
+    
+    public func provideSubmitField() -> some View {
+        VStack(alignment: .leading, spacing: 6) {
+           Button(action: {}, label: {
+               Text("\(label ?? "Submit")")
+           }).disabled(true)
+           .buttonStyle(FillButtonStyle())
+        }.disabled(false)
+    }
+}
+
 extension GenericFormScreen {
     
     public func provideTextField(field: FormFieldModel) -> some View {
@@ -19,15 +32,6 @@ extension GenericFormScreen {
                 .modifier(FormFieldViewModifier())
                 .clipShape(RoundedRectangle(cornerRadius: 8))
         }
-    }
-    
-    public func provideSubmitField(field: FormFieldModel) -> some View {
-        VStack(alignment: .leading, spacing: 6) {
-           Button(action: {}, label: {
-               Text("\(field.label ?? "Submit")")
-           }).disabled(true)
-           .buttonStyle(FillButtonStyle())
-        }.disabled(false)
     }
     
     public func provideNoteField(field: FormFieldModel) -> some View {

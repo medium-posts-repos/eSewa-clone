@@ -27,8 +27,9 @@ public extension Router {
                 .navigationTitle(destination.routingTitle ?? "")
             
         case MenuConstants.ELECTRICITY_CONFIRM:
-            ProfileScreen()
-            
+            GenericConfirmationVc()
+                .navigationTitle(destination.routingTitle ?? "")
+
         default:
             EmptyView().navigationTitle("Feature not available at the moment")
         }

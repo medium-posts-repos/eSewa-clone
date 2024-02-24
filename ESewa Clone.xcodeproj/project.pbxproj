@@ -25,6 +25,8 @@
 		A33AD6992B009887005A09AC /* NavigationRoutePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AD6952B009887005A09AC /* NavigationRoutePath.swift */; };
 		A33AD69A2B009887005A09AC /* RouteIntentDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AD6962B009887005A09AC /* RouteIntentDto.swift */; };
 		A33AD69B2B009887005A09AC /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AD6972B009887005A09AC /* Router.swift */; };
+		A34645F52B89A82C00A20230 /* GenericConfirmationVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34645F42B89A82C00A20230 /* GenericConfirmationVc.swift */; };
+		A34645F72B89A9A400A20230 /* CardShapeViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34645F62B89A9A400A20230 /* CardShapeViewModifier.swift */; };
 		A371F10A2B1B15FF00B50E77 /* DomainPackage in Frameworks */ = {isa = PBXBuildFile; productRef = A371F1092B1B15FF00B50E77 /* DomainPackage */; };
 		A371F10C2B1B160100B50E77 /* FormPackage in Frameworks */ = {isa = PBXBuildFile; productRef = A371F10B2B1B160100B50E77 /* FormPackage */; };
 		A371F10F2B1B225600B50E77 /* GenericFormScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371F10E2B1B225600B50E77 /* GenericFormScreen.swift */; };
@@ -114,6 +116,8 @@
 		A33AD6952B009887005A09AC /* NavigationRoutePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationRoutePath.swift; sourceTree = "<group>"; };
 		A33AD6962B009887005A09AC /* RouteIntentDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteIntentDto.swift; sourceTree = "<group>"; };
 		A33AD6972B009887005A09AC /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		A34645F42B89A82C00A20230 /* GenericConfirmationVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericConfirmationVc.swift; sourceTree = "<group>"; };
+		A34645F62B89A9A400A20230 /* CardShapeViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardShapeViewModifier.swift; sourceTree = "<group>"; };
 		A371F1042B1B146600B50E77 /* DomainPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = DomainPackage; sourceTree = "<group>"; };
 		A371F1052B1B146600B50E77 /* FormPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FormPackage; sourceTree = "<group>"; };
 		A371F10E2B1B225600B50E77 /* GenericFormScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericFormScreen.swift; sourceTree = "<group>"; };
@@ -377,6 +381,7 @@
 				A394A7702B0208B60030AAF1 /* ViewModel */,
 				A371F1102B1B251900B50E77 /* TextFields */,
 				A371F10E2B1B225600B50E77 /* GenericFormScreen.swift */,
+				A34645F42B89A82C00A20230 /* GenericConfirmationVc.swift */,
 			);
 			path = Forms;
 			sourceTree = "<group>";
@@ -458,6 +463,7 @@
 				A3E74CAA2B22DEC0006DFB17 /* ProgressViewModifier.swift */,
 				A3E74CAE2B230456006DFB17 /* TextStyleModifier.swift */,
 				A3ACA4822B2C40C90051E9D4 /* AmountBalanceModifier.swift */,
+				A34645F62B89A9A400A20230 /* CardShapeViewModifier.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -795,6 +801,7 @@
 				A371F10F2B1B225600B50E77 /* GenericFormScreen.swift in Sources */,
 				A37415BB2B03D3DC007D1ECA /* HorizontalProductPagerView.swift in Sources */,
 				A3ACA47D2B2C3D500051E9D4 /* DashboardScreen.swift in Sources */,
+				A34645F72B89A9A400A20230 /* CardShapeViewModifier.swift in Sources */,
 				A3ACA4832B2C40C90051E9D4 /* AmountBalanceModifier.swift in Sources */,
 				A3ACA4732B2C3D500051E9D4 /* HorizontalProductPagerView.swift in Sources */,
 				A3ACA4712B2C3D500051E9D4 /* MoreHeaderView.swift in Sources */,
@@ -837,6 +844,7 @@
 				A371F1232B1B4F0900B50E77 /* BaseUseCase.swift in Sources */,
 				A334A6242B8799AF008CC8D4 /* FormCoordinator.swift in Sources */,
 				A3ACA47B2B2C3D500051E9D4 /* HomePrimaryMenuView.swift in Sources */,
+				A34645F52B89A82C00A20230 /* GenericConfirmationVc.swift in Sources */,
 				A3ECAED52B012BE900CA8E32 /* ColorExt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1138,7 +1146,7 @@
 				A33AD6892B009819005A09AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		A33AD68A2B009819005A09AC /* Build configuration list for PBXNativeTarget "ESewa Clone" */ = {
 			isa = XCConfigurationList;
@@ -1147,7 +1155,7 @@
 				A33AD68C2B009819005A09AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		A33AD68D2B009819005A09AC /* Build configuration list for PBXNativeTarget "ESewa CloneTests" */ = {
 			isa = XCConfigurationList;
@@ -1156,7 +1164,7 @@
 				A33AD68F2B009819005A09AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		A33AD6902B009819005A09AC /* Build configuration list for PBXNativeTarget "ESewa CloneUITests" */ = {
 			isa = XCConfigurationList;
@@ -1165,7 +1173,7 @@
 				A33AD6922B009819005A09AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 
