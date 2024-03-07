@@ -9,7 +9,10 @@ import Foundation
 
 public struct MenuModel: Codable, Hashable, Identifiable {
     public var id: Int?
+    
     public var code: String?
+    public var routeApi: String?
+    
     public var name: String?
     public var desc: String?
     public var iconName: String? // local

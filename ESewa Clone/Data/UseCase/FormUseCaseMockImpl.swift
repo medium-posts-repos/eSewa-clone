@@ -11,6 +11,16 @@ import Combine
 import NetworkPackage
 
 public final class FormUseCaseMockImpl: FormUseCase {
+    public func executeMerchantApi(code: String, params: RequestParams) -> AnyPublisher<BaseResponseDto<MerchantResponseDto>, Error> {
+        return Future<BaseResponseDto<MerchantResponseDto>, Error> { promise in
+            var response = BaseResponseDto<MerchantResponseDto>()
+            response.data = .init()
+            
+            promise(.success(response))
+        }.delay(for: 1.5, scheduler: DispatchQueue.main)
+            .eraseToAnyPublisher()
+    }
+    
     public func executeGet(code: String, params: RequestParams) -> AnyPublisher<BaseResponseDto<[FormItemResponseDto]>, Error> {
         let mockFormJsonString = """
                     {

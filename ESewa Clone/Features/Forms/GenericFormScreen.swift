@@ -13,15 +13,12 @@ import FormPackage
 public struct GenericFormScreen: View  {
     @Environment(\.colorScheme) var colorScheme
     @State private var selectedDropDowns = 0
-
-    // MARK: States
     @State private var textInputs: [String] = []
     
     public let formFields: [FormFieldModel]
-    
-    public var onSubmitClicked: VoidCallback
-        
-    public init(formFields: [FormFieldModel], onSubmitClicked: @escaping VoidCallback) {
+    public var onSubmitClicked: VoidCallback?
+            
+    public init(formFields: [FormFieldModel], onSubmitClicked: VoidCallback?) {
         self.formFields = formFields
         self.onSubmitClicked = onSubmitClicked
     }
@@ -54,11 +51,22 @@ public struct GenericFormScreen: View  {
             Section {
                 FormFieldModel().provideSubmitField()
                     .onTapGesture {
-                        self.onSubmitClicked()
+                        self.onSubmitTapped()
                     }
             }
             .listRowSeparator(.hidden)
 
         }.listStyle(.plain)
+    }
+}
+
+// MARK: view events
+extension GenericFormScreen {
+    func onSubmitTapped() {
+        guard let onSubmitClicked = self.onSubmitClicked  else {
+            return
+        }
+        
+        onSubmitClicked()
     }
 }

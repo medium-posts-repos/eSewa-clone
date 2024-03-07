@@ -18,4 +18,12 @@ public final class FormUseCaseImpl: BaseUseCase, FormUseCase {
                 return response
             }.eraseToAnyPublisher()
     }
+    
+    public func executeMerchantApi(code: String, params: RequestParams) -> AnyPublisher<BaseResponseDto<MerchantResponseDto>, Error> {
+        let url = RouteProvider.shared.routeFrom(routeCode: code).getUrl
+        return networkService.aSyncCall(request: url, model: BaseResponseDto<MerchantResponseDto>.self, method: .get, params: params)
+            .map { response in
+                return response
+            }.eraseToAnyPublisher()
+    }
 }

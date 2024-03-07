@@ -12,4 +12,7 @@ public class ApiConstants {
     public static let CONTENT = "content"
     public static let REQUESTED_ID = "requestedId"
     public static let AUTHORIZATION = "Authorization"
+    
+    public static let MERCHANT_CODE = "merchantCode"
+    public static let TXN_PIN = "txnPin"
 }

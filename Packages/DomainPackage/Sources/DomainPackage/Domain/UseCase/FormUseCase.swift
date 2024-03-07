@@ -11,4 +11,7 @@ import Combine
 public protocol FormUseCase: AnyObject {
     @available(iOS 13.0, *)
     func executeGet(code: String, params: RequestParams) -> AnyPublisher<BaseResponseDto<[FormItemResponseDto]>, Error>
+    
+    @available(iOS 13.0, *)
+    func executeMerchantApi(code: String, params: RequestParams) -> AnyPublisher<BaseResponseDto<MerchantResponseDto>, Error>
 }

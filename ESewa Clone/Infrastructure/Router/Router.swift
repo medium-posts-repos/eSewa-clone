@@ -15,26 +15,7 @@ public class Router: ObservableObject {
     @Published var navPath = NavigationRoutePath()
     
     public lazy var cancellables: Set<AnyCancellable> = []
-
-    @ViewBuilder
-    func buildNavigationStack(destination: RouteIntentDto) -> some View {
-        switch destination.routeCode {
-        case RouteCodeNavigator.ROUTE_PRIVATE_PROFILE:
-            ProfileScreen()
-        case RouteCodeNavigator.ROUTE_NOTIFICATION:
-            EmptyView()
-        case RouteCodeNavigator.ROUTE_DASHBOARD:
-            DashboardScreen()
-                .navigationBarBackButtonHidden()
-        default:
-            buildFormRouteDestination(destination: destination)
-        }
-    }
-}
-
-//MARK: route variations
-extension Router {
-
+    
     public func route(menu: RouteIntentDto) {
         if routeToFormMiddleware(menu: menu, onNext: { newMenu in
             routeFormHandler(formMenu: newMenu)
@@ -68,5 +49,35 @@ extension Router {
     
     public func popToRoot() {
         navPath.path = .init()
+    }
+}
+
+// MARK: main route entry point
+extension Router {
+    
+    @ViewBuilder
+    func buildNavigationStack(destination: RouteIntentDto) -> some View {
+        switch destination.routeCode {
+        case RouteCodeNavigator.ROUTE_PRIVATE_PROFILE:
+            ProfileScreen()
+        case RouteCodeNavigator.ROUTE_NOTIFICATION:
+            EmptyView()
+        case RouteCodeNavigator.ROUTE_DASHBOARD:
+            DashboardScreen()
+                .navigationBarBackButtonHidden()
+        default:
+            buildFormRouteDestination(destination: destination)
+        }
+    }
+    
+    @ViewBuilder
+    func buildMerchantCompletionStack(destination: MerchantRouteCompletionIntent) -> some View {
+        switch destination.routeCode {
+        case MenuConstants.MERCHANT_SUCCESS_ROUTE:
+            SuccessFormScreen()
+
+        default:
+            SuccessFormScreen()
+        }
     }
 }

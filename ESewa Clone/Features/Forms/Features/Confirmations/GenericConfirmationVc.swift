@@ -11,6 +11,16 @@ import DomainPackage
 public struct GenericConfirmationVc: View {
     
     @State private var stateShowConfirmation = false
+    public let targetMenu: MenuModel?
+    private let onCompletion: TypeCallback<MerchantResponseDto>
+    
+    public init(targetMenu: MenuModel?, onCompletion: @escaping TypeCallback<MerchantResponseDto>) {
+        self.targetMenu = targetMenu
+        self.onCompletion = onCompletion
+    }
+    
+    @ObservedObject
+    private var formViewModel = AppFactory.shared.vmFactory.providesFormViewModel()
     
     var onEventCallback: ConfirmationEventListener?
     
@@ -43,16 +53,38 @@ public struct GenericConfirmationVc: View {
         }.listStyle(.plain)
             .buildSheet(binding: $stateShowConfirmation) {
                 TxnPinSheetView(isPresented: $stateShowConfirmation) {
-                    onEventCallback?(.onTxnSheetSubmitted(pin: $0))
+                    executeApiOperation(pin: $0)
                 }
                 .presentationDetents([.medium])
             }
     }
 }
 
+// MARK: api operations
+extension GenericConfirmationVc {
+    private func executeApiOperation(pin: String) {
+        let params: RequestParams = [ApiConstants.MERCHANT_CODE: pin]
+        
+        Task {
+            self.formViewModel.executeMerchantApi(code: RouteConstants.ROUTE_ELECTRICITY, params: params, completion: { data in
+                
+                guard let response = data, response.status == true else {
+                    // TODO: handle failure
+                    return
+                }
+                
+                var destination = MerchantRouteCompletionIntent(routeCode: MenuConstants.MERCHANT_SUCCESS_ROUTE)
+                destination.targetMenu = targetMenu
+                
+                onCompletion(response)
+            })
+        }
+    }
+}
+
 struct GenericConfirmationVc_Previews: PreviewProvider {
     static var previews: some View {
-        GenericConfirmationVc()
+        GenericConfirmationVc(targetMenu: nil) { _ in }
     }
 }
 

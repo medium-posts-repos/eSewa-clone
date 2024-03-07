@@ -11,7 +11,6 @@ import FormPackage
 
 public protocol RoutableIntentProtocol: Hashable {
     var routeCode: String? { get set }
-    var formFields: [FormFieldModel]? { get set }
 }
 
 public struct RouteIntentDto: RoutableIntentProtocol {

@@ -25,16 +25,6 @@ public extension Router {
         case MenuConstants.ELECTRICITY:
             GenericFormScreen(formFields: destination.formFields ?? []) { self.routeConfirmation(destination: destination) }
                 .navigationTitle(destination.routingTitle ?? "")
-            
-        case MenuConstants.ELECTRICITY_CONFIRM:
-            GenericConfirmationVc {
-                switch $0 {
-                case .onTxnSheetSubmitted(let pin):
-                    print("Pin entered.. \(pin)")
-                }
-            }
-                .navigationTitle(destination.routingTitle ?? "")
-
         default:
             EmptyView().navigationTitle("Feature not available at the moment")
         }

@@ -78,7 +78,7 @@ public struct DashboardScreen: View {
 // MARK: view events
 extension DashboardScreen {
     func onProfileTapped() {
-        router.route(menu: .init(routeCode: RouteCodeNavigator.ROUTE_PRIVATE_PROFILE))
+        router.route(menu: RouteIntentDto(routeCode: RouteCodeNavigator.ROUTE_PRIVATE_PROFILE))
     }
 }
 

@@ -21,12 +21,18 @@ public extension Router {
     @ViewBuilder
     func buildFormRouteDestination(destination: RouteIntentDto) -> some View {
         switch destination.routingCode {
-        case MenuConstants.ELECTRICITY, MenuConstants.ELECTRICITY_CONFIRM:
+        case MenuConstants.ELECTRICITY:
             buildElectricityFlowDestination(destination: destination)
         default:
-            GenericFormScreen(formFields: destination.formFields ?? [], onSubmitClicked: {})
-                .navigationTitle(destination.routingTitle ?? "")
+            GenericFormScreen(formFields: destination.formFields ?? []) {
+                self.routeToConfirmation(destination: destination)
+            }.navigationTitle(destination.routingTitle ?? "")
         }
+    }
+    
+    private func routeToConfirmation(destination: RouteIntentDto) {
+        let confirmationIntent = MerchantRouteConfirmationIntent(targetMenu: destination.routeMenu, routeCode: destination.routeCode)
+        self.route(menu: confirmationIntent)
     }
     
     func formBuilder(formMenu: RouteIntentDto) {

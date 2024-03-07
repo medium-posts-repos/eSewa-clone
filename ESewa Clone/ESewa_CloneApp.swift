@@ -38,6 +38,10 @@ struct ESewaApp: App {
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationDestination(for: RouteIntentDto.self) { destination in
                     router.buildNavigationStack(destination: destination)
+                }.navigationDestination(for: MerchantRouteConfirmationIntent.self) { destination in
+                    router.buildMerchantConfirmationRouter(destination: destination)
+                }.navigationDestination(for: MerchantRouteCompletionIntent.self) { destination in
+                    router.buildMerchantCompletionRouter(destination: destination)
                 }
             }
             .environmentObject(router)

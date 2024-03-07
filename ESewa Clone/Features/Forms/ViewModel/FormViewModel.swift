@@ -22,12 +22,24 @@ public final class FormViewModel: BaseViewModel {
             .sink(receiveCompletion: { [weak self] response in
                 guard let _self = self else { return }
                 _self.isLoading = false
-            }, receiveValue: { [weak self] response in                
+            }, receiveValue: { response in
                 if response.status == true, let data = response.data?.formFields {
                     completion(data)
                 } else {
                     completion([])
                 }
+            })
+            .store(in: &cancellables)
+    }
+    
+    func executeMerchantApi(code: String, params: RequestParams, completion: @escaping TypeCallback<MerchantResponseDto?>) {
+        isLoading = true
+        formUseCase.executeMerchantApi(code: code, params: params)
+            .sink(receiveCompletion: { [weak self] response in
+                guard let _self = self else { return }
+                _self.isLoading = false
+            }, receiveValue: { response in
+                completion(response.data)
             })
             .store(in: &cancellables)
     }

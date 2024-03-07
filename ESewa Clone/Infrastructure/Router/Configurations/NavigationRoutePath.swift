@@ -10,9 +10,9 @@ import SwiftUI
 public struct NavigationRoutePath {
     public var path = NavigationPath()
     
-    public lazy var stacks: [RouteIntentDto] = []
+    public lazy var stacks: [any RoutableIntentProtocol] = []
     
-    public mutating func append(_ item: RouteIntentDto) {
+    public mutating func append(_ item: any RoutableIntentProtocol) {
         path.append(item)
         stacks.append(item)
     }
