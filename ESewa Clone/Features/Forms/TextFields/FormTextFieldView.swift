@@ -9,8 +9,8 @@ import SwiftUI
 import DomainPackage
 import FormPackage
 
-public protocol FormFieldTextDelegate: Protocol {
-    func onTextChanged(field: FormFieldModel, text: String)
+public enum FormFieldTextEvent {
+    case onTextChanged(field: FormFieldModel, text: String)
 }
 
 struct FormTextFieldView: View {
@@ -18,11 +18,12 @@ struct FormTextFieldView: View {
     
     public let formField: FormFieldModel
     
-    public init(formField: FormFieldModel) {
+    public init(formField: FormFieldModel, delegate: TypeCallback<FormFieldTextEvent>?) {
         self.formField = formField
+        self.delegate = delegate
     }
     
-    public var delegate: FormFieldTextDelegate?
+    public var delegate: TypeCallback<FormFieldTextEvent>?
     
     var body: some View {
         
@@ -30,7 +31,7 @@ struct FormTextFieldView: View {
             self.textInput
         }, set: {
             self.textInput = $0
-            self.delegate?.onTextChanged(field: formField, text: $0)
+            self.delegate?(.onTextChanged(field: formField, text: textInput))
         })
         
         TextField(formField.hint ?? "", text: binding)

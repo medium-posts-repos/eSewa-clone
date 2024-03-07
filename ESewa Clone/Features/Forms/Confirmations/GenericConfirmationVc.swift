@@ -12,6 +12,8 @@ public struct GenericConfirmationVc: View {
     
     @State private var stateShowConfirmation = false
     
+    var onEventCallback: ConfirmationEventListener?
+    
     public var body: some View {
         List {
             Section {
@@ -40,8 +42,10 @@ public struct GenericConfirmationVc: View {
             }.listRowSeparator(.hidden)
         }.listStyle(.plain)
             .buildSheet(binding: $stateShowConfirmation) {
-                TxnPinSheetView()
-                    .presentationDetents([.medium])
+                TxnPinSheetView(isPresented: $stateShowConfirmation) {
+                    onEventCallback?(.onTxnSheetSubmitted(pin: $0))
+                }
+                .presentationDetents([.medium])
             }
     }
 }

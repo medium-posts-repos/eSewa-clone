@@ -31,9 +31,12 @@ public struct GenericFormScreen: View  {
             Section {
                 VStack(alignment: .leading, spacing: 22) {
                      ForEach(formFields, id: \.self) { formField in
-                        switch formField.type {
-                        case .TEXT, .AMOUNT:
-                            formField.provideTextField()
+                         switch formField.type {
+                         case .TEXT, .AMOUNT:
+                             formField.provideTextField { _ in
+                                 
+                             }
+
                         case .HEADER_CAPTION:
                             formField.provideHeaderCaption()
                         case .NOTE:

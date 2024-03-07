@@ -27,7 +27,12 @@ public extension Router {
                 .navigationTitle(destination.routingTitle ?? "")
             
         case MenuConstants.ELECTRICITY_CONFIRM:
-            GenericConfirmationVc()
+            GenericConfirmationVc {
+                switch $0 {
+                case .onTxnSheetSubmitted(let pin):
+                    print("Pin entered.. \(pin)")
+                }
+            }
                 .navigationTitle(destination.routingTitle ?? "")
 
         default:

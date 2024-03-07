@@ -29,6 +29,7 @@
 		A34645F72B89A9A400A20230 /* CardShapeViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34645F62B89A9A400A20230 /* CardShapeViewModifier.swift */; };
 		A34645F92B89B6E600A20230 /* SheetExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34645F82B89B6E600A20230 /* SheetExt.swift */; };
 		A34645FC2B89DA7300A20230 /* TxnPinSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34645FB2B89DA7300A20230 /* TxnPinSheetView.swift */; };
+		A36529F92B9A03FC007C1240 /* ConfirmationEventListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36529F82B9A03FC007C1240 /* ConfirmationEventListener.swift */; };
 		A371F10A2B1B15FF00B50E77 /* DomainPackage in Frameworks */ = {isa = PBXBuildFile; productRef = A371F1092B1B15FF00B50E77 /* DomainPackage */; };
 		A371F10C2B1B160100B50E77 /* FormPackage in Frameworks */ = {isa = PBXBuildFile; productRef = A371F10B2B1B160100B50E77 /* FormPackage */; };
 		A371F10F2B1B225600B50E77 /* GenericFormScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A371F10E2B1B225600B50E77 /* GenericFormScreen.swift */; };
@@ -122,6 +123,7 @@
 		A34645F62B89A9A400A20230 /* CardShapeViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardShapeViewModifier.swift; sourceTree = "<group>"; };
 		A34645F82B89B6E600A20230 /* SheetExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetExt.swift; sourceTree = "<group>"; };
 		A34645FB2B89DA7300A20230 /* TxnPinSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TxnPinSheetView.swift; sourceTree = "<group>"; };
+		A36529F82B9A03FC007C1240 /* ConfirmationEventListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationEventListener.swift; sourceTree = "<group>"; };
 		A371F1042B1B146600B50E77 /* DomainPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = DomainPackage; sourceTree = "<group>"; };
 		A371F1052B1B146600B50E77 /* FormPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FormPackage; sourceTree = "<group>"; };
 		A371F10E2B1B225600B50E77 /* GenericFormScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericFormScreen.swift; sourceTree = "<group>"; };
@@ -368,6 +370,15 @@
 			path = Pins;
 			sourceTree = "<group>";
 		};
+		A36529F72B9A03B5007C1240 /* Confirmations */ = {
+			isa = PBXGroup;
+			children = (
+				A34645F42B89A82C00A20230 /* GenericConfirmationVc.swift */,
+				A36529F82B9A03FC007C1240 /* ConfirmationEventListener.swift */,
+			);
+			path = Confirmations;
+			sourceTree = "<group>";
+		};
 		A371F1032B1B145E00B50E77 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
@@ -388,12 +399,12 @@
 		A371F10D2B1B224500B50E77 /* Forms */ = {
 			isa = PBXGroup;
 			children = (
+				A36529F72B9A03B5007C1240 /* Confirmations */,
 				A334A6252B87A9F6008CC8D4 /* Features */,
 				A334A6162B878F3B008CC8D4 /* FormExt */,
 				A394A7702B0208B60030AAF1 /* ViewModel */,
 				A371F1102B1B251900B50E77 /* TextFields */,
 				A371F10E2B1B225600B50E77 /* GenericFormScreen.swift */,
-				A34645F42B89A82C00A20230 /* GenericConfirmationVc.swift */,
 			);
 			path = Forms;
 			sourceTree = "<group>";
@@ -824,6 +835,7 @@
 				A33AD6992B009887005A09AC /* NavigationRoutePath.swift in Sources */,
 				A3ACA4762B2C3D500051E9D4 /* ExpandedView.swift in Sources */,
 				A3ACA4852B2C49020051E9D4 /* StatementViewModel.swift in Sources */,
+				A36529F92B9A03FC007C1240 /* ConfirmationEventListener.swift in Sources */,
 				A334A6212B879927008CC8D4 /* Coordinating.swift in Sources */,
 				A3ACA46F2B2C3D500051E9D4 /* StatementScreen.swift in Sources */,
 				A334A6182B878F4C008CC8D4 /* FormFieldModel + FormsExt.swift in Sources */,

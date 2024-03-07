@@ -22,11 +22,12 @@ public extension FormFieldModel {
         }.disabled(false)
     }
     
-    func provideTextField() -> some View {
+    @ViewBuilder
+    func provideTextField(delegate: TypeCallback<FormFieldTextEvent>?) -> some View {
         VStack(alignment: .leading, spacing: 6) {
             Text(label ?? "")
                 .font(.subheadline)
-            FormTextFieldView(formField: self)
+            FormTextFieldView(formField: self, delegate: delegate)
                 .modifier(FormFieldViewModifier())
                 .clipShape(RoundedRectangle(cornerRadius: 8))
         }

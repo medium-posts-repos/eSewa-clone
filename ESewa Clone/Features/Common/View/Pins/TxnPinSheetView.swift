@@ -10,6 +10,17 @@ import SwiftUI
 import DomainPackage
 
 public struct TxnPinSheetView: View {
+    
+    @State private var mPinTextValue = ""
+    @Binding private var isPresented: Bool
+    
+    private var onSubmitClick: TypeCallback<String>?
+    
+    public init(isPresented: Binding<Bool>, onSubmitClick: TypeCallback<String>?) {
+        self.onSubmitClick = onSubmitClick
+        self._isPresented = isPresented
+    }
+    
     public var body: some View {
         VStack {
             Image("ic_profile_view")
@@ -20,7 +31,12 @@ public struct TxnPinSheetView: View {
             VStack(alignment: .leading, spacing: 2) {
                 Text("Enter MPIN")
                     .font(.subheadline)
-                FormTextFieldView(formField: FormFieldModel())
+                FormTextFieldView(formField: .init()) {
+                    switch $0 {
+                    case .onTextChanged(_, let pin):
+                        mPinTextValue = pin
+                    }
+                }
                     .modifier(FormFieldViewModifier())
                     .clipShape(RoundedRectangle(cornerRadius: 8))
                 Spacer().frame(height: 16)
@@ -36,6 +52,10 @@ public struct TxnPinSheetView: View {
                     Button(action: {}, label: {
                         Text("\("Submit")")
                     }).disabled(true)
+                        .onTapGesture {
+                            self.onSubmitClick?(mPinTextValue)
+                            self.isPresented = false
+                        }
                     .buttonStyle(FillButtonStyle())
                     
                     Button(action: {}, label: {
