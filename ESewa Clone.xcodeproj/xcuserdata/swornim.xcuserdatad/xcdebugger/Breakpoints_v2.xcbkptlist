@@ -114,5 +114,69 @@
             landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "74DC92E1-74DB-4C14-85F3-EAFF6FDC9D3E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ESewa Clone/Features/Forms/ViewModel/FormViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "executeMerchantApi(code:params:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "74DC92E1-74DB-4C14-85F3-EAFF6FDC9D3E - e0c0ae15ca83a49f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Combine.Subscribers.Completion&lt;Swift.Error&gt;) -&gt; () in ESewa_Clone.FormViewModel.executeMerchantApi(code: Swift.String, params: Swift.Dictionary&lt;Swift.String, Any&gt;, completion: (Swift.Optional&lt;DomainPackage.MerchantResponseDto&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ESewa Clone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swornim/Desktop/personal/ios-projects/SwiftUI/ESewaClone/ESewa%20Clone/ESewa%20Clone/Features/Forms/ViewModel/FormViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  uuid = "74DC92E1-74DB-4C14-85F3-EAFF6FDC9D3E - b399b6bef2cb3a57"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (DomainPackage.BaseResponseDto&lt;DomainPackage.MerchantResponseDto&gt;) -&gt; () in ESewa_Clone.FormViewModel.executeMerchantApi(code: Swift.String, params: Swift.Dictionary&lt;Swift.String, Any&gt;, completion: (Swift.Optional&lt;DomainPackage.MerchantResponseDto&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ESewa Clone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swornim/Desktop/personal/ios-projects/SwiftUI/ESewaClone/ESewa%20Clone/ESewa%20Clone/Features/Forms/ViewModel/FormViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1508F7E0-89A8-48FC-840C-6899A1CA7D1B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ESewa Clone/Features/Forms/ViewModel/FormViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "executeMerchantApi(code:params:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
