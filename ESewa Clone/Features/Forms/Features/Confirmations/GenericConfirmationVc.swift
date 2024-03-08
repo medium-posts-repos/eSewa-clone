@@ -19,7 +19,7 @@ public struct GenericConfirmationVc: View {
         self.onCompletion = onCompletion
     }
     
-    @ObservedObject
+    @StateObject
     private var formViewModel = AppFactory.shared.vmFactory.providesFormViewModel()
     
     var onEventCallback: ConfirmationEventListener?
