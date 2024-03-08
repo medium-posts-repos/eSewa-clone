@@ -23,9 +23,11 @@ extension Router {
     func buildMerchantCompletionRouter(destination: MerchantRouteCompletionIntent) -> some View {
         switch destination.routeCode {
         case MenuConstants.MERCHANT_SUCCESS_ROUTE:
-            SuccessFormScreen(response: destination.response)
-                .navigationTitle("Transaction Success")
-                .navigationBarBackButtonHidden(true)
+            SuccessFormScreen(response: destination.response) {
+                self.routeToDashboard()
+            }
+            .navigationTitle("Transaction Success")
+            .navigationBarBackButtonHidden(true)
         case MenuConstants.MERCHANT_FAILURE_ROUTE:
             SuccessFormScreen()
         default:

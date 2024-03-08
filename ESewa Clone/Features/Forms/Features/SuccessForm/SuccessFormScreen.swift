@@ -9,7 +9,13 @@ import SwiftUI
 import DomainPackage
 
 public struct SuccessFormScreen: View {
-    public var response: MerchantResponseDto?
+    private var response: MerchantResponseDto?
+    private var onRouteToDashboad: VoidCallback?
+    
+    public init(response: MerchantResponseDto? = nil, onRouteToDashboad: VoidCallback? = nil) {
+        self.response = response
+        self.onRouteToDashboad = onRouteToDashboad
+    }
     
     public var body: some View {
         List {
@@ -34,6 +40,14 @@ public struct SuccessFormScreen: View {
                 KeyValueView(options: response?.invoices ?? [])
             }.modifier(MenuShapeViewModifier(padding: 14))
                 .listRowSeparator(.hidden)
+            
+            Section {
+                FormFieldModel().provideSubmitField()
+                    .onTapGesture {
+                        self.onRouteToDashboad?()
+                    }
+            }
+            .listRowSeparator(.hidden)
         }.listStyle(.plain)
     }
 }
