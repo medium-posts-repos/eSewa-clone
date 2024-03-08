@@ -26,6 +26,8 @@
 		A33AD69A2B009887005A09AC /* RouteIntentDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AD6962B009887005A09AC /* RouteIntentDto.swift */; };
 		A33AD69B2B009887005A09AC /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AD6972B009887005A09AC /* Router.swift */; };
 		A33C07862B9AE81100E12669 /* KeyValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33C07852B9AE81100E12669 /* KeyValueView.swift */; };
+		A33C07882B9AFAD800E12669 /* AlertDialogViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33C07872B9AFAD800E12669 /* AlertDialogViewModifier.swift */; };
+		A33C078C2B9AFB9000E12669 /* ScreenViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33C078B2B9AFB9000E12669 /* ScreenViewExt.swift */; };
 		A34645F52B89A82C00A20230 /* GenericConfirmationVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34645F42B89A82C00A20230 /* GenericConfirmationVc.swift */; };
 		A34645F72B89A9A400A20230 /* CardShapeViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34645F62B89A9A400A20230 /* CardShapeViewModifier.swift */; };
 		A34645F92B89B6E600A20230 /* SheetExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34645F82B89B6E600A20230 /* SheetExt.swift */; };
@@ -124,6 +126,8 @@
 		A33AD6962B009887005A09AC /* RouteIntentDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteIntentDto.swift; sourceTree = "<group>"; };
 		A33AD6972B009887005A09AC /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		A33C07852B9AE81100E12669 /* KeyValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueView.swift; sourceTree = "<group>"; };
+		A33C07872B9AFAD800E12669 /* AlertDialogViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDialogViewModifier.swift; sourceTree = "<group>"; };
+		A33C078B2B9AFB9000E12669 /* ScreenViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenViewExt.swift; sourceTree = "<group>"; };
 		A34645F42B89A82C00A20230 /* GenericConfirmationVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericConfirmationVc.swift; sourceTree = "<group>"; };
 		A34645F62B89A9A400A20230 /* CardShapeViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardShapeViewModifier.swift; sourceTree = "<group>"; };
 		A34645F82B89B6E600A20230 /* SheetExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetExt.swift; sourceTree = "<group>"; };
@@ -399,6 +403,14 @@
 			path = KeyValueView;
 			sourceTree = "<group>";
 		};
+		A33C078A2B9AFB7800E12669 /* ScreenExt */ = {
+			isa = PBXGroup;
+			children = (
+				A33C078B2B9AFB9000E12669 /* ScreenViewExt.swift */,
+			);
+			path = ScreenExt;
+			sourceTree = "<group>";
+		};
 		A34645FA2B89DA5F00A20230 /* Pins */ = {
 			isa = PBXGroup;
 			children = (
@@ -540,6 +552,7 @@
 				A3E74CAE2B230456006DFB17 /* TextStyleModifier.swift */,
 				A3ACA4822B2C40C90051E9D4 /* AmountBalanceModifier.swift */,
 				A34645F62B89A9A400A20230 /* CardShapeViewModifier.swift */,
+				A33C07872B9AFAD800E12669 /* AlertDialogViewModifier.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -711,6 +724,7 @@
 		A3ECAECE2B00FB1E00CA8E32 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A33C078A2B9AFB7800E12669 /* ScreenExt */,
 				A394A77C2B0216FB0030AAF1 /* Modifiers */,
 				A3ECAECF2B00FB2800CA8E32 /* ViewExt */,
 			);
@@ -866,6 +880,7 @@
 				A3ACA4742B2C3D500051E9D4 /* MenuListMoreView.swift in Sources */,
 				A3ACA4752B2C3D500051E9D4 /* MenuIconDescListView.swift in Sources */,
 				A371F1312B1B6CC500B50E77 /* VmFactory.swift in Sources */,
+				A33C078C2B9AFB9000E12669 /* ScreenViewExt.swift in Sources */,
 				A3ACA46C2B2C3D500051E9D4 /* HelpAndFaqListView.swift in Sources */,
 				A371F11B2B1B48DD00B50E77 /* FormViewModel.swift in Sources */,
 				A371F1162B1B3AB600B50E77 /* RouterMiddleware.swift in Sources */,
@@ -881,6 +896,7 @@
 				A3ACA47D2B2C3D500051E9D4 /* DashboardScreen.swift in Sources */,
 				A34645F72B89A9A400A20230 /* CardShapeViewModifier.swift in Sources */,
 				A3ACA4832B2C40C90051E9D4 /* AmountBalanceModifier.swift in Sources */,
+				A33C07882B9AFAD800E12669 /* AlertDialogViewModifier.swift in Sources */,
 				A3ACA4732B2C3D500051E9D4 /* HorizontalProductPagerView.swift in Sources */,
 				A3ACA4712B2C3D500051E9D4 /* MoreHeaderView.swift in Sources */,
 				A394A7842B021F930030AAF1 /* ProfileScreen.swift in Sources */,

@@ -38,6 +38,14 @@ public final class FormViewModel: BaseViewModel {
             .sink(receiveCompletion: { [weak self] response in
                 guard let _self = self else { return }
                 _self.isLoading = false
+
+                switch response {
+                case .failure(let error):
+                    self?.onFailureResult = self?.unknownFailure
+                    self?.showAlert = true
+                default:
+                    break
+                }
             }, receiveValue: { response in
                 completion(response.data)
             })

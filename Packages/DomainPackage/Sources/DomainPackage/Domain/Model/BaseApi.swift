@@ -27,10 +27,12 @@ public struct NothingDto: Codable {
 
 public struct ApiResDto: Codable {
     
+    public var title: String?
     public var message: String?
     public var status: Bool?
     
-    public init(message: String?, status: Bool? = false) {
+    public init(title: String?, message: String?, status: Bool? = false) {
+        self.title = title
         self.message = message
         self.status = status
     }

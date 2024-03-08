@@ -51,7 +51,7 @@ public struct GenericConfirmationVc: View {
                     }
             }.listRowSeparator(.hidden)
         }.listStyle(.plain)
-            .modifier(ProgressViewModifier(isLoading: formViewModel.isLoading))
+            .addProgressAndLoader(viewModel: formViewModel)
             .buildSheet(binding: $stateShowConfirmation) {
                 TxnPinSheetView(isPresented: $stateShowConfirmation) {
                     executeApiOperation(pin: $0)
@@ -63,12 +63,16 @@ public struct GenericConfirmationVc: View {
 
 // MARK: api operations
 extension GenericConfirmationVc {
+    fileprivate func extractedFunc() -> MerchantRouteCompletionIntent {
+        return MerchantRouteCompletionIntent(routeCode: MenuConstants.MERCHANT_SUCCESS_ROUTE)
+    }
+    
     private func executeApiOperation(pin: String) {
         let params: RequestParams = [ApiConstants.MERCHANT_CODE: pin]
         
         self.formViewModel.executeMerchantApi(code: targetMenu?.routeApiCode ?? "", params: params, completion: { data in
                         
-            var destination = MerchantRouteCompletionIntent(routeCode: MenuConstants.MERCHANT_SUCCESS_ROUTE)
+            var destination = extractedFunc()
             destination.response = data
             destination.targetMenu = targetMenu
             

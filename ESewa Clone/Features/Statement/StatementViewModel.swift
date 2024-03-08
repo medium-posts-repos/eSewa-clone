@@ -31,7 +31,7 @@ public final class StatementViewModel: BaseViewModel {
                 if response.status == true, let data = response.data?.statementGroups {
                     self.statementResult.send(data)
                 } else {
-                    self.failureResult.send(.init(message: response.message))
+                    self.failureResult.send(.init(title: "Failure", message: response.message))
                 }
             })
             .store(in: &cancellables)
