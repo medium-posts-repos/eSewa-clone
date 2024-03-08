@@ -23,9 +23,9 @@ extension Router {
     func buildMerchantCompletionRouter(destination: MerchantRouteCompletionIntent) -> some View {
         switch destination.routeCode {
         case MenuConstants.MERCHANT_SUCCESS_ROUTE:
-            SuccessFormScreen().onAppear {
-                print("Incoming success \(destination.routeCode ?? "")")
-            }
+            SuccessFormScreen(response: destination.response)
+                .navigationTitle("Transaction Success")
+                .navigationBarBackButtonHidden(true)
         case MenuConstants.MERCHANT_FAILURE_ROUTE:
             SuccessFormScreen()
         default:
@@ -36,9 +36,7 @@ extension Router {
     @ViewBuilder
     func buildMerchantConfirmationRouter(destination: MerchantRouteConfirmationIntent) -> some View {
         GenericConfirmationVc(targetMenu: destination.targetMenu) {
-            var successIntent = MerchantRouteCompletionIntent(targetMenu: destination.targetMenu, routeCode: MenuConstants.MERCHANT_SUCCESS_ROUTE)
-            successIntent.response = $0
-            self.route(menu: successIntent)
+            self.route(menu: $0)
         }.navigationTitle("Confirmation")
     }
 }

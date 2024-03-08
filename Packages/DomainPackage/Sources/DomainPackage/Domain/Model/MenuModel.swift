@@ -11,7 +11,7 @@ public struct MenuModel: Codable, Hashable, Identifiable {
     public var id: Int?
     
     public var code: String?
-    public var routeApi: String?
+    public var routeApiCode: String?
     
     public var name: String?
     public var desc: String?
@@ -44,13 +44,22 @@ public struct MenuModel: Codable, Hashable, Identifiable {
         self.iconUrl = iconUrl
     }
     
+    public mutating func addApiRouteCode(code: String) -> MenuModel {
+        routeApiCode = code
+        return self
+    }
+    
     public init() {}
     
     public static var dashboardMenus: [MenuModel] {
         var menus: [MenuModel] = []
         menus.append(.init(id: 0, name: "Form Builder", desc: "Topup", iconName: "mobile.fill"))
         menus.append(.init(id: 1, code: MenuConstants.ELECTRICITY, name: "Electricity NEA", desc: "Electricity", iconName: "mobile.fill"))
-        menus.append(.init(id: 2, name: "Khanepani Water", desc: "Khanepani", iconName: "mobile.fill"))
+        
+        var kppMenu = MenuModel(id: 2, name: "Khanepani Water", desc: "Khanepani", iconName: "mobile.fill")
+        kppMenu.routeApiCode = RouteConstants.KHANE_PANI_PAYMENT
+        
+        menus.append(kppMenu)
         menus.append(.init(id: 3, name: "eSewa Care", desc: "eSewa Care", iconName: "mobile.fill"))
         menus.append(.init(id: 4, name: "Tihar Daskhina", desc: "Tihar Daskhina", iconName: "mobile.fill"))
         menus.append(.init(id: 5, name: "Internet Company", desc: "Internet", iconName: "mobile.fill"))

@@ -25,6 +25,7 @@
 		A33AD6992B009887005A09AC /* NavigationRoutePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AD6952B009887005A09AC /* NavigationRoutePath.swift */; };
 		A33AD69A2B009887005A09AC /* RouteIntentDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AD6962B009887005A09AC /* RouteIntentDto.swift */; };
 		A33AD69B2B009887005A09AC /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33AD6972B009887005A09AC /* Router.swift */; };
+		A33C07862B9AE81100E12669 /* KeyValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33C07852B9AE81100E12669 /* KeyValueView.swift */; };
 		A34645F52B89A82C00A20230 /* GenericConfirmationVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34645F42B89A82C00A20230 /* GenericConfirmationVc.swift */; };
 		A34645F72B89A9A400A20230 /* CardShapeViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34645F62B89A9A400A20230 /* CardShapeViewModifier.swift */; };
 		A34645F92B89B6E600A20230 /* SheetExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34645F82B89B6E600A20230 /* SheetExt.swift */; };
@@ -122,6 +123,7 @@
 		A33AD6952B009887005A09AC /* NavigationRoutePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationRoutePath.swift; sourceTree = "<group>"; };
 		A33AD6962B009887005A09AC /* RouteIntentDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteIntentDto.swift; sourceTree = "<group>"; };
 		A33AD6972B009887005A09AC /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		A33C07852B9AE81100E12669 /* KeyValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueView.swift; sourceTree = "<group>"; };
 		A34645F42B89A82C00A20230 /* GenericConfirmationVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericConfirmationVc.swift; sourceTree = "<group>"; };
 		A34645F62B89A9A400A20230 /* CardShapeViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardShapeViewModifier.swift; sourceTree = "<group>"; };
 		A34645F82B89B6E600A20230 /* SheetExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetExt.swift; sourceTree = "<group>"; };
@@ -371,6 +373,32 @@
 			path = Infrastructure;
 			sourceTree = "<group>";
 		};
+		A33C07822B9AE7E200E12669 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				A3ACA45E2B2C3D500051E9D4 /* MenuListMoreView.swift */,
+				A3ACA45F2B2C3D500051E9D4 /* MenuIconDescListView.swift */,
+				A3ACA4612B2C3D500051E9D4 /* GridListMenuView.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		A33C07832B9AE7F300E12669 /* ImageViews */ = {
+			isa = PBXGroup;
+			children = (
+				A3ACA4622B2C3D500051E9D4 /* ImageAsyncView.swift */,
+			);
+			path = ImageViews;
+			sourceTree = "<group>";
+		};
+		A33C07842B9AE80200E12669 /* KeyValueView */ = {
+			isa = PBXGroup;
+			children = (
+				A33C07852B9AE81100E12669 /* KeyValueView.swift */,
+			);
+			path = KeyValueView;
+			sourceTree = "<group>";
+		};
 		A34645FA2B89DA5F00A20230 /* Pins */ = {
 			isa = PBXGroup;
 			children = (
@@ -596,12 +624,11 @@
 		A3ACA45D2B2C3D500051E9D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A33C07842B9AE80200E12669 /* KeyValueView */,
+				A33C07832B9AE7F300E12669 /* ImageViews */,
+				A33C07822B9AE7E200E12669 /* Menu */,
 				A34645FA2B89DA5F00A20230 /* Pins */,
-				A3ACA45E2B2C3D500051E9D4 /* MenuListMoreView.swift */,
-				A3ACA45F2B2C3D500051E9D4 /* MenuIconDescListView.swift */,
 				A3ACA4602B2C3D500051E9D4 /* ExpandedView.swift */,
-				A3ACA4612B2C3D500051E9D4 /* GridListMenuView.swift */,
-				A3ACA4622B2C3D500051E9D4 /* ImageAsyncView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -859,6 +886,7 @@
 				A394A7842B021F930030AAF1 /* ProfileScreen.swift in Sources */,
 				A33AD6992B009887005A09AC /* NavigationRoutePath.swift in Sources */,
 				A3ACA4762B2C3D500051E9D4 /* ExpandedView.swift in Sources */,
+				A33C07862B9AE81100E12669 /* KeyValueView.swift in Sources */,
 				A3ACA4852B2C49020051E9D4 /* StatementViewModel.swift in Sources */,
 				A36529F92B9A03FC007C1240 /* Delegates.swift in Sources */,
 				A334A6212B879927008CC8D4 /* Coordinating.swift in Sources */,

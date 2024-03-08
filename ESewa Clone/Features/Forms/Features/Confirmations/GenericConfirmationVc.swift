@@ -12,9 +12,9 @@ public struct GenericConfirmationVc: View {
     
     @State private var stateShowConfirmation = false
     public let targetMenu: MenuModel?
-    private let onCompletion: TypeCallback<MerchantResponseDto>
+    private let onCompletion: TypeCallback<MerchantRouteCompletionIntent>
     
-    public init(targetMenu: MenuModel?, onCompletion: @escaping TypeCallback<MerchantResponseDto>) {
+    public init(targetMenu: MenuModel?, onCompletion: @escaping TypeCallback<MerchantRouteCompletionIntent>) {
         self.targetMenu = targetMenu
         self.onCompletion = onCompletion
     }
@@ -66,16 +66,13 @@ extension GenericConfirmationVc {
     private func executeApiOperation(pin: String) {
         let params: RequestParams = [ApiConstants.MERCHANT_CODE: pin]
         
-        self.formViewModel.executeMerchantApi(code: RouteConstants.ROUTE_ELECTRICITY, params: params, completion: { data in
-            
-            // TODO: handle failure and success
-            var response = MerchantResponseDto()
-            
+        self.formViewModel.executeMerchantApi(code: targetMenu?.routeApiCode ?? "", params: params, completion: { data in
+                        
             var destination = MerchantRouteCompletionIntent(routeCode: MenuConstants.MERCHANT_SUCCESS_ROUTE)
-            destination.response = response
+            destination.response = data
             destination.targetMenu = targetMenu
             
-            onCompletion(response)
+            onCompletion(destination)
         })
     }
 }

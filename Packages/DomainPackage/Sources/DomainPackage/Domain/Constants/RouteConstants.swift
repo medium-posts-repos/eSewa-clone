@@ -8,4 +8,5 @@
 public struct RouteConstants {
     public static let ROUTE_ELECTRICITY = "ROUTE_ELECTRICITY"
     public static let ACCOUNT_STATEMENTS = "ACCOUNT_STATEMENTS"
+    public static let KHANE_PANI_PAYMENT = "KHANE_PANI_PAYMENT"
 }

@@ -12,7 +12,7 @@ public struct MerchantResponseDto: Codable, Hashable, Identifiable {
 
     public var message: String?
     public var status: Bool?
-    public var invoices: [[String: String]]?
+    public var invoices: [OptionModel]?
     
     public init() {}
     

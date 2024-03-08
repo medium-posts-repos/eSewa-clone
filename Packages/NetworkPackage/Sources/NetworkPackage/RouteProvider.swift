@@ -15,7 +15,8 @@ public class RouteProvider {
 
     private let authRoutes: [String: String] = [
         RouteConstants.ROUTE_ELECTRICITY: "form/electricity",
-        RouteConstants.ACCOUNT_STATEMENTS: "account/statements"
+        RouteConstants.ACCOUNT_STATEMENTS: "account/statements",
+        RouteConstants.KHANE_PANI_PAYMENT: "merchant/payment/khanepani",
     ]
     
     public func routeFrom(routeCode: String) -> ApiRoutes {

@@ -18,3 +18,16 @@ public extension Color {
         )
     }
 }
+
+public extension Color {
+    static func onSurfaceColor(_ colorScheme: ColorScheme) -> Color {
+        switch colorScheme {
+        case .light:
+            return Color(hex: 0x1c252e)
+        case .dark:
+           return Color(hex: 0xf5f5f5)
+        @unknown default:
+            return Color(hex: 0xf5f5f5)
+        }
+    }
+}
