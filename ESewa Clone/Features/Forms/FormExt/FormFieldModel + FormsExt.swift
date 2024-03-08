@@ -13,10 +13,10 @@ import SwiftUI
 public extension FormFieldModel {
     
     @ViewBuilder
-    func provideSubmitField() -> some View {
+    func provideSubmitField(title: String = "Submit") -> some View {
         VStack(alignment: .leading, spacing: 6) {
            Button(action: {}, label: {
-               Text("\(label ?? "Submit")")
+               Text("\(label ?? "\(title)")")
            }).disabled(true)
            .buttonStyle(FillButtonStyle())
         }.disabled(false)

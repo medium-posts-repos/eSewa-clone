@@ -42,7 +42,7 @@ public struct SuccessFormScreen: View {
                 .listRowSeparator(.hidden)
             
             Section {
-                FormFieldModel().provideSubmitField()
+                FormFieldModel().provideSubmitField(title: "Go to Dashboard")
                     .onTapGesture {
                         self.onRouteToDashboad?()
                     }
