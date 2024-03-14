@@ -26,6 +26,7 @@ public struct StatementScreen: View {
                     Section(header: Text("\(item.filterDate ?? "" )")) {
                         ForEach(item.statements ?? [], id: \.self) { statement in
                             Text("\(statement.reason ?? "")")
+                                .padding(.leading, 8)
                         }
                     }
                 }
