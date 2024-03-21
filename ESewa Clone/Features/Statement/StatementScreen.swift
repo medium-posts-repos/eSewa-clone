@@ -31,9 +31,9 @@ public struct StatementScreen: View {
                     }
                 }
             }
-            .listStyle(.plain)
+            .listStyle(.grouped)
             .padding(.init(top: 0, leading: -14, bottom: 0, trailing: -14))
-        }.modifier(ProgressViewModifier(isLoading: statementViewModel.isLoading))
+        }.modifier(ProgressViewModifier(isLoading: statementViewModel.isLoading, isEnabled: dataSource.isEmpty))
             .onReceive(statementViewModel.statementResult) {
                 self.dataSource = $0
             }

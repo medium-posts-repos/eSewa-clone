@@ -9,12 +9,18 @@ import SwiftUI
 
 struct ProgressViewModifier: ViewModifier {
     var isLoading: Bool
+    let isEnabled: Bool
+    
+    init(isLoading: Bool, isEnabled: Bool = true) {
+        self.isLoading = isLoading
+        self.isEnabled = isEnabled
+    }
     
     func body(content: Content) -> some View {
         ZStack(alignment: .center) {
             content
                 .disabled(isLoading)
-            if isLoading {
+            if isLoading && isEnabled {
                 ProgressView()
                     .progressViewStyle(CircularProgressViewStyle(tint: .primary))
             }

@@ -23,6 +23,6 @@ public final class DataFactory {
     }
     
     public func provideStatementUseCase() -> StatementUseCase {
-        StatementUseCaseImpl(networkService: networkService)
+        FeatureConfiguration.MOCKABLE ? StatementUseCaseMockImpl(networkService: networkService) : StatementUseCaseImpl(networkService: networkService)
     }
 }
