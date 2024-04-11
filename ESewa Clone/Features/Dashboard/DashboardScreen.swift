@@ -44,14 +44,27 @@ public struct DashboardScreen: View {
     }
     
     @ViewBuilder
-    private func renderTabScreen() -> some View {
+    func homeScreen() -> some View {
         HomeScreen(router: router)
             .tabItem({
                 Image(systemName: "house")
             })
             .tabItem { Text("Home") }
             .tag(0)
-        
+    }
+    
+    @ViewBuilder
+    func statementScreen() -> some View {
+        StatementScreen()
+            .tabItem({
+                Image(systemName: "text.bubble")
+            })
+            .tabItem { Text("Statement") }
+            .tag(0)
+    }
+    
+    @ViewBuilder
+    private func renderTabScreen() -> some View {
         StatementScreen()
             .tabItem({
                 Image(systemName: "text.bubble")
