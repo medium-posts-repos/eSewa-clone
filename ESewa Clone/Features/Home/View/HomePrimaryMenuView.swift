@@ -41,6 +41,7 @@ public struct HomePrimaryMenuView: BaseView {
             Text(title)
                 .font(.system(size: 15))
                 .fontWeight(.medium)
+                .foregroundColor(theme.currentTheme.onSurfaceColor)
                 .multilineTextAlignment(.center)
                 .onTapGesture {
                     theme.updateTheme(scheme: .light)

@@ -44,7 +44,7 @@ public protocol CoreTheme {
 }
 
 public class DarkTheme: CoreTheme {
-    public var tintImageColor: Color { .black }
+    public var tintImageColor: Color { .white }
     public var surfaceColor: Color{ Color(hex: 0x0e1116) }
     public var onSurfaceColor: Color { Color(hex: 0xf5f5f5) }
     public var backgroundColor: Color { .black }
@@ -53,9 +53,9 @@ public class DarkTheme: CoreTheme {
 
 public class LightTheme: CoreTheme {
     public var colorScheme: AppCoreColorScheme { .light }
-    public var tintImageColor: Color { .white }
-    public var surfaceColor: Color { Color(hex: 0xf5f5f5) }
-    public var onSurfaceColor: Color { Color(hex: 0xf5f5f5) }
+    public var tintImageColor: Color { .black }
+    public var surfaceColor: Color { .white }
+    public var onSurfaceColor: Color { .black }
     public var backgroundColor: Color { .white }
     public var onBackgroundColor: Color { .white }
 }

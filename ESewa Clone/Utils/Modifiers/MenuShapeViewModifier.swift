@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct MenuShapeViewModifier: ViewModifier {
-    @Environment(\.colorScheme) var colorScheme
-    
     @EnvironmentObject var theme: ThemeManager
     
     public var padding: CGFloat = 14
@@ -23,24 +21,23 @@ struct MenuShapeViewModifier: ViewModifier {
             .padding(.all, padding)
             .background(
                 RoundedRectangle(cornerRadius: 16)
-//                    .foregroundColor(colorScheme == .dark ? Color(hex: 0x0e1116) : Color(hex: 0xf5f5f5))
                     .foregroundColor(theme.currentTheme.surfaceColor)
             )
     }
 }
 
 struct FormFieldViewModifier: ViewModifier {
-    @Environment(\.colorScheme) var colorScheme
-    
+    @EnvironmentObject var theme: ThemeManager
+
     func body(content: Content) -> some View {
         content
-            .background(colorScheme == .dark ? Color(hex: 0x2b3846) : Color(hex: 0xf5f5f5))
+            .background(theme.currentTheme.backgroundColor)
     }
 }
 
 struct GridMenuShapeViewModifier: ViewModifier {
-    @Environment(\.colorScheme) var colorScheme
-    
+    @EnvironmentObject var theme: ThemeManager
+
     func body(content: Content) -> some View {
         content
             .padding(.top, 14)
@@ -49,7 +46,7 @@ struct GridMenuShapeViewModifier: ViewModifier {
             .padding(.trailing, 8)
             .background(
                 RoundedRectangle(cornerRadius: 16)
-                    .foregroundColor(colorScheme == .dark ? Color(hex: 0x1c252e) : Color(hex: 0xf5f5f5))
+                    .foregroundColor(theme.currentTheme.surfaceColor)
             )
     }
 }
