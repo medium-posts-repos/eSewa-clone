@@ -76,6 +76,9 @@
 		A3ACA4832B2C40C90051E9D4 /* AmountBalanceModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ACA4822B2C40C90051E9D4 /* AmountBalanceModifier.swift */; };
 		A3ACA4852B2C49020051E9D4 /* StatementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ACA4842B2C49020051E9D4 /* StatementViewModel.swift */; };
 		A3ACA4872B2C4A3F0051E9D4 /* StatementUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ACA4862B2C4A3F0051E9D4 /* StatementUseCaseImpl.swift */; };
+		A3B16F442BC8276900134965 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B16F432BC8276900134965 /* ThemeManager.swift */; };
+		A3B16F482BC83F8200134965 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B16F472BC83F8200134965 /* BaseView.swift */; };
+		A3B16F4B2BC846D300134965 /* ThemeEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B16F4A2BC846D300134965 /* ThemeEnvironment.swift */; };
 		A3B3EF602B088F5C00392609 /* MoreHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B3EF5F2B088F5C00392609 /* MoreHeaderView.swift */; };
 		A3B3EF642B0895EE00392609 /* MoreScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B3EF632B0895EE00392609 /* MoreScreen.swift */; };
 		A3BCD6182B08791D000CD081 /* CGFloatExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BCD6172B08791D000CD081 /* CGFloatExt.swift */; };
@@ -177,6 +180,9 @@
 		A3ACA4822B2C40C90051E9D4 /* AmountBalanceModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountBalanceModifier.swift; sourceTree = "<group>"; };
 		A3ACA4842B2C49020051E9D4 /* StatementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementViewModel.swift; sourceTree = "<group>"; };
 		A3ACA4862B2C4A3F0051E9D4 /* StatementUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementUseCaseImpl.swift; sourceTree = "<group>"; };
+		A3B16F432BC8276900134965 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		A3B16F472BC83F8200134965 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		A3B16F4A2BC846D300134965 /* ThemeEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeEnvironment.swift; sourceTree = "<group>"; };
 		A3B3EF5F2B088F5C00392609 /* MoreHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreHeaderView.swift; sourceTree = "<group>"; };
 		A3B3EF632B0895EE00392609 /* MoreScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreScreen.swift; sourceTree = "<group>"; };
 		A3BCD6172B08791D000CD081 /* CGFloatExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExt.swift; sourceTree = "<group>"; };
@@ -562,7 +568,6 @@
 		A394A7822B021F860030AAF1 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				A3B3EF5E2B088F5100392609 /* View */,
 				A394A7832B021F930030AAF1 /* ProfileScreen.swift */,
 			);
 			path = Profile;
@@ -699,11 +704,37 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		A3B3EF5E2B088F5100392609 /* View */ = {
+		A3B16F412BC8274200134965 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				A3B16F422BC8275200134965 /* ThemeManager */,
 			);
-			path = View;
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		A3B16F422BC8275200134965 /* ThemeManager */ = {
+			isa = PBXGroup;
+			children = (
+				A3B16F432BC8276900134965 /* ThemeManager.swift */,
+				A3B16F4A2BC846D300134965 /* ThemeEnvironment.swift */,
+			);
+			path = ThemeManager;
+			sourceTree = "<group>";
+		};
+		A3B16F452BC83F5300134965 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A3B16F462BC83F6800134965 /* Screen */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A3B16F462BC83F6800134965 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				A3B16F472BC83F8200134965 /* BaseView.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 		A3B3EF612B0895C100392609 /* More */ = {
@@ -735,6 +766,8 @@
 		A3ECAECE2B00FB1E00CA8E32 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A3B16F452BC83F5300134965 /* Base */,
+				A3B16F412BC8274200134965 /* Manager */,
 				A33C078A2B9AFB7800E12669 /* ScreenExt */,
 				A394A77C2B0216FB0030AAF1 /* Modifiers */,
 				A3ECAECF2B00FB2800CA8E32 /* ViewExt */,
@@ -903,6 +936,7 @@
 				A3E74CA92B22D9EA006DFB17 /* FillButtonStyle.swift in Sources */,
 				A371F10F2B1B225600B50E77 /* GenericFormScreen.swift in Sources */,
 				A34645FC2B89DA7300A20230 /* TxnPinSheetView.swift in Sources */,
+				A3B16F482BC83F8200134965 /* BaseView.swift in Sources */,
 				A37415BB2B03D3DC007D1ECA /* HorizontalProductPagerView.swift in Sources */,
 				A3ACA47D2B2C3D500051E9D4 /* DashboardScreen.swift in Sources */,
 				A34645F72B89A9A400A20230 /* CardShapeViewModifier.swift in Sources */,
@@ -951,10 +985,12 @@
 				A3ACA47C2B2C3D500051E9D4 /* HomeScreen.swift in Sources */,
 				A371F1232B1B4F0900B50E77 /* BaseUseCase.swift in Sources */,
 				A334A6242B8799AF008CC8D4 /* FormCoordinator.swift in Sources */,
+				A3B16F442BC8276900134965 /* ThemeManager.swift in Sources */,
 				A3ACA47B2B2C3D500051E9D4 /* HomePrimaryMenuView.swift in Sources */,
 				A3652A032B9A2A18007C1240 /* MerchantRouter.swift in Sources */,
 				A34645F52B89A82C00A20230 /* GenericConfirmationVc.swift in Sources */,
 				A3ECAED52B012BE900CA8E32 /* ColorExt.swift in Sources */,
+				A3B16F4B2BC846D300134965 /* ThemeEnvironment.swift in Sources */,
 				A3652A012B9A28BC007C1240 /* MerchantRouteCompletionIntent.swift in Sources */,
 				A34645F92B89B6E600A20230 /* SheetExt.swift in Sources */,
 				A36529FC2B9A253B007C1240 /* SuccessFormScreen.swift in Sources */,

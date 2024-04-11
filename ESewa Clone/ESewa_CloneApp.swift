@@ -14,6 +14,7 @@ struct ESewaApp: App {
    // @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
 
     @AppStorage("isAuthenticated") private var isAuthenticated = true
+    @ObservedObject private var themeManager: ThemeManager = ThemeManager.instance
     
     @ObservedObject var router = Router()
     
@@ -45,6 +46,7 @@ struct ESewaApp: App {
                 }
             }
             .environmentObject(router)
+            .environmentObject(themeManager)
             .environment(\.colorScheme, .dark)
         }
     }

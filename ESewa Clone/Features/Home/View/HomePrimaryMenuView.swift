@@ -7,8 +7,10 @@
 
 import SwiftUI
 
-public struct HomePrimaryMenuView: View {
-        
+public struct HomePrimaryMenuView: BaseView {
+    
+    @EnvironmentObject var theme: ThemeManager
+
     public var body: some View {
         HStack(spacing: 14) {
             verticalMenuView(title: "Loads Money", icon: "house.fill")
@@ -29,13 +31,20 @@ public struct HomePrimaryMenuView: View {
     func verticalMenuView(title: String, icon: String) -> some View {
         VStack {
             Image(systemName: icon)
+                .renderingMode(.template)
                 .toNavigationIcon()
-                .tint(.green)
+                .foregroundColor(theme.currentTheme.tintImageColor)
+                .onTapGesture {
+                    theme.updateTheme(scheme: .dark)
+                }
             
             Text(title)
                 .font(.system(size: 15))
                 .fontWeight(.medium)
                 .multilineTextAlignment(.center)
+                .onTapGesture {
+                    theme.updateTheme(scheme: .light)
+                }
         }
     }
 }
