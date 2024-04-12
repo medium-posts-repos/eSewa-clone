@@ -8,7 +8,8 @@
 import SwiftUI
 import DomainPackage
 
-public struct MenuIconDescListView: View {
+public struct MenuIconDescListView: BaseView {
+    @EnvironmentObject var theme: ThemeManager
     
     public var spacing: CGFloat = 0
     
@@ -29,7 +30,9 @@ public struct MenuIconDescListView: View {
     }
 }
 
-public struct MenuIconDescItemView: View {
+public struct MenuIconDescItemView: BaseView {
+    @EnvironmentObject var theme: ThemeManager
+    
     public var menu: MenuModel
     
     public init(menu: MenuModel) {
@@ -40,14 +43,17 @@ public struct MenuIconDescItemView: View {
         HStack(alignment: .top, spacing: 18) {
             Image(systemName: "house.fill")
                 .toNavigationIcon()
+                .foregroundColor(theme.currentTheme.tintImageColor)
             VStack(alignment: .leading) {
                 Text(menu.name ?? "")
                     .font(.body)
                     .fontWeight(.medium)
+                    .foregroundColor(theme.currentTheme.onSurfaceColor)
                 
                 Text(menu.desc ?? "")
                     .font(.caption)
                     .fontWeight(.regular)
+                    .foregroundColor(theme.currentTheme.onSurfaceColor)
             }
         }
     }

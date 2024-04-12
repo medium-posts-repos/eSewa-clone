@@ -65,12 +65,8 @@ public struct DashboardScreen: View {
     
     @ViewBuilder
     private func renderTabScreen() -> some View {
-        StatementScreen()
-            .tabItem({
-                Image(systemName: "text.bubble")
-            })
-            .tabItem { Text("Statement") }
-            .tag(1)
+        homeScreen()
+        statementScreen()
         
         HelpAndSupportScreen()
             .tabItem({

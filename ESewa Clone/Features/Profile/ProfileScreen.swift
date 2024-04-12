@@ -8,7 +8,11 @@
 import SwiftUI
 import DomainPackage
 
-public struct ProfileScreen: View {
+public struct ProfileScreen: BaseView {
+    @EnvironmentObject var theme: ThemeManager
+    
+    @State private var isToggled = false
+
     public var body: some View {
         List {
             Section {
@@ -20,6 +24,13 @@ public struct ProfileScreen: View {
             Section {
                 ProfileBalancePointsView()
                     .modifier(MenuShapeViewModifier())
+            }.listRowSeparator(.hidden)
+            
+            Section {
+                Toggle("Dark Theme", isOn: $isToggled)
+                    .onChange(of: isToggled) { newValue in
+                        theme.updateTheme(scheme: newValue ? .dark : .light)
+                    }
             }.listRowSeparator(.hidden)
             
             Section {
@@ -48,7 +59,10 @@ public struct ProfileScreen: View {
     }
 }
 
-public struct ProfileHeaderView: View {
+public struct ProfileHeaderView: BaseView {
+    
+    @EnvironmentObject var theme: ThemeManager
+    
     public var body: some View {
         VStack(alignment: .center) {
             Image("ic_profile_view")
@@ -62,25 +76,33 @@ public struct ProfileHeaderView: View {
                         .frame(width: .smallSize, height: .smallSize)
                     Text("Verified")
                 }
-            }.foregroundColor(.green)
+            }.foregroundColor(theme.currentTheme.backgroundColor)
             
             VStack {
                 Text("Swornim Bikram Shah")
+                    .foregroundColor(theme.currentTheme.onSurfaceColor)
+
                 Text("9813847444")
+                    .foregroundColor(theme.currentTheme.onSurfaceColor)
+
                 Button(action: {}) {
                     HStack {
                         Image(systemName: "house.fill")
                             .toNavigationIcon()
                         Text("Active")
+                            .foregroundColor(theme.currentTheme.onSurfaceColor)
+
                     }.modifier(MenuShapeViewModifier(padding: 8))
                     
-                }.foregroundColor(.green)
+                }.foregroundColor(theme.currentTheme.backgroundColor)
             }
         }.frame(maxWidth: .infinity)
     }
 }
 
-public struct ProfileBalancePointsView: View {
+public struct ProfileBalancePointsView: BaseView {
+    @EnvironmentObject var theme: ThemeManager
+
     public var body: some View {
         HStack(alignment: .center, spacing: 18) {
             Image(systemName: "house.fill")
@@ -88,7 +110,9 @@ public struct ProfileBalancePointsView: View {
             
             VStack(alignment: .leading) {
                 Text("NPR XXXX.XX")
+                    .foregroundColor(theme.currentTheme.onSurfaceColor)
                 Text("Wallet Balance")
+                    .foregroundColor(theme.currentTheme.onSurfaceColor)
             }
             
             Rectangle()
@@ -101,7 +125,10 @@ public struct ProfileBalancePointsView: View {
             
             VStack(alignment: .leading) {
                 Text("XXXX.XXX")
+                    .foregroundColor(theme.currentTheme.onSurfaceColor)
+
                 Text("Reward Points")
+                    .foregroundColor(theme.currentTheme.onSurfaceColor)
             }
         }.frame(maxWidth: .infinity)
     }
