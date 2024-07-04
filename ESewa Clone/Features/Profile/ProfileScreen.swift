@@ -20,11 +20,13 @@ public struct ProfileScreen: BaseView {
                     .modifier(MenuShapeViewModifier())
             }
             .listRowSeparator(.hidden)
+            .listRowBackground(Color.clear)
             
             Section {
                 ProfileBalancePointsView()
                     .modifier(MenuShapeViewModifier())
             }.listRowSeparator(.hidden)
+            .listRowBackground(Color.clear)
             
             Section {
                 Toggle("Dark Theme", isOn: $isToggled)
@@ -32,14 +34,18 @@ public struct ProfileScreen: BaseView {
                         theme.updateTheme(scheme: newValue ? .dark : .light)
                     }
             }.listRowSeparator(.hidden)
+            .listRowBackground(Color.clear)
             
             Section {
                 MenuIconDescListView(menus: MenuModel.dashboardMenus, spacing: 20)
                     .frame(maxWidth: .infinity)
                     .modifier(MenuShapeViewModifier())
             }.listRowSeparator(.hidden)
+                .listRowBackground(Color.clear)
             
         }.listStyle(.plain)
+            .scrollContentBackground(.hidden)
+            .background(theme.currentTheme.backgroundColor)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Image(systemName: "bell.fill")
@@ -55,7 +61,7 @@ public struct ProfileScreen: BaseView {
                         .padding(.leading, 16)
                         .foregroundColor(.accentColor)
                 }
-            }
+            }.toolbarBackground(theme.activeScheme == .dark ? .black : .white, for: .navigationBar)
     }
 }
 

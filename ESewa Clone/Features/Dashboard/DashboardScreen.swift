@@ -11,6 +11,7 @@ import DomainPackage
 public struct DashboardScreen: View {
     
     @EnvironmentObject var router: Router
+    @EnvironmentObject var theme: ThemeManager
 
     @State private var selectedTab = 0
     @State private var onSelectedTab = 0
@@ -19,7 +20,9 @@ public struct DashboardScreen: View {
         VStack {
             TabView(selection:$selectedTab) {
                 renderTabScreen()
-            }.onChange(of: selectedTab) { index in
+                    .background(theme.currentTheme.backgroundColor)
+            }
+            .onChange(of: selectedTab) { index in
                 print("Tab selected \(index)")
                 onSelectedTab = index
             }.toolbar {

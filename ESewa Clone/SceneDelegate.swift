@@ -22,6 +22,14 @@ class SceneDelegate: NSObject, UIWindowSceneDelegate {
         navigationController.navigationBar.shadowImage = UIImage()
         navigationController.navigationBar.layer.masksToBounds = false
         
+        if #available(iOS 15.0, *) {
+            let navigationBarAppearance = UINavigationBarAppearance()
+            navigationBarAppearance.configureWithDefaultBackground()
+            UINavigationBar.appearance().standardAppearance = navigationBarAppearance
+            UINavigationBar.appearance().compactAppearance = navigationBarAppearance
+            UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
+        }
+        
 //        window = UIWindow(windowScene: windowScene)
 //        window?.rootViewController = navigationController
 //        window?.makeKeyAndVisible()

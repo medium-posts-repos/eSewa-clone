@@ -19,7 +19,13 @@ public class ThemeManager: ObservableObject {
     public static let instance = ThemeManager()
     
     @Published
-    public var currentTheme: CoreTheme = DarkTheme()
+    public var currentTheme: CoreTheme = LightTheme()
+    
+    public var activeScheme: AppCoreColorScheme {
+        get {
+            (currentTheme is DarkTheme) ? .dark : .light
+        }
+    }
     
     public func updateTheme(scheme: AppCoreColorScheme) {
         switch scheme {
@@ -54,7 +60,7 @@ public class DarkTheme: CoreTheme {
 public class LightTheme: CoreTheme {
     public var colorScheme: AppCoreColorScheme { .light }
     public var tintImageColor: Color { .black }
-    public var surfaceColor: Color { .white }
+    public var surfaceColor: Color { .init(hex: 0xFBFBFB) }
     public var onSurfaceColor: Color { .black }
     public var backgroundColor: Color { .white }
     public var onBackgroundColor: Color { .white }

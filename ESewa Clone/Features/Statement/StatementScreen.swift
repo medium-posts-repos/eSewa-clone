@@ -9,7 +9,8 @@ import SwiftUI
 import DomainPackage
 
 public struct StatementScreen: View {
-    
+    @EnvironmentObject var theme: ThemeManager
+
     @StateObject private var statementViewModel = AppFactory.shared.vmFactory.providesStatementViewModel()
     
     @State private var dataSource: [StatementGroupDto] = []
@@ -19,7 +20,7 @@ public struct StatementScreen: View {
             List {
                 Section {
                     AccountBalanceView()
-                }.listRowBackground(Color.clear)
+                }.listRowBackground(theme.currentTheme.surfaceColor)
                     .listRowSeparator(.hidden)
                 
                 ForEach(dataSource, id: \.self) { item in
@@ -28,12 +29,12 @@ public struct StatementScreen: View {
                             Text("\(statement.reason ?? "")")
                                 .padding(.leading, 8)
                         }
-                    }
+                    }.listRowBackground(theme.currentTheme.surfaceColor)
                 }
             }
             .listStyle(.grouped)
             .padding(.init(top: 0, leading: -14, bottom: 0, trailing: -14))
-        }.modifier(ProgressViewModifier(isLoading: statementViewModel.isLoading, isEnabled: dataSource.isEmpty))
+            .modifier(ProgressViewModifier(isLoading: statementViewModel.isLoading, isEnabled: dataSource.isEmpty))
             .onReceive(statementViewModel.statementResult) {
                 self.dataSource = $0
             }
@@ -42,5 +43,6 @@ public struct StatementScreen: View {
                     print("Incoming statements \($0)")
                 }
             }
+        }.background(theme.currentTheme.surfaceColor)
     }
 }
