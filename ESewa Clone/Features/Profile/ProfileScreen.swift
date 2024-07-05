@@ -29,9 +29,10 @@ public struct ProfileScreen: BaseView {
             .listRowBackground(Color.clear)
             
             Section {
-                Toggle("Dark Theme", isOn: $isToggled)
+                Toggle("Change Theme", isOn: $isToggled)
+                    .foregroundStyle(theme.currentTheme.onSurfaceColor)
                     .onChange(of: isToggled) { newValue in
-                        theme.updateTheme(scheme: newValue ? .dark : .light)
+                        theme.updateTheme(scheme: theme.activeScheme == .dark ? .light : .dark)
                     }
             }.listRowSeparator(.hidden)
             .listRowBackground(Color.clear)

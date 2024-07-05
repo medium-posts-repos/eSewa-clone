@@ -44,7 +44,7 @@ public struct HomePrimaryMenuView: BaseView {
                 .foregroundColor(theme.currentTheme.onSurfaceColor)
                 .multilineTextAlignment(.center)
                 .onTapGesture {
-                    theme.updateTheme(scheme: .light)
+                    theme.updateTheme(scheme: theme.activeScheme == .light ? .dark : .light)
                 }
         }
     }
