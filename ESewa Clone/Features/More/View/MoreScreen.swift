@@ -8,11 +8,14 @@
 import SwiftUI
 
 public struct MoreScreen: View {
+    @EnvironmentObject var theme: ThemeManager
+
     public var body: some View {
         List {
             Section {
                 MoreHeaderView()
-            }
+            }.listRowBackground(Color.clear)
         }.listStyle(.plain)
+           
     }
 }

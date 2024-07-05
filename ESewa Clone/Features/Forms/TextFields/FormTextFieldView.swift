@@ -15,7 +15,8 @@ public enum FormFieldTextEvent {
 
 struct FormTextFieldView: View {
     @State private var textInput: String = ""
-    
+    @EnvironmentObject var theme: ThemeManager
+
     public let formField: FormFieldModel
     
     public init(formField: FormFieldModel, delegate: TypeCallback<FormFieldTextEvent>?) {
@@ -34,10 +35,11 @@ struct FormTextFieldView: View {
             self.delegate?(.onTextChanged(field: formField, text: textInput))
         })
         
-        TextField(formField.hint ?? "", text: binding)
+        TextField("", text: binding, prompt: Text(formField.hint ?? "").foregroundColor(theme.currentTheme.onSurfaceHintColor))
             .keyboardType(formField.type == .AMOUNT ? .decimalPad : .default)
             .padding(.all, 12)
             .overlay(RoundedRectangle(cornerRadius: 6)
             .strokeBorder(Color.black, style: StrokeStyle(lineWidth: 0.0)))
+            .foregroundStyle(theme.currentTheme.onSurfaceColor)
     }
 }

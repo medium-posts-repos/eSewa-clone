@@ -45,7 +45,10 @@ public struct HomeScreen: View {
                         }.listRowBackground(Color.clear)
                             .listRowSeparator(.hidden)
                     case .productView:
-                        HorizontalProductPagerView(products: Product.products)
+                        Section {
+                            HorizontalProductPagerView(products: Product.products)
+                        }.listRowBackground(Color.clear)
+                            .listRowSeparator(.hidden)
                     default:
                         EmptyView()
                     }

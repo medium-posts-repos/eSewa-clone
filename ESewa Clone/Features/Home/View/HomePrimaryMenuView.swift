@@ -35,7 +35,7 @@ public struct HomePrimaryMenuView: BaseView {
                 .toNavigationIcon()
                 .foregroundColor(theme.currentTheme.tintImageColor)
                 .onTapGesture {
-                    theme.updateTheme(scheme: .dark)
+                    theme.updateTheme(scheme: theme.activeScheme == .light ? .dark : .light)
                 }
             
             Text(title)

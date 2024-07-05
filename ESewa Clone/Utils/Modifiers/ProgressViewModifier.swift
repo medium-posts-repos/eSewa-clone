@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ProgressViewModifier: ViewModifier {
+    @EnvironmentObject var theme: ThemeManager
+
     var isLoading: Bool
     let isEnabled: Bool
     
@@ -22,7 +24,7 @@ struct ProgressViewModifier: ViewModifier {
                 .disabled(isLoading)
             if isLoading && isEnabled {
                 ProgressView()
-                    .progressViewStyle(CircularProgressViewStyle(tint: .primary))
+                    .progressViewStyle(CircularProgressViewStyle(tint: theme.currentTheme.onSurfaceColor))
             }
         }
     }

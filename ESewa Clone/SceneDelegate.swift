@@ -28,6 +28,7 @@ class SceneDelegate: NSObject, UIWindowSceneDelegate {
             UINavigationBar.appearance().standardAppearance = navigationBarAppearance
             UINavigationBar.appearance().compactAppearance = navigationBarAppearance
             UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
+            UITabBar.appearance().scrollEdgeAppearance = UITabBarAppearance()
         }
         
 //        window = UIWindow(windowScene: windowScene)

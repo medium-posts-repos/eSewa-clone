@@ -8,8 +8,11 @@
 import SwiftUI
 
 public struct TextStyleModifier: ViewModifier {
+    @EnvironmentObject var theme: ThemeManager
+
     public func body(content: Content) -> some View {
-        content.foregroundColor(.primary)
+        content.foregroundColor(theme.currentTheme.onSurfaceColor)
+        
     }
 }
 

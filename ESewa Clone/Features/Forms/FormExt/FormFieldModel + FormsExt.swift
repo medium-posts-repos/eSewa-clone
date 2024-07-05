@@ -23,10 +23,11 @@ public extension FormFieldModel {
     }
     
     @ViewBuilder
-    func provideTextField(delegate: TypeCallback<FormFieldTextEvent>?) -> some View {
+    func provideTextField(theme: ThemeManager, delegate: TypeCallback<FormFieldTextEvent>? = nil) -> some View {
         VStack(alignment: .leading, spacing: 6) {
             Text(label ?? "")
                 .font(.subheadline)
+                .foregroundStyle(theme.currentTheme.onSurfaceColor)
             FormTextFieldView(formField: self, delegate: delegate)
                 .modifier(FormFieldViewModifier())
                 .clipShape(RoundedRectangle(cornerRadius: 8))

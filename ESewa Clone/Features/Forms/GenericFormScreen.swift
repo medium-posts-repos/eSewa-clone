@@ -31,10 +31,9 @@ public struct GenericFormScreen: View  {
                      ForEach(formFields, id: \.self) { formField in
                          switch formField.type {
                          case .TEXT, .AMOUNT:
-                             formField.provideTextField { _ in
+                             formField.provideTextField(theme: theme) { _ in
                                  
                              }
-
                         case .HEADER_CAPTION:
                             formField.provideHeaderCaption()
                         case .NOTE:
@@ -48,7 +47,6 @@ public struct GenericFormScreen: View  {
                 }.frame(maxWidth: .infinity, alignment: .leading)
                 .modifier(MenuShapeViewModifier(padding: 14))
             }.listRowBackground(Color.clear)
-
             
             Section {
                 FormFieldModel().provideSubmitField()
@@ -60,7 +58,8 @@ public struct GenericFormScreen: View  {
             .listRowBackground(Color.clear)
 
         }.listStyle(.plain)
-            .background(theme.currentTheme.surfaceColor)
+            .scrollContentBackground(.hidden)
+            .background(theme.currentTheme.backgroundColor)
     }
 }
 
