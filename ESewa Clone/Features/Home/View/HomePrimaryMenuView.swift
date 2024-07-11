@@ -34,18 +34,11 @@ public struct HomePrimaryMenuView: BaseView {
                 .renderingMode(.template)
                 .toNavigationIcon()
                 .foregroundColor(theme.currentTheme.tintImageColor)
-                .onTapGesture {
-                    theme.updateTheme(scheme: theme.activeScheme == .light ? .dark : .light)
-                }
-            
             Text(title)
                 .font(.system(size: 15))
                 .fontWeight(.medium)
                 .foregroundColor(theme.currentTheme.onSurfaceColor)
                 .multilineTextAlignment(.center)
-                .onTapGesture {
-                    theme.updateTheme(scheme: theme.activeScheme == .light ? .dark : .light)
-                }
         }
     }
 }

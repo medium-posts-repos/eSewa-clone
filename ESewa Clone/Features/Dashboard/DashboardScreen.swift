@@ -27,8 +27,6 @@ public struct DashboardScreen: View {
                 renderTabScreen()
                     .background(theme.currentTheme.backgroundColor)
             }
-
-             
             .onChange(of: selectedTab) { index in
                 onSelectedTab = index
             }.toolbar {

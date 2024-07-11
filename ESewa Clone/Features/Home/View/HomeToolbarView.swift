@@ -40,13 +40,12 @@ public struct HomeToolbarView: ToolbarContent {
                     .toNavigationIcon()
                     .foregroundStyle(theme.currentTheme.tintImageColor)
                 
-                Image(systemName: "bell.fill")
+                Image(systemName: "moon.fill")
                     .toNavigationIcon()
                     .foregroundStyle(theme.currentTheme.tintImageColor)
-                
-                Image(systemName: "scribble")
-                    .toNavigationIcon()
-                    .foregroundStyle(theme.currentTheme.tintImageColor)
+                    .onTapGesture {
+                        theme.updateTheme(scheme: theme.activeScheme == .light ? .dark : .light)
+                    }
             }
         }
     }
