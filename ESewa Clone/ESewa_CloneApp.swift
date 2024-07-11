@@ -41,10 +41,14 @@ struct ESewaApp: App {
                 }.navigationDestination(for: MerchantRouteCompletionIntent.self) { destination in
                     router.buildMerchantCompletionRouter(destination: destination)
                 }
+            }.onAppear {
+                let tabBarAppearance = UITabBarAppearance()
+
+                UITabBar.appearance().standardAppearance = tabBarAppearance
             }
             .environmentObject(router)
             .environmentObject(themeManager)
-            .environment(\.colorScheme, .light)
+            .environment(\.colorScheme, themeManager.currentTheme.colorScheme)
         }
     }
 }

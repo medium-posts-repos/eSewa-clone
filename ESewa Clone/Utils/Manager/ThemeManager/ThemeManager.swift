@@ -19,7 +19,7 @@ public class ThemeManager: ObservableObject {
     public static let instance = ThemeManager()
     
     @Published
-    public var currentTheme: CoreTheme = LightTheme()
+    public var currentTheme: CoreTheme = DarkTheme()
     
     public var activeScheme: AppCoreColorScheme {
         get {
@@ -49,6 +49,7 @@ public protocol CoreTheme {
     var backgroundColor: Color { get }
     var onBackgroundColor: Color { get }
     var primaryColor: Color { get }
+    var colorScheme: ColorScheme { get }
 }
 
 public class DarkTheme: CoreTheme {
@@ -59,10 +60,11 @@ public class DarkTheme: CoreTheme {
     public var backgroundColor: Color { .black }
     public var onBackgroundColor: Color { .black }
     public var primaryColor: Color { .green }
+    public var colorScheme: ColorScheme { .dark }
 }
 
 public class LightTheme: CoreTheme {
-    public var colorScheme: AppCoreColorScheme { .light }
+    public var colorScheme: ColorScheme { .light }
     public var tintImageColor: Color { .black }
     public var surfaceColor: Color { .init(hex: 0xFBFBFB) }
     public var onSurfaceColor: Color { .black }

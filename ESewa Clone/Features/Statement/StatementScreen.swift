@@ -16,26 +16,30 @@ public struct StatementScreen: View {
     @State private var dataSource: [StatementGroupDto] = []
     
     public var body: some View {
-        List {
-            Section {
-                AccountBalanceView()
-            }.listRowBackground(Color.clear)
-                .listRowSeparator(.hidden)
-            
-            ForEach(dataSource, id: \.self) { item in
-                renderItems(item: item)
+        VStack {
+            List {
+                Section {
+                    AccountBalanceView()
+                }.listRowBackground(Color.clear)
+                    .listRowSeparator(.hidden)
+                
+                ForEach(dataSource, id: \.self) { item in
+                    renderItems(item: item)
+                }
             }
-        }.scrollContentBackground(.hidden)
-        .background(theme.currentTheme.backgroundColor)
-        .listStyle(.grouped)
-        .padding(.init(top: 0, leading: -14, bottom: 0, trailing: -14))
-        .modifier(ProgressViewModifier(isLoading: statementViewModel.isLoading, isEnabled: dataSource.isEmpty))
-        .onReceive(statementViewModel.statementResult) {
-            self.dataSource = $0
-        }.task {
-            await statementViewModel.fetchStatements(code: RouteConstants.ACCOUNT_STATEMENTS) {
-                print("Incoming statements \($0)")
+            .scrollContentBackground(.hidden)
+            .background(theme.currentTheme.backgroundColor)
+            .listStyle(.grouped)
+            .padding(.init(top: 0, leading: -14, bottom: 0, trailing: -14))
+            .modifier(ProgressViewModifier(isLoading: statementViewModel.isLoading, isEnabled: dataSource.isEmpty))
+            .onReceive(statementViewModel.statementResult) {
+                self.dataSource = $0
+            }.task {
+                await statementViewModel.fetchStatements(code: RouteConstants.ACCOUNT_STATEMENTS) {
+                    print("Incoming statements \($0)")
+                }
             }
+            Spacer()
         }
     }
     

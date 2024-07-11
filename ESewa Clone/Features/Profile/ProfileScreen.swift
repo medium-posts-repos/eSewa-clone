@@ -62,7 +62,8 @@ public struct ProfileScreen: BaseView {
                         .padding(.leading, 16)
                         .foregroundColor(.accentColor)
                 }
-            }.toolbarBackground(theme.activeScheme == .dark ? .black : .white, for: .navigationBar)
+            }
+            .toolbarBackground(theme.activeScheme == .dark ? .black : .clear, for: .navigationBar)
     }
 }
 

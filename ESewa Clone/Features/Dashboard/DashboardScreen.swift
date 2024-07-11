@@ -12,18 +12,24 @@ public struct DashboardScreen: View {
     
     @EnvironmentObject var router: Router
     @EnvironmentObject var theme: ThemeManager
-
+    
     @State private var selectedTab = 0
     @State private var onSelectedTab = 0
-
+    
+    init() {
+      
+    }
+    
     public var body: some View {
+
         VStack {
             TabView(selection:$selectedTab) {
                 renderTabScreen()
                     .background(theme.currentTheme.backgroundColor)
             }
+
+             
             .onChange(of: selectedTab) { index in
-                print("Tab selected \(index)")
                 onSelectedTab = index
             }.toolbar {
                 switch onSelectedTab {
@@ -32,18 +38,35 @@ public struct DashboardScreen: View {
                 case 1:
                     ToolbarItem(placement: .navigationBarLeading) {
                         Text("Notification")
+                            .foregroundStyle(theme.currentTheme.onSurfaceColor)
                     }
                 case 2:
                     ToolbarItem(placement: .principal) {
                         Text("Help and Support")
+                            .foregroundStyle(theme.currentTheme.onSurfaceColor)
                     }
                 default:
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Text("More")
+                            .foregroundStyle(theme.currentTheme.onSurfaceColor)
                     }
                 }
             }
-        }
+        }.safeAreaInset(edge: .top, content: {
+            if theme.activeScheme == .dark {
+                ZStack(alignment: .top) {
+                    Color.clear
+                        .frame(height: 0)
+                        .background(.bar)
+                }.background(Color.black.opacity(0.5))
+            } else {
+                ZStack(alignment: .top) {
+                    Color.clear
+                        .frame(height: 0)
+                        .background(.bar)
+                }.background(Color.clear)
+            }
+        })
     }
     
     @ViewBuilder
@@ -59,11 +82,12 @@ public struct DashboardScreen: View {
     @ViewBuilder
     func statementScreen() -> some View {
         StatementScreen()
+            .toolbarBackground(.hidden, for: .bottomBar)
             .tabItem({
                 Image(systemName: "text.bubble")
             })
             .tabItem { Text("Statement") }
-            .tag(0)
+            .tag(1)
     }
     
     @ViewBuilder

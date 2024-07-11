@@ -11,11 +11,118 @@ public struct MoreScreen: View {
     @EnvironmentObject var theme: ThemeManager
 
     public var body: some View {
-        List {
-            Section {
-                MoreHeaderView()
-            }.listRowBackground(Color.clear)
-        }.listStyle(.plain)
-           
+        VStack {
+            List {
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+                Section {
+                    MoreHeaderView()
+                }.listRowBackground(Color.clear)
+            }.listStyle(.plain)
+            Spacer()
+        }
     }
 }

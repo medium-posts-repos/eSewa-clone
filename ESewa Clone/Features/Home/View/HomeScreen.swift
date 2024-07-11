@@ -12,7 +12,8 @@ import NetworkPackage
 public struct HomeScreen: View {
     
     public let router: Router
-    
+    @EnvironmentObject var theme: ThemeManager
+
     @ObservedObject
     private var formViewModel = AppFactory.shared.vmFactory.providesFormViewModel()
         
