@@ -9,7 +9,8 @@ import SwiftUI
 import DomainPackage
 
 public struct GenericConfirmationVc: View {
-    
+    @EnvironmentObject var theme: ThemeManager
+
     @State private var stateShowConfirmation = false
     public let targetMenu: MenuModel?
     private let onCompletion: TypeCallback<MerchantRouteCompletionIntent>

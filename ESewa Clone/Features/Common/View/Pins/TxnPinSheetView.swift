@@ -13,7 +13,7 @@ public struct TxnPinSheetView: View {
     
     @State private var mPinTextValue = ""
     @Binding private var isPresented: Bool
-    
+
     private var onSubmitClick: TypeCallback<String>?
     
     public init(isPresented: Binding<Bool>, onSubmitClick: TypeCallback<String>?) {
@@ -28,16 +28,16 @@ public struct TxnPinSheetView: View {
                 .clipShape(Circle())
                 .frame(width: .xLargeSize, height: .xLargeSize)
             
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: 6) {
                 Text("Enter MPIN")
                     .font(.subheadline)
-                FormTextFieldView(formField: .init()) {
+                    .themeable()
+                FormTextFieldView(formField: .init().hint(text: "XXXX")) {
                     switch $0 {
                     case .onTextChanged(_, let pin):
                         mPinTextValue = pin
                     }
-                }
-                    .modifier(FormFieldViewModifier())
+                }.modifier(FormFieldViewModifier())
                     .clipShape(RoundedRectangle(cornerRadius: 8))
                 Spacer().frame(height: 16)
                 HStack(alignment: .top) {
@@ -64,7 +64,6 @@ public struct TxnPinSheetView: View {
                     .buttonStyle(PlainButtonStyle())
                 }.frame(maxWidth: .infinity, alignment: .center)
             }
-        }
-            .padding(.init(top: 0, leading: 16, bottom: 0, trailing: 16))
+        }.padding(.init(top: 0, leading: 16, bottom: 0, trailing: 16))
     }
 }

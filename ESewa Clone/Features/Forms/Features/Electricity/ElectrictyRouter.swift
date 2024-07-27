@@ -13,7 +13,9 @@ import SwiftUI
 public extension Router {
     
     private func routeConfirmation(destination: RouteIntentDto) {
-        var confirmDest = destination
+        var confirmDest = MerchantRouteConfirmationIntent(routeCode: destination.routeCode)
+        confirmDest.targetMenu = destination.routeMenu
+        
         confirmDest.routeCode = MenuConstants.ELECTRICITY_CONFIRM
         self.route(menu: confirmDest)
     }

@@ -82,24 +82,28 @@ public struct ProfileHeaderView: BaseView {
                     Image(systemName: "house.fill")
                         .aspectRatio(contentMode: .fill)
                         .frame(width: .smallSize, height: .smallSize)
+                        .foregroundColor(theme.currentTheme.tintImageColor)
+                        .foregroundColor(theme.currentTheme.tintImageColor)
+                    
                     Text("Verified")
+                        .themeable()
                 }
             }.foregroundColor(theme.currentTheme.backgroundColor)
             
             VStack {
                 Text("Swornim Bikram Shah")
-                    .foregroundColor(theme.currentTheme.onSurfaceColor)
-
+                    .themeable()
                 Text("9813847444")
-                    .foregroundColor(theme.currentTheme.onSurfaceColor)
+                    .themeable()
 
                 Button(action: {}) {
                     HStack {
                         Image(systemName: "house.fill")
                             .toNavigationIcon()
-                        Text("Active")
-                            .foregroundColor(theme.currentTheme.onSurfaceColor)
+                            .foregroundColor(theme.currentTheme.tintImageColor)
 
+                        Text("Active")
+                            .themeable()
                     }.modifier(MenuShapeViewModifier(padding: 8))
                     
                 }.foregroundColor(theme.currentTheme.backgroundColor)
@@ -115,12 +119,13 @@ public struct ProfileBalancePointsView: BaseView {
         HStack(alignment: .center, spacing: 18) {
             Image(systemName: "house.fill")
                 .toNavigationIcon()
+                .foregroundColor(theme.currentTheme.tintImageColor)
             
             VStack(alignment: .leading) {
                 Text("NPR XXXX.XX")
-                    .foregroundColor(theme.currentTheme.onSurfaceColor)
+                    .themeable()
                 Text("Wallet Balance")
-                    .foregroundColor(theme.currentTheme.onSurfaceColor)
+                    .themeable()
             }
             
             Rectangle()
@@ -130,13 +135,12 @@ public struct ProfileBalancePointsView: BaseView {
             
             Image(systemName: "house.fill")
                 .toNavigationIcon()
+                .foregroundColor(theme.currentTheme.tintImageColor)
             
             VStack(alignment: .leading) {
-                Text("XXXX.XXX")
-                    .foregroundColor(theme.currentTheme.onSurfaceColor)
+                Text("XXXX.XXX").themeable()
 
-                Text("Reward Points")
-                    .foregroundColor(theme.currentTheme.onSurfaceColor)
+                Text("Reward Points").themeable()
             }
         }.frame(maxWidth: .infinity)
     }

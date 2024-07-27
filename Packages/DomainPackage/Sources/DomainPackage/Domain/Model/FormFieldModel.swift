@@ -42,6 +42,11 @@ public final class FormFieldModel: Hashable, Identifiable {
         self.hashId = UUID()
     }
     
+    public func hint(text: String) -> Self {
+        self.hint = text
+        return self
+    }
+    
     // Hashable conformance
     public func hash(into hasher: inout Hasher) {
         hasher.combine(hashId)

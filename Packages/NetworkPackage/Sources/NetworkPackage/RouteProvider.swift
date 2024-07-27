@@ -27,6 +27,8 @@ public class RouteProvider {
             return apiRoute
         }
         
+        apiRoute.url = RouteProvider.BASE_URL + "payment"
+        
         return apiRoute
     }
 }
