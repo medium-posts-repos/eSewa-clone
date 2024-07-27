@@ -63,7 +63,7 @@ public struct GenericConfirmationVc: View {
 }
 
 // MARK: api operations
-extension GenericConfirmationVc {
+extension    {
     fileprivate func extractedFunc() -> MerchantRouteCompletionIntent {
         return MerchantRouteCompletionIntent(routeCode: MenuConstants.MERCHANT_SUCCESS_ROUTE)
     }
