@@ -8,5 +8,5 @@
 import Foundation
 
 public struct FeatureConfiguration {
-    public static var MOCKABLE = true // TODO: use xcode schemes based approach for ( PREPROD, UAT, RELEASE, DEVELOPMENT)
+    public static var MOCKABLE = false // TODO: use xcode schemes based approach for ( PREPROD, UAT, RELEASE, DEVELOPMENT)
 }

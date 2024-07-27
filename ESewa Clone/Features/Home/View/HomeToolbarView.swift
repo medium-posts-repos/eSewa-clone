@@ -9,7 +9,8 @@ import SwiftUI
 import DomainPackage
 
 public struct HomeToolbarView: ToolbarContent {
-    
+    @EnvironmentObject var theme: ThemeManager
+
     public var onProfileTapped: VoidCallback?
     
     public init(onProfileTapped: VoidCallback? = nil) {
@@ -29,7 +30,7 @@ public struct HomeToolbarView: ToolbarContent {
                         self.onProfileTapped?()
                     }
                 Text("Hi, Swornim")
-                
+                    .foregroundStyle(theme.currentTheme.onSurfaceColor)
             }
         }
         
@@ -37,12 +38,14 @@ public struct HomeToolbarView: ToolbarContent {
             HStack(spacing: 12) {
                 Image(systemName: "tray.and.arrow.down")
                     .toNavigationIcon()
+                    .foregroundStyle(theme.currentTheme.tintImageColor)
                 
-                Image(systemName: "bell.fill")
+                Image(systemName: "moon.fill")
                     .toNavigationIcon()
-                
-                Image(systemName: "scribble")
-                    .toNavigationIcon()
+                    .foregroundStyle(theme.currentTheme.tintImageColor)
+                    .onTapGesture {
+                        theme.updateTheme(scheme: theme.activeScheme == .light ? .dark : .light)
+                    }
             }
         }
     }

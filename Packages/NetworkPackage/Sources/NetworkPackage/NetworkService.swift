@@ -102,24 +102,6 @@ public class NetworkService: NetworkServiceProtocol {
         return service
     }()
 
-//    @available(iOS 13.0, *)
-//    public func post<T: Codable>(request: URLConvertible, model: T.Type, completion: @escaping (Result<T, AFError>) -> Void) -> AnyPublisher<T, Error> {
-//
-//        let requestPublisher = sessionManager.request(request).publishDecodable(type: T.self)
-//
-//        let cancellable = requestPublisher
-//            .subscribe(on: DispatchQueue(label: "Background Queue", qos: .background))
-//            .receive(on: DispatchQueue.main)
-//            .sink { result in
-//                if let value = result.value {
-//                    completion(Result.success(value))
-//                } else if let error = result.error {
-//                    completion(Result.failure(error))
-//                }
-//            }
-//        return cancellable
-//    }
-
     @available(iOS 13.0, *)
     public func post<T: Codable>(request: URLConvertible, params: Parameters, model: T.Type) async throws -> T {
         try await withUnsafeThrowingContinuation { continuation in

@@ -9,7 +9,8 @@ import SwiftUI
 import DomainPackage
 
 public struct MenuListMoreView: View {
-    
+    @EnvironmentObject var theme: ThemeManager
+
     public var dataSource: [MenuModel]
     
     public init(dataSource: [MenuModel]) {
@@ -20,12 +21,16 @@ public struct MenuListMoreView: View {
         VStack(alignment: .leading, spacing: 14) {
             HStack {
                 Text("Offers")
+                    .foregroundStyle(theme.currentTheme.onSurfaceColor)
                 Spacer()
                 Button(action: {}) {
                     HStack {
                         Text("View More")
+                            .foregroundStyle(theme.currentTheme.onSurfaceColor)
+
                         Image(systemName: "arrow.right.circle.fill")
                             .padding(.trailing, 10)
+                            .foregroundStyle(theme.currentTheme.tintImageColor)
                     }
                 }
             }
@@ -36,7 +41,7 @@ public struct MenuListMoreView: View {
                         VStack(alignment: .center) {
                             Image(systemName: "house.fill")
                                 .toNavigationIcon()
-                                .foregroundColor(.green)
+                                .foregroundStyle(theme.currentTheme.tintImageColor)
                             
                             Text(item.name ?? "")
                                 .font(.system(size: 15))
@@ -44,10 +49,12 @@ public struct MenuListMoreView: View {
                                 .multilineTextAlignment(.center)
                                 .lineLimit(2, reservesSpace: true)
                                 .frame(maxWidth: 100)
+                                .foregroundStyle(theme.currentTheme.onSurfaceColor)
                         }
                     }
                 }
             }.scrollIndicators(.never)
+                .background(Color.clear)
         }
         .modifier(MenuShapeViewModifier())
         .frame(maxWidth: .infinity, alignment: .leading)

@@ -11,10 +11,9 @@ import FormPackage
 @main
 struct ESewaApp: App {
     
-   // @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
-
     @AppStorage("isAuthenticated") private var isAuthenticated = true
     
+    @ObservedObject private var themeManager: ThemeManager = ThemeManager.instance
     @ObservedObject var router = Router()
     
     private var routeDashboard: RouteIntentDto {
@@ -31,7 +30,6 @@ struct ESewaApp: App {
                         Rectangle().hidden().onAppear {
                             router.route(menu: routeDashboard)
                         }
-                        
                     }
                 }
                 .navigationTitle("")
@@ -43,9 +41,15 @@ struct ESewaApp: App {
                 }.navigationDestination(for: MerchantRouteCompletionIntent.self) { destination in
                     router.buildMerchantCompletionRouter(destination: destination)
                 }
+            }.preferredColorScheme(themeManager.currentTheme.colorScheme)
+            .onAppear {
+                let tabBarAppearance = UITabBarAppearance()
+
+                UITabBar.appearance().standardAppearance = tabBarAppearance
             }
             .environmentObject(router)
-            .environment(\.colorScheme, .dark)
+            .environmentObject(themeManager)
+            .environment(\.colorScheme, themeManager.currentTheme.colorScheme)
         }
     }
 }

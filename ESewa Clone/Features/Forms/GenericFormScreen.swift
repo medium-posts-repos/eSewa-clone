@@ -11,7 +11,8 @@ import DomainPackage
 import FormPackage
 
 public struct GenericFormScreen: View  {
-    @Environment(\.colorScheme) var colorScheme
+    @EnvironmentObject var theme: ThemeManager
+
     @State private var selectedDropDowns = 0
     @State private var textInputs: [String] = []
     
@@ -30,10 +31,9 @@ public struct GenericFormScreen: View  {
                      ForEach(formFields, id: \.self) { formField in
                          switch formField.type {
                          case .TEXT, .AMOUNT:
-                             formField.provideTextField { _ in
+                             formField.provideTextField(theme: theme) { _ in
                                  
                              }
-
                         case .HEADER_CAPTION:
                             formField.provideHeaderCaption()
                         case .NOTE:
@@ -46,7 +46,7 @@ public struct GenericFormScreen: View  {
                     }
                 }.frame(maxWidth: .infinity, alignment: .leading)
                 .modifier(MenuShapeViewModifier(padding: 14))
-            }
+            }.listRowBackground(Color.clear)
             
             Section {
                 FormFieldModel().provideSubmitField()
@@ -55,8 +55,11 @@ public struct GenericFormScreen: View  {
                     }
             }
             .listRowSeparator(.hidden)
+            .listRowBackground(Color.clear)
 
         }.listStyle(.plain)
+            .scrollContentBackground(.hidden)
+            .background(theme.currentTheme.backgroundColor)
     }
 }
 

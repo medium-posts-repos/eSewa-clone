@@ -12,7 +12,8 @@ import NetworkPackage
 public struct HomeScreen: View {
     
     public let router: Router
-    
+    @EnvironmentObject var theme: ThemeManager
+
     @ObservedObject
     private var formViewModel = AppFactory.shared.vmFactory.providesFormViewModel()
         
@@ -45,7 +46,10 @@ public struct HomeScreen: View {
                         }.listRowBackground(Color.clear)
                             .listRowSeparator(.hidden)
                     case .productView:
-                        HorizontalProductPagerView(products: Product.products)
+                        Section {
+                            HorizontalProductPagerView(products: Product.products)
+                        }.listRowBackground(Color.clear)
+                            .listRowSeparator(.hidden)
                     default:
                         EmptyView()
                     }

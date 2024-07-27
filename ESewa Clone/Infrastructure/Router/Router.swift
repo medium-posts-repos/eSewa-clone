@@ -74,10 +74,9 @@ extension Router {
     func buildMerchantCompletionStack(destination: MerchantRouteCompletionIntent) -> some View {
         switch destination.routeCode {
         case MenuConstants.MERCHANT_SUCCESS_ROUTE:
-            SuccessFormScreen()
-
+            SuccessFormScreen(response: destination.response)
         default:
-            SuccessFormScreen()
+            SuccessFormScreen(response: destination.response)
         }
     }
 }

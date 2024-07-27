@@ -9,7 +9,8 @@ import SwiftUI
 import DomainPackage
 
 public struct HorizontalProductPagerView: View {
-    
+    @EnvironmentObject var theme: ThemeManager
+
     public var products: [Product]
     
     public init(products: [Product]){
@@ -26,6 +27,6 @@ public struct HorizontalProductPagerView: View {
                         .cornerRadius(16)
                 }
             }
-        }
+        }.background(Color.clear)
     }
 }

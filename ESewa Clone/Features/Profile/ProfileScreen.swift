@@ -8,7 +8,11 @@
 import SwiftUI
 import DomainPackage
 
-public struct ProfileScreen: View {
+public struct ProfileScreen: BaseView {
+    @EnvironmentObject var theme: ThemeManager
+    
+    @State private var isToggled = false
+
     public var body: some View {
         List {
             Section {
@@ -16,19 +20,33 @@ public struct ProfileScreen: View {
                     .modifier(MenuShapeViewModifier())
             }
             .listRowSeparator(.hidden)
+            .listRowBackground(Color.clear)
             
             Section {
                 ProfileBalancePointsView()
                     .modifier(MenuShapeViewModifier())
             }.listRowSeparator(.hidden)
+            .listRowBackground(Color.clear)
+            
+            Section {
+                Toggle("Change Theme", isOn: $isToggled)
+                    .foregroundStyle(theme.currentTheme.onSurfaceColor)
+                    .onChange(of: isToggled) { newValue in
+                        theme.updateTheme(scheme: theme.activeScheme == .dark ? .light : .dark)
+                    }
+            }.listRowSeparator(.hidden)
+            .listRowBackground(Color.clear)
             
             Section {
                 MenuIconDescListView(menus: MenuModel.dashboardMenus, spacing: 20)
                     .frame(maxWidth: .infinity)
                     .modifier(MenuShapeViewModifier())
             }.listRowSeparator(.hidden)
+                .listRowBackground(Color.clear)
             
         }.listStyle(.plain)
+            .scrollContentBackground(.hidden)
+            .background(theme.currentTheme.backgroundColor)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Image(systemName: "bell.fill")
@@ -45,10 +63,14 @@ public struct ProfileScreen: View {
                         .foregroundColor(.accentColor)
                 }
             }
+            .toolbarBackground(theme.activeScheme == .dark ? .black : .clear, for: .navigationBar)
     }
 }
 
-public struct ProfileHeaderView: View {
+public struct ProfileHeaderView: BaseView {
+    
+    @EnvironmentObject var theme: ThemeManager
+    
     public var body: some View {
         VStack(alignment: .center) {
             Image("ic_profile_view")
@@ -60,35 +82,50 @@ public struct ProfileHeaderView: View {
                     Image(systemName: "house.fill")
                         .aspectRatio(contentMode: .fill)
                         .frame(width: .smallSize, height: .smallSize)
+                        .foregroundColor(theme.currentTheme.tintImageColor)
+                        .foregroundColor(theme.currentTheme.tintImageColor)
+                    
                     Text("Verified")
+                        .themeable()
                 }
-            }.foregroundColor(.green)
+            }.foregroundColor(theme.currentTheme.backgroundColor)
             
             VStack {
                 Text("Swornim Bikram Shah")
+                    .themeable()
                 Text("9813847444")
+                    .themeable()
+
                 Button(action: {}) {
                     HStack {
                         Image(systemName: "house.fill")
                             .toNavigationIcon()
+                            .foregroundColor(theme.currentTheme.tintImageColor)
+
                         Text("Active")
+                            .themeable()
                     }.modifier(MenuShapeViewModifier(padding: 8))
                     
-                }.foregroundColor(.green)
+                }.foregroundColor(theme.currentTheme.backgroundColor)
             }
         }.frame(maxWidth: .infinity)
     }
 }
 
-public struct ProfileBalancePointsView: View {
+public struct ProfileBalancePointsView: BaseView {
+    @EnvironmentObject var theme: ThemeManager
+
     public var body: some View {
         HStack(alignment: .center, spacing: 18) {
             Image(systemName: "house.fill")
                 .toNavigationIcon()
+                .foregroundColor(theme.currentTheme.tintImageColor)
             
             VStack(alignment: .leading) {
                 Text("NPR XXXX.XX")
+                    .themeable()
                 Text("Wallet Balance")
+                    .themeable()
             }
             
             Rectangle()
@@ -98,10 +135,12 @@ public struct ProfileBalancePointsView: View {
             
             Image(systemName: "house.fill")
                 .toNavigationIcon()
+                .foregroundColor(theme.currentTheme.tintImageColor)
             
             VStack(alignment: .leading) {
-                Text("XXXX.XXX")
-                Text("Reward Points")
+                Text("XXXX.XXX").themeable()
+
+                Text("Reward Points").themeable()
             }
         }.frame(maxWidth: .infinity)
     }

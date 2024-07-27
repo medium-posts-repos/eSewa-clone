@@ -15,12 +15,19 @@ class SceneDelegate: NSObject, UIWindowSceneDelegate {
     var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let windowScene = (scene as? UIWindowScene) else { return }
+        guard let _ = (scene as? UIWindowScene) else { return }
         
         let navigationController = UINavigationController()
         navigationController.navigationBar.isTranslucent = true
         navigationController.navigationBar.shadowImage = UIImage()
         navigationController.navigationBar.layer.masksToBounds = false
+        
+        let navigationBarAppearance = UINavigationBarAppearance()
+        navigationBarAppearance.configureWithDefaultBackground()
+        UINavigationBar.appearance().standardAppearance = navigationBarAppearance
+        UINavigationBar.appearance().compactAppearance = navigationBarAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
+        UITabBar.appearance().backgroundColor = .clear
         
 //        window = UIWindow(windowScene: windowScene)
 //        window?.rootViewController = navigationController

@@ -8,11 +8,19 @@
 import SwiftUI
 
 public struct MoreScreen: View {
+    @EnvironmentObject var theme: ThemeManager
+
     public var body: some View {
-        List {
-            Section {
-                MoreHeaderView()
-            }
-        }.listStyle(.plain)
+        VStack {
+            List {
+                ForEach(0..<20) { index in
+                    Section {
+                        MoreHeaderView()
+                    }.listRowBackground(Color.clear)
+                        .tag(index)
+                }
+            }.listStyle(.plain)
+            Spacer()
+        }
     }
 }

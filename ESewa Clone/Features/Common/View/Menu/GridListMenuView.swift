@@ -27,7 +27,9 @@ public struct GridListMenuView: View {
     }
 }
 
-public struct GridListItemMenuView: View {
+public struct GridListItemMenuView: BaseView {
+    @EnvironmentObject var theme: ThemeManager
+
     public var menu: MenuModel
     
     public var body: some View {
@@ -38,6 +40,7 @@ public struct GridListItemMenuView: View {
             
             Text(menu.name ?? "")
                 .font(.system(size: 15))
+                .foregroundColor(theme.currentTheme.onSurfaceColor)
                 .fontWeight(.medium)
                 .multilineTextAlignment(.center)
             Spacer()
