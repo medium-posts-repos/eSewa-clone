@@ -8,7 +8,7 @@
 import SwiftUI
 import DomainPackage
 
-public struct   : View {
+public struct  SuccessFormScreen : View {
     private var response: MerchantResponseDto?
     private var onRouteToDashboad: VoidCallback?
     

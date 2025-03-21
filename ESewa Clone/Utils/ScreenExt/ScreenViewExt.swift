@@ -17,7 +17,7 @@ public extension View {
                     set: { _ in viewModel.showAlert = false }
                 )
         
-        self.modifier(ProgressViewModifier(isLoading: viewModel.isLoading))
+             modifier(ProgressViewModifier(isLoading: viewModel.isLoading))
             .modifier(AlertDialogViewModifier(showingAlert: alertBinding, title: "", message: "Failure", onCompletion: { }))
     }
 }

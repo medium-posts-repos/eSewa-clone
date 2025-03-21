@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A3193AA22D8D0D21005C8147 /* RouteRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3193AA12D8D0D1A005C8147 /* RouteRegistry.swift */; };
 		A334A6182B878F4C008CC8D4 /* FormFieldModel + FormsExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A334A6172B878F4C008CC8D4 /* FormFieldModel + FormsExt.swift */; };
 		A334A61A2B8797DF008CC8D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A334A6192B8797DF008CC8D4 /* SceneDelegate.swift */; };
 		A334A61C2B8798A1008CC8D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A334A61B2B8798A1008CC8D4 /* AppDelegate.swift */; };
@@ -108,6 +109,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A3193AA12D8D0D1A005C8147 /* RouteRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteRegistry.swift; sourceTree = "<group>"; };
 		A334A6172B878F4C008CC8D4 /* FormFieldModel + FormsExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FormFieldModel + FormsExt.swift"; sourceTree = "<group>"; };
 		A334A6192B8797DF008CC8D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A334A61B2B8798A1008CC8D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 		A334A6262B87AA64008CC8D4 /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
+				A3193AA12D8D0D1A005C8147 /* RouteRegistry.swift */,
 				A33AD6942B009887005A09AC /* RouteCode.swift */,
 				A33AD6952B009887005A09AC /* NavigationRoutePath.swift */,
 				A371F1152B1B3AB600B50E77 /* RouterMiddleware.swift */,
@@ -959,6 +962,7 @@
 				A3ACA46D2B2C3D500051E9D4 /* HelpAndSupportScreen.swift in Sources */,
 				A371F1302B1B6CC500B50E77 /* DataFactory.swift in Sources */,
 				A334A61A2B8797DF008CC8D4 /* SceneDelegate.swift in Sources */,
+				A3193AA22D8D0D21005C8147 /* RouteRegistry.swift in Sources */,
 				A334A6292B87AAAD008CC8D4 /* ElectrictyRouter.swift in Sources */,
 				A33AD69A2B009887005A09AC /* RouteIntentDto.swift in Sources */,
 				A33AD66A2B009818005A09AC /* ESewa_CloneApp.swift in Sources */,
